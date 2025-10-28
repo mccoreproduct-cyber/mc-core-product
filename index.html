@@ -84,7 +84,21 @@
       }
       .photo-pulse { animation: photoBreath 5s ease-in-out infinite; }
       .photo-frame { border-radius: 14px; overflow: hidden; }
-    </style>
+    
+      /* Magnetic hover for CTA buttons */
+      .magnetic { will-change: transform; transition: transform .15s ease-out, box-shadow .2s ease; }
+      .magnetic:hover { box-shadow: 0 10px 30px -10px rgba(249,115,22,.35); }
+      @media (prefers-reduced-motion: reduce) {
+        .magnetic { transition: none !important; transform: none !important; }
+      }
+
+      /* CTA in-view glow */
+      .cta-glow { transition: box-shadow .5s ease, border-color .5s ease; }
+      .cta-inview { box-shadow: 0 0 0 2px rgba(168,85,247,.25), 0 10px 30px -10px rgba(249,115,22,.35) !important; }
+      @media (prefers-reduced-motion: reduce) {
+        .cta-glow { transition: none !important; }
+      }
+</style>
   </head>
   <body class="min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden">
     <!-- Header -->
@@ -720,6 +734,90 @@
         lastY = scrollY;
       }
     });
+  })();
+</script>
+
+
+<script>
+// --- Parallax reagujący na ruch myszki (desktop only) ---
+(function heroMouseParallax() {
+  const aura = document.querySelector('.hero-aura');
+  if (!aura) return;
+  function onMouseMove(e){
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    const moveX = x * 20; // max 20px
+    const moveY = y * 15; // max 15px
+    aura.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    aura.style.transition = 'transform 0.15s ease-out';
+  }
+  function enable(){
+    if (window.innerWidth >= 768) {
+      document.addEventListener('mousemove', onMouseMove);
+    } else {
+      document.removeEventListener('mousemove', onMouseMove);
+      aura.style.transform = 'translate(0,0)';
+    }
+  }
+  window.addEventListener('resize', enable);
+  enable();
+})();
+</script>
+
+
+<script>
+  // --- Magnetic hover micro-interaction for CTA buttons ---
+  (function magneticCTA(){
+    const els = document.querySelectorAll('.magnetic');
+    if (!els.length) return;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    const strength = 12; // max px offset
+    els.forEach(el => {
+      const rectCache = {x:0,y:0,w:0,h:0};
+      function updateRect(){ const r = el.getBoundingClientRect(); rectCache.x=r.left; rectCache.y=r.top; rectCache.w=r.width; rectCache.h=r.height; }
+      updateRect();
+      window.addEventListener('resize', updateRect);
+      window.addEventListener('scroll', updateRect, {passive:true});
+      el.addEventListener('mousemove', (e) => {
+        const relX = (e.clientX - rectCache.x) / rectCache.w - 0.5;
+        const relY = (e.clientY - rectCache.y) / rectCache.h - 0.5;
+        const tx = Math.max(Math.min(relX * strength, strength), -strength);
+        const ty = Math.max(Math.min(relY * strength, strength), -strength);
+        el.style.transform = `translate(${tx}px, ${ty}px)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = 'translate(0,0)';
+      });
+      // Keyboard focus accessibility: small nudge
+      el.addEventListener('focus', () => { el.style.transform = 'translate(0,-2px)'; });
+      el.addEventListener('blur', () => { el.style.transform = 'translate(0,0)'; });
+    });
+  })();
+</script>
+
+
+<script>
+  // --- In-view glow for CTA buttons (IntersectionObserver) ---
+  (function ctaInViewGlow(){
+    const keys = ['hero_contact','services_cta_email','cta_email'];
+    const targets = [];
+    keys.forEach(k => {
+      const el = document.querySelector(`[data-i18n="${k}"]`);
+      if (el) {
+        el.classList.add('cta-glow','cta-watch');
+        targets.push(el);
+      }
+    });
+    if (!targets.length) return;
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('cta-inview');
+        else entry.target.classList.remove('cta-inview');
+      });
+    }, { root: null, threshold: 0.5 });
+    targets.forEach(t => io.observe(t));
   })();
 </script>
 
