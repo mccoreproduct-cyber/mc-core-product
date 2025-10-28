@@ -1,29 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="pl" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MC-Core Product — Maciej Cieślak</title>
+    <meta name="description" content="Portfolio MC-Core Product — Maciej Cieślak. Product & R&D leadership.">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<html class="dark" lang="pl">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>MC-Core Product — Maciej Cieślak</title>
-<meta content="Portfolio MC-Core Product — Maciej Cieślak. Product &amp; R&amp;D leadership." name="description"/>
-<!-- Tailwind CDN -->
-<!-- SEO / OpenGraph -->
-<link href="https://mccoreproduct-cyber.github.io/mc-core-product/" rel="canonical"/>
-<meta content="index,follow" name="robots"/>
-<meta content="#0a0a0a" name="theme-color"/>
-<link href="favicon.png" rel="icon" sizes="256x256" type="image/png"/>
-<meta content="website" property="og:type"/>
-<meta content="pl_PL" property="og:locale">
-<meta content="MC-Core Product — Maciej Cieślak" property="og:title"/>
-<meta content="Project leadership • R&amp;D • E‑commerce. 23 years of experience across the full product lifecycle." property="og:description"/>
-<meta content="https://mccoreproduct-cyber.github.io/mc-core-product/" property="og:url"/>
-<meta content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="MC-Core Product — Maciej Cieślak" name="twitter:title"/>
-<meta content="Project leadership • R&amp;D • E‑commerce. 23 years of experience across the full product lifecycle." name="twitter:description"/>
-<meta content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png" name="twitter:image"/>
-<!-- JSON-LD Schema.org -->
-<script type="application/ld+json">
+    <!-- SEO / OpenGraph -->
+    <link rel="canonical" href="https://mccoreproduct-cyber.github.io/mc-core-product/" />
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" type="image/png" href="favicon.png" sizes="256x256" />
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:title" content="MC-Core Product — Maciej Cieślak">
+    <meta property="og:description" content="Project leadership • R&D • E‑commerce. 23 years of experience across the full product lifecycle.">
+    <meta property="og:url" content="https://mccoreproduct-cyber.github.io/mc-core-product/">
+    <meta property="og:image" content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MC-Core Product — Maciej Cieślak">
+    <meta name="twitter:description" content="Project leadership • R&D • E‑commerce. 23 years of experience across the full product lifecycle.">
+    <meta name="twitter:image" content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png">
+
+    <!-- JSON-LD Schema.org -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -35,11 +37,11 @@
       "sameAs": ["https://www.linkedin.com/in/maciej-cieslak-911bbb94"]
     }
     </script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
+
+    <script>
       tailwind.config = { theme: { extend: {} } };
     </script>
-<style>
+    <style>
       * { transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
       @keyframes pulseGlow {
         0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(249,115,22,0.5)); }
@@ -48,190 +50,242 @@
       .logo-pulse { animation: pulseGlow 3s infinite ease-in-out; }
       .btn { display:inline-flex; align-items:center; gap:.5rem; border-radius:.75rem; padding:.5rem .75rem; }
     </style>
-</meta></head>
-<body class="min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden">
-<!-- Header -->
-<header class="sticky top-0 z-40 backdrop-blur border-b border-fuchsia-500/20 bg-neutral-950/70">
-<div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<img alt="MC Core Product Logo" class="rounded-full object-cover ring-2 ring-orange-500/40 logo-pulse h-8 w-8 md:h-10 md:w-10" id="logoSmall"/>
-<span class="font-semibold tracking-tight text-lg">MC-Core Product</span>
-</div>
-<nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
-<a class="hover:text-white" data-i18n="nav_about" href="#about">O mnie</a>
-<a class="hover:text-white" data-i18n="nav_skills" href="#skills">Kompetencje</a>
-<a class="hover:text-white" data-i18n="nav_clients" href="#clients">Klienci</a>
-<a class="hover:text-white" data-i18n="nav_contact" href="#contact">Kontakt</a>
-</nav>
-<button aria-label="Menu" class="md:hidden btn border border-purple-500/40 hover:bg-purple-500/10" id="mobileMenuBtn">☰ Menu</button>
-<div class="flex items-center gap-2 md:gap-4 flex-wrap sm:gap-3">
-<button aria-label="Language toggle" class="btn border border-purple-500/40 hover:bg-purple-500/10" id="langToggle" title="Language / Język">🇵🇱/🇬🇧</button>
-<button aria-label="Przełącz tryb motywu" class="btn border border-fuchsia-500/30 hover:bg-fuchsia-500/10" id="themeToggle" title="Przełącz motyw">🌓</button>
-<a class="btn border border-orange-500/30 hover:bg-orange-500/10 text-sm min-h-[44px] min-w-[44px]" data-i18n="header_write" href="mailto:mccoreproduct@gmail.com">✉️ Napisz</a>
-<a class="btn bg-gradient-to-r from-fuchsia-500 to-orange-500 text-black text-sm hover:opacity-90 min-h-[44px] min-w-[44px]" data-i18n="header_linkedin" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" rel="noreferrer" target="_blank">in LinkedIn</a>
-</div>
-</div>
-</header><div class="md:hidden px-4 pb-3 hidden" id="mobileNav"><ul class="flex flex-col gap-2 text-sm text-neutral-300"><li><a class="hover:text-white" data-i18n="nav_about" href="#about">O mnie</a></li><li><a class="hover:text-white" data-i18n="nav_skills" href="#skills">Kompetencje</a></li><li><a class="hover:text-white" data-i18n="nav_clients" href="#clients">Klienci</a></li><li><a class="hover:text-white" data-i18n="nav_contact" href="#contact">Kontakt</a></li></ul></div>
-<!-- Hero -->
-<section class="relative overflow-hidden">
-<div class="pointer-events-none absolute inset-0 opacity-30">
-<div class="absolute -top-24 -left-24 h-96 w-96 rounded-full blur-3xl bg-fuchsia-600/40"></div>
-<div class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full blur-3xl bg-orange-500/40"></div>
-</div>
-<div class="mx-auto max-w-6xl px-4 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
-<div>
-<h1 class="md:text-5xl font-bold tracking-tight sm:text-4xl text-3xl">
-<span class="block">Maciej Cieślak</span>
-<span class="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">MC‑Core Product</span>
-</h1>
-<p class="mt-5 text-neutral-300 leading-relaxed max-w-prose" data-i18n="hero_intro" id="heroIntro">
+  </head>
+  <body class="min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 backdrop-blur border-b border-fuchsia-500/20 bg-neutral-950/70">
+      <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img id="logoSmall" alt="MC Core Product Logo" class="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover ring-2 ring-orange-500/40 logo-pulse" />
+          <span class="font-semibold tracking-tight text-lg">MC-Core Product</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
+          <a href="#about" class="hover:text-white" data-i18n="nav_about">O mnie</a>
+          <a href="#skills" class="hover:text-white" data-i18n="nav_skills">Kompetencje</a>
+          <a href="#services" class="hover:text-white" data-i18n="nav_services">Usługi</a>
+          <a href="#clients" class="hover:text-white" data-i18n="nav_clients">Klienci</a>
+          <a href="#contact" class="hover:text-white" data-i18n="nav_contact">Kontakt</a>
+        </nav>
+        <div class="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4">
+          <button id="mobileMenuBtn" class="md:hidden btn border border-purple-500/40 hover:bg-purple-500/10" aria-label="Menu">☰ Menu</button>
+          <button id="langToggle" class="btn border border-purple-500/40 hover:bg-purple-500/10" title="Language / Język" aria-label="Language toggle">🇵🇱 PL</button>
+          <button id="themeToggle" class="btn border border-fuchsia-500/30 hover:bg-fuchsia-500/10" title="Przełącz motyw" aria-label="Przełącz tryb motywu">🌓</button>
+          <a href="mailto:mccoreproduct@gmail.com" class="btn border border-orange-500/30 hover:bg-orange-500/10 text-sm min-h-[44px] min-w-[44px]" data-i18n="header_write">✉️ Napisz</a>
+          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="btn bg-gradient-to-r from-fuchsia-500 to-orange-500 text-black text-sm hover:opacity-90 min-h-[44px] min-w-[44px]" data-i18n="header_linkedin">in LinkedIn</a>
+        </div>
+      </div>
+    </header>
+    <div id="mobileNav" class="md:hidden px-4 pb-3 hidden">
+      <ul class="flex flex-col gap-2 text-sm text-neutral-300">
+        <li><a class="hover:text-white" href="#about" data-i18n="nav_about">O mnie</a></li>
+        <li><a class="hover:text-white" href="#skills" data-i18n="nav_skills">Kompetencje</a></li>
+        <li><a class="hover:text-white" href="#services" data-i18n="nav_services">Usługi</a></li>
+        <li><a class="hover:text-white" href="#clients" data-i18n="nav_clients">Klienci</a></li>
+        <li><a class="hover:text-white" href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0 opacity-30">
+        <div class="absolute -top-24 -left-24 h-96 w-96 rounded-full blur-3xl bg-fuchsia-600/40"></div>
+        <div class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full blur-3xl bg-orange-500/40"></div>
+      </div>
+
+      <div class="mx-auto max-w-6xl px-4 py-10 sm:py-14 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+            <span class="block">Maciej Cieślak</span>
+            <span class="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">MC‑Core Product</span>
+          </h1>
+          <p id="heroIntro" class="mt-5 text-neutral-300 leading-relaxed max-w-prose" data-i18n="hero_intro">
             Lider projektów i strateg biznesu z 23-letnim doświadczeniem w pełnym cyklu życia produktu – od koncepcji,
             przez R&amp;D i produkcję, po komercjalizację i skalowanie na rynku.
           </p>
-<div class="mt-6 flex flex-wrap gap-3">
-<a class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="hero_contact" href="mailto:mccoreproduct@gmail.com">✉️ Skontaktuj się</a>
-<a class="btn border border-fuchsia-500/40 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="hero_call" href="tel:+48500497680">📞 Zadzwoń</a>
-</div>
-<div class="mt-8 grid gap-4 grid-cols-1 sm:grid-cols-3">
-<div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-<div class="text-2xl font-bold text-white">23</div>
-<div class="text-sm text-neutral-300" data-i18n="stat_experience_label">lat doświadczenia</div>
-</div>
-<div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-<div class="text-2xl font-bold text-white">6000+</div>
-<div class="text-sm text-neutral-300" data-i18n="stat_sku_label">SKU w portfelu</div>
-</div>
-<div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-<div class="text-2xl font-bold text-white">R&amp;D • E‑com • Produkcja</div>
-<div class="text-sm text-neutral-300" data-i18n="stat_industries_label">Branże</div>
-</div>
-</div>
-</div>
-<div class="flex items-center justify-center">
-<div class="relative">
-<img alt="MC Core Product Logo" class="rounded-full shadow-xl ring-2 ring-fuchsia-500/40 object-cover logo-pulse h-32 w-32 md:h-44 md:w-44 max-w-full" id="logoHero"/>
-<div class="absolute inset-0 -z-10 blur-3xl opacity-60" style="background: radial-gradient(closest-side, rgba(217,70,239,.5), rgba(249,115,22,.35), transparent)"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- About & Skills -->
-<section class="mx-auto max-w-6xl px-4 py-14 sm:py-14" id="about">
-<div class="grid lg:grid-cols-3 gap-6">
-<div class="lg:col-span-2">
-<h2 class="text-2xl font-semibold" data-i18n="about_title">Mój sposób działania</h2>
-<p class="mt-4 text-neutral-300 leading-relaxed" data-i18n="about_body">
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="hero_contact">✉️ Skontaktuj się</a>
+            <a href="tel:+48500497680" class="btn border border-fuchsia-500/40 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="hero_call">📞 Zadzwoń</a>
+          </div>
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
+              <div class="text-2xl font-bold text-white">23</div>
+              <div class="text-sm text-neutral-300" data-i18n="stat_experience_label">lat doświadczenia</div>
+            </div>
+            <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
+              <div class="text-2xl font-bold text-white">6000+</div>
+              <div class="text-sm text-neutral-300" data-i18n="stat_sku_label">SKU w portfelu</div>
+            </div>
+            <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
+              <div class="text-2xl font-bold text-white">R&amp;D • E‑com • Produkcja</div>
+              <div class="text-sm text-neutral-300" data-i18n="stat_industries_label">Branże</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center">
+          <div class="relative">
+            <img id="logoHero" alt="MC Core Product Logo" class="h-32 w-32 md:h-44 md:w-44 rounded-full shadow-xl ring-2 ring-fuchsia-500/40 object-cover logo-pulse" />
+            <div class="absolute inset-0 -z-10 blur-3xl opacity-60" style="background: radial-gradient(closest-side, rgba(217,70,239,.5), rgba(249,115,22,.35), transparent)"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Skills -->
+    <section id="about" class="mx-auto max-w-6xl px-4 py-14">
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl font-semibold" data-i18n="about_title">Mój sposób działania</h2>
+          <p class="mt-4 text-neutral-300 leading-relaxed" data-i18n="about_body">
             Łączę dyscyplinę finansową (ROI, struktury kosztów) z praktyką Lean i inżynierią produkcji. Potrafię łączyć zespoły
             międzyfunkcyjne, zarządzać roadmapą i upraszczać złożoność do decyzyjnych metryk. Pracuję zwinnie (JIRA),
             wykorzystuję AI do analizy danych i priorytetyzacji backlogu.
           </p>
-</div>
-<div class="rounded-2xl border border-orange-500/20 p-5 bg-orange-500/5">
-<div class="text-sm text-orange-300" data-i18n="snapshot_title">Snapshot</div>
-<ul class="mt-3 space-y-2 text-sm text-neutral-300 list-disc list-inside" id="snapshotList">
-<li data-i18n="snap_1">Claim rate ↓, rating ↑ dzięki działaniom poprawy jakości.</li>
-<li data-i18n="snap_2">Operowanie portfelem 6000+ SKU w e‑commerce.</li>
-<li data-i18n="snap_3">Wdrożenia R&amp;D: prototyp → produkcja → rynek.</li>
-</ul>
-</div>
-</div>
-<h2 class="text-2xl font-semibold mt-12" data-i18n="skills_title" id="skills">Kompetencje kluczowe</h2>
-<div class="mt-6 grid md:grid-cols-3 gap-4" id="skillsGrid">
-<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_1">Zarządzanie cyklem życia produktu (PLM)</div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_2">Przywództwo projektowe &amp; R&amp;D</div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_3">Strategia e-commerce (6000+ SKU)</div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_4">Redukcja reklamacji / satysfakcja klienta</div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_5">FMEA, Lean, Kaizen, 5S, ISO 9001</div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_6">Planowanie finansowe &amp; ROI</div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_7">Budowanie zespołów (mocne strony)</div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_8">Procesy &amp; workflow (JIRA)</div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_9">CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP</div>
-</div>
-</section>
-<!-- Clients -->
-<section class="mx-auto max-w-6xl px-4 py-14 sm:py-14" id="clients">
-<h2 class="text-2xl font-semibold" data-i18n="clients_title">Klienci, których obsługiwałem</h2>
-<ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300"><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
-<div class="flex items-start gap-3">
-<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="expondo.png"/>
-<div>
-<div class="font-medium text-white" data-i18n="client_expondo_title">Expondo — Senior Quality Engineer (2021–2025)</div>
-<p class="text-sm text-neutral-300 mt-1" data-i18n="client_expondo_desc">Europejski lider e-commerce B2B i B2C w sektorze urządzeń przemysłowych, gastronomicznych i warsztatowych.</p>
-</div>
-</div>
-</li><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
-<div class="flex items-start gap-3">
-<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="lug.png"/>
-<div>
-<div class="font-medium text-white" data-i18n="client_lug_title">LUG Light Factory — Project Lead R&amp;D (2018–2022)</div>
-<p class="text-sm text-neutral-300 mt-1" data-i18n="client_lug_desc">Polski producent profesjonalnych systemów oświetlenia LED dla sektora przemysłowego i publicznego, działający globalnie.</p>
-</div>
-</div>
-</li><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
-<div class="flex items-start gap-3">
-<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="farrell.png"/>
-<div>
-<div class="font-medium text-white" data-i18n="client_farrell_title">Farrell Furniture — CAM / Production Engineer (2005–2018)</div>
-<p class="text-sm text-neutral-300 mt-1" data-i18n="client_farrell_desc">Irlandzki producent mebli biurowych i szkolnych, specjalizujący się w rozwiązaniach kontraktowych.</p>
-</div>
-</div>
-</li><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
-<div class="flex items-start gap-3">
-<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="wilo.png"/>
-<div>
-<div class="font-medium text-white" data-i18n="client_wilo_title">Wilo — Sales Engineer (2003–2004)</div>
-<p class="text-sm text-neutral-300 mt-1" data-i18n="client_wilo_desc">Niemiecki koncern produkujący pompy i systemy pompowe dla instalacji grzewczych, wodnych i przemysłowych.</p>
-</div>
-</div>
-</li><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
-<div class="flex items-start gap-3">
-<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="afriso.png"/>
-<div>
-<div class="font-medium text-white" data-i18n="client_afriso_title">Afriso — Sales Representative (2002–2003)</div>
-<p class="text-sm text-neutral-300 mt-1" data-i18n="client_afriso_desc">Niemiecki producent aparatury kontrolno‑pomiarowej dla branży grzewczej, przemysłowej i ekologicznej.</p>
-</div>
-</div>
-</li></ul>
-</section>
-<!-- Contact -->
-<section class="mx-auto max-w-6xl px-4 py-14 sm:py-14" id="contact">
-<div class="rounded-3xl border border-fuchsia-500/25 bg-gradient-to-br from-fuchsia-600/10 via-purple-700/10 to-orange-500/10 p-6 md:p-10">
-<h2 class="text-2xl font-semibold" data-i18n="contact_title">Porozmawiajmy o Twoim produkcie</h2>
-<!-- usunięto zdanie o umowie o pracę i B2B na prośbę użytkownika -->
-<div class="mt-5 flex flex-wrap gap-3">
-<a class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="cta_email" href="mailto:mccoreproduct@gmail.com">✉️ Napisz</a>
-<a class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_call" href="tel:+48500497680">📞 Zadzwoń</a>
-<a class="btn border border-purple-500/30 px-4 py-2 hover:bg-purple-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_linkedin" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" rel="noreferrer" target="_blank">in LinkedIn</a>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="border-t border-purple-500/20">
-<div class="mx-auto max-w-6xl px-4 py-8 text-sm text-neutral-400 flex flex-wrap items-center justify-between gap-3">
-<div>© <span id="year"></span> MC-Core Product — Maciej Cieślak</div>
-<div class="flex items-center gap-4">
-<a class="hover:text-white" href="mailto:mccoreproduct@gmail.com">✉️ Email</a>
-<a class="hover:text-white" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" rel="noreferrer" target="_blank">in LinkedIn</a>
-<span class="hover:text-white">📍 <span data-i18n="footer_location">Zielona Góra, Polska</span></span>
-</div>
-</div>
-</footer>
+        </div>
+        <div class="rounded-2xl border border-orange-500/20 p-5 bg-orange-500/5">
+          <div class="text-sm text-orange-300" data-i18n="snapshot_title">Snapshot</div>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-300 list-disc list-inside" id="snapshotList">
+            <li data-i18n="snap_1">Claim rate ↓, rating ↑ dzięki działaniom poprawy jakości.</li>
+            <li data-i18n="snap_2">Operowanie portfelem 6000+ SKU w e‑commerce.</li>
+            <li data-i18n="snap_3">Wdrożenia R&amp;D: prototyp → produkcja → rynek.</li>
+          </ul>
+        </div>
+      </div>
 
-<script>
-    // AUTO-INJECTED: paths to your own logo files — edit by replacing files in the repo only.
-    // Main brand logo (page header & hero):
-    window.__MC_LOGO_URL = "./logo%20MC%20core%20produkt.png"; // rename your file exactly like this, spaces encoded in HTML
-    
-    // Client logos mapping (replace files in repo with real logos, keep filenames or change below):
-    window.__CLIENT_LOGOS = {
-      expondo: "./expondo.png",
-      lug: "./lug.png",
-      farrell: "./farrell.png",
-      wilo: "./wilo.png",
-      afriso: "./afriso.png"
-    };
-  </script>
-<script>
+      <h2 id="skills" class="text-2xl font-semibold mt-12" data-i18n="skills_title">Kompetencje kluczowe</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-4" id="skillsGrid">
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_1">Zarządzanie cyklem życia produktu (PLM)</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_2">Przywództwo projektowe &amp; R&amp;D</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_3">Strategia e-commerce (6000+ SKU)</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_4">Redukcja reklamacji / satysfakcja klienta</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_5">FMEA, Lean, Kaizen, 5S, ISO 9001</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_6">Planowanie finansowe &amp; ROI</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_7">Budowanie zespołów (mocne strony)</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_8">Procesy &amp; workflow (JIRA)</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_9">CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP</div>
+      </div>
+    </section>
+
+    <!-- Services / Offer -->
+    <section id="services" class="mx-auto max-w-6xl px-4 py-14">
+      <h2 class="text-2xl font-semibold" data-i18n="services_title">Usługi / Oferta</h2>
+      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+          <div class="font-semibold text-white" data-i18n="svc_quality_title">Audyt jakości</div>
+          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_quality_desc">Analiza claim rate, NPS/CSAT, szybkie działania naprawcze i roadmapa jakości.</p>
+        </div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+          <div class="font-semibold text-white" data-i18n="svc_plm_title">Wdrożenie PLM</div>
+          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_plm_desc">Procesy i narzędzia PLM: od koncepcji do EOL. Standaryzacja danych produktu.</p>
+        </div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+          <div class="font-semibold text-white" data-i18n="svc_cost_title">Optymalizacja kosztów</div>
+          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_cost_desc">Analiza BOM/TCO, sourcing, negocjacje, redesign pod koszty bez straty jakości.</p>
+        </div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+          <div class="font-semibold text-white" data-i18n="svc_rd_title">Rozwój R&amp;D</div>
+          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_rd_desc">Szybkie prototypowanie, testy, transfer do produkcji. Harmonogram i KPI.</p>
+        </div>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="services_cta_email">✉️ Zamów konsultację</a>
+        <a href="tel:+48500497680" class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="services_cta_call">📞 Umów rozmowę</a>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section id="clients" class="mx-auto max-w-6xl px-4 py-14">
+      <h2 class="text-2xl font-semibold" data-i18n="clients_title">Klienci, których obsługiwałem</h2>
+      <ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300">
+        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+          <div class="flex items-start gap-3">
+            <img src="expondo.png" alt="Expondo" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" />
+            <div>
+              <div class="font-medium text-white" data-i18n="client_expondo_title">Expondo — Senior Quality Engineer (2021–2025)</div>
+              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_expondo_desc">Europejski lider e-commerce B2B i B2C w sektorze urządzeń przemysłowych, gastronomicznych i warsztatowych.</p>
+            </div>
+          </div>
+        </li>
+        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+          <div class="flex items-start gap-3">
+            <img src="lug.png" alt="LUG Light Factory" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" />
+            <div>
+              <div class="font-medium text-white" data-i18n="client_lug_title">LUG Light Factory — Project Lead R&amp;D (2018–2022)</div>
+              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_lug_desc">Polski producent profesjonalnych systemów oświetlenia LED dla sektora przemysłowego i publicznego, działający globalnie.</p>
+            </div>
+          </div>
+        </li>
+        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+          <div class="flex items-start gap-3">
+            <img src="farrell.png" alt="Farrell Furniture" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" />
+            <div>
+              <div class="font-medium text-white" data-i18n="client_farrell_title">Farrell Furniture — CAM / Production Engineer (2005–2018)</div>
+              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_farrell_desc">Irlandzki producent mebli biurowych i szkolnych, specjalizujący się w rozwiązaniach kontraktowych.</p>
+            </div>
+          </div>
+        </li>
+        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+          <div class="flex items-start gap-3">
+            <img src="wilo.png" alt="Wilo" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" />
+            <div>
+              <div class="font-medium text-white" data-i18n="client_wilo_title">Wilo — Sales Engineer (2003–2004)</div>
+              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_wilo_desc">Niemiecki koncern produkujący pompy i systemy pompowe dla instalacji grzewczych, wodnych i przemysłowych.</p>
+            </div>
+          </div>
+        </li>
+        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+          <div class="flex items-start gap-3">
+            <img src="afriso.png" alt="Afriso" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" />
+            <div>
+              <div class="font-medium text-white" data-i18n="client_afriso_title">Afriso — Sales Representative (2002–2003)</div>
+              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_afriso_desc">Niemiecki producent aparatury kontrolno‑pomiarowej dla branży grzewczej, przemysłowej i ekologicznej.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
+      <div class="rounded-3xl border border-fuchsia-500/25 bg-gradient-to-br from-fuchsia-600/10 via-purple-700/10 to-orange-500/10 p-6 md:p-10">
+        <h2 class="text-2xl font-semibold" data-i18n="contact_title">Porozmawiajmy o Twoim produkcie</h2>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="cta_email">✉️ Napisz</a>
+          <a href="tel:+48500497680" class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_call">📞 Zadzwoń</a>
+          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="btn border border-purple-500/30 px-4 py-2 hover:bg-purple-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_linkedin">in LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-purple-500/20">
+      <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-neutral-400 flex flex-wrap items-center justify-between gap-3">
+        <div>© <span id="year"></span> MC-Core Product — Maciej Cieślak</div>
+        <div class="flex items-center gap-4">
+          <a class="hover:text-white" href="mailto:mccoreproduct@gmail.com">✉️ Email</a>
+          <a class="hover:text-white" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer">in LinkedIn</a>
+          <span class="hover:text-white">📍 <span data-i18n="footer_location">Zielona Góra, Polska</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="fixed bottom-6 right-4 z-40 hidden rounded-full px-3 py-2 bg-white/10 border border-white/20 text-white backdrop-blur hover:bg-white/20">⬆</button>
+
+    <!-- AUTO-INJECTED: paths to brand & client logos -->
+    <script>
+      // Główne logo (nagłówek + hero). Jeśli dodasz plik o tej nazwie obok index.html, strona sama go użyje:
+      window.__MC_LOGO_URL = "./logo%20MC%20core%20produkt.png";
+      // Logotypy klientów — podmień pliki w repo na realne loga (nazwy możesz zachować):
+      window.__CLIENT_LOGOS = {
+        expondo: "./expondo.png",
+        lug: "./lug.png",
+        farrell: "./farrell.png",
+        wilo: "./wilo.png",
+        afriso: "./afriso.png"
+      };
+    </script>
+
+    <script>
       // Fallback logo as data URL (purple/orange glow)
       const FALLBACK_LOGO = "data:image/svg+xml;utf8," + encodeURIComponent(`
         <svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
@@ -308,7 +362,29 @@
           cta_email: "✉️ Napisz",
           cta_call: "📞 Zadzwoń",
           cta_linkedin: "in LinkedIn",
-          footer_location: "Zielona Góra, Polska"
+          footer_location: "Zielona Góra, Polska",
+          nav_about:"O mnie", nav_skills:"Kompetencje", nav_clients:"Klienci", nav_contact:"Kontakt", nav_services:"Usługi",
+          services_title:"Usługi / Oferta",
+          svc_quality_title:"Audyt jakości",
+          svc_quality_desc:"Analiza claim rate, NPS/CSAT, szybkie działania naprawcze i roadmapa jakości.",
+          svc_plm_title:"Wdrożenie PLM",
+          svc_plm_desc:"Procesy i narzędzia PLM: od koncepcji do EOL. Standaryzacja danych produktu.",
+          svc_cost_title:"Optymalizacja kosztów",
+          svc_cost_desc:"Analiza BOM/TCO, sourcing, negocjacje, redesign pod koszty bez straty jakości.",
+          svc_rd_title:"Rozwój R&D",
+          svc_rd_desc:"Szybkie prototypowanie, testy, transfer do produkcji. Harmonogram i KPI.",
+          services_cta_email:"✉️ Zamów konsultację",
+          services_cta_call:"📞 Umów rozmowę",
+          client_expondo_title:"Expondo — Senior Quality Engineer (2021–2025)",
+          client_expondo_desc:"Europejski lider e-commerce B2B i B2C w sektorze urządzeń przemysłowych, gastronomicznych i warsztatowych.",
+          client_lug_title:"LUG Light Factory — Project Lead R&D (2018–2022)",
+          client_lug_desc:"Polski producent profesjonalnych systemów oświetlenia LED dla sektora przemysłowego i publicznego, działający globalnie.",
+          client_farrell_title:"Farrell Furniture — CAM / Production Engineer (2005–2018)",
+          client_farrell_desc:"Irlandzki producent mebli biurowych i szkolnych, specjalizujący się w rozwiązaniach kontraktowych.",
+          client_wilo_title:"Wilo — Sales Engineer (2003–2004)",
+          client_wilo_desc:"Niemiecki koncern produkujący pompy i systemy pompowe dla instalacji grzewczych, wodnych i przemysłowych.",
+          client_afriso_title:"Afriso — Sales Representative (2002–2003)",
+          client_afriso_desc:"Niemiecki producent aparatury kontrolno‑pomiarowej dla branży grzewczej, przemysłowej i ekologicznej."
         },
         en: {
           header_write: "✉️ Email me",
@@ -340,7 +416,29 @@
           cta_email: "✉️ Email me",
           cta_call: "📞 Call",
           cta_linkedin: "in LinkedIn",
-          footer_location: "Zielona Góra, Poland"
+          footer_location: "Zielona Góra, Poland",
+          nav_about:"About", nav_skills:"Skills", nav_clients:"Clients", nav_contact:"Contact", nav_services:"Services",
+          services_title:"Services / Offer",
+          svc_quality_title:"Quality audit",
+          svc_quality_desc:"Claim-rate, NPS/CSAT analysis, quick corrective actions and a quality roadmap.",
+          svc_plm_title:"PLM implementation",
+          svc_plm_desc:"Processes and PLM tooling from concept to EOL. Product data standardization.",
+          svc_cost_title:"Cost optimization",
+          svc_cost_desc:"BOM/TCO analysis, sourcing, negotiations, cost-down redesign without quality loss.",
+          svc_rd_title:"R&D development",
+          svc_rd_desc:"Rapid prototyping, testing, transfer to production. Timeline and KPIs.",
+          services_cta_email:"✉️ Request a consultation",
+          services_cta_call:"📞 Book a call",
+          client_expondo_title:"Expondo — Senior Quality Engineer (2021–2025)",
+          client_expondo_desc:"European B2B/B2C e‑commerce leader in industrial, catering and workshop equipment.",
+          client_lug_title:"LUG Light Factory — Project Lead R&D (2018–2022)",
+          client_lug_desc:"Polish manufacturer of professional LED lighting systems for industrial and public sectors, operating globally.",
+          client_farrell_title:"Farrell Furniture — CAM / Production Engineer (2005–2018)",
+          client_farrell_desc:"Irish manufacturer of office and school furniture, focused on contract solutions.",
+          client_wilo_title:"Wilo — Sales Engineer (2003–2004)",
+          client_wilo_desc:"German group producing pumps and pump systems for heating, water and industrial applications.",
+          client_afriso_title:"Afriso — Sales Representative (2002–2003)",
+          client_afriso_desc:"German manufacturer of control and measuring instruments for heating, industrial and environmental sectors."
         }
       };
 
@@ -367,11 +465,6 @@
         });
       })();
 
-      // Set dynamic bits
-      document.getElementById('year').textContent = new Date().getFullYear();
-      setLogo(document.getElementById('logoSmall'));
-      setLogo(document.getElementById('logoHero'));
-    
       // Mobile menu toggle
       (function menu(){
         const btn = document.getElementById('mobileMenuBtn');
@@ -382,7 +475,8 @@
           });
         }
       })();
-      // Back to top visibility
+
+      // Back to top
       (function backToTop(){
         const btn = document.getElementById('backToTop');
         window.addEventListener('scroll', ()=>{
@@ -390,7 +484,8 @@
         });
         btn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
       })();
-      // Optional: client logos override via window.__CLIENT_LOGOS = {expondo:'...', lug:'...', ...}
+
+      // Client logos override if provided
       (function clientLogos(){
         if(window.__CLIENT_LOGOS){
           const map = window.__CLIENT_LOGOS;
@@ -400,6 +495,11 @@
           }
         }
       })();
+
+      // Set dynamic bits
+      document.getElementById('year').textContent = new Date().getFullYear();
+      setLogo(document.getElementById('logoSmall'));
+      setLogo(document.getElementById('logoHero'));
     </script>
-<button class="fixed bottom-6 right-4 z-40 hidden rounded-full px-3 py-2 bg-white/10 border border-white/20 text-white backdrop-blur hover:bg-white/20" id="backToTop">⬆</button></body>
+  </body>
 </html>
