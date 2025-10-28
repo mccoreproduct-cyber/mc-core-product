@@ -10,10 +10,10 @@
 <!-- SEO / OpenGraph -->
 <link href="https://mccoreproduct-cyber.github.io/mc-core-product/" rel="canonical"/>
 <meta content="index,follow" name="robots"/>
-<meta content="#0a0a0a" name="theme-color">
+<meta content="#0a0a0a" name="theme-color"/>
 <link href="favicon.png" rel="icon" sizes="256x256" type="image/png"/>
 <meta content="website" property="og:type"/>
-<meta content="pl_PL" property="og:locale"/>
+<meta content="pl_PL" property="og:locale">
 <meta content="MC-Core Product — Maciej Cieślak" property="og:title"/>
 <meta content="Project leadership • R&amp;D • E‑commerce. 23 years of experience across the full product lifecycle." property="og:description"/>
 <meta content="https://mccoreproduct-cyber.github.io/mc-core-product/" property="og:url"/>
@@ -57,6 +57,13 @@
 <img alt="MC Core Product Logo" class="rounded-full object-cover ring-2 ring-orange-500/40 logo-pulse h-8 w-8 md:h-10 md:w-10" id="logoSmall"/>
 <span class="font-semibold tracking-tight text-lg">MC-Core Product</span>
 </div>
+<nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
+<a class="hover:text-white" data-i18n="nav_about" href="#about">O mnie</a>
+<a class="hover:text-white" data-i18n="nav_skills" href="#skills">Kompetencje</a>
+<a class="hover:text-white" data-i18n="nav_clients" href="#clients">Klienci</a>
+<a class="hover:text-white" data-i18n="nav_contact" href="#contact">Kontakt</a>
+</nav>
+<button aria-label="Menu" class="md:hidden btn border border-purple-500/40 hover:bg-purple-500/10" id="mobileMenuBtn">☰ Menu</button>
 <div class="flex items-center gap-2 md:gap-4 flex-wrap sm:gap-3">
 <button aria-label="Language toggle" class="btn border border-purple-500/40 hover:bg-purple-500/10" id="langToggle" title="Language / Język">🇵🇱/🇬🇧</button>
 <button aria-label="Przełącz tryb motywu" class="btn border border-fuchsia-500/30 hover:bg-fuchsia-500/10" id="themeToggle" title="Przełącz motyw">🌓</button>
@@ -64,7 +71,7 @@
 <a class="btn bg-gradient-to-r from-fuchsia-500 to-orange-500 text-black text-sm hover:opacity-90 min-h-[44px] min-w-[44px]" data-i18n="header_linkedin" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" rel="noreferrer" target="_blank">in LinkedIn</a>
 </div>
 </div>
-</header>
+</header><div class="md:hidden px-4 pb-3 hidden" id="mobileNav"><ul class="flex flex-col gap-2 text-sm text-neutral-300"><li><a class="hover:text-white" data-i18n="nav_about" href="#about">O mnie</a></li><li><a class="hover:text-white" data-i18n="nav_skills" href="#skills">Kompetencje</a></li><li><a class="hover:text-white" data-i18n="nav_clients" href="#clients">Klienci</a></li><li><a class="hover:text-white" data-i18n="nav_contact" href="#contact">Kontakt</a></li></ul></div>
 <!-- Hero -->
 <section class="relative overflow-hidden">
 <div class="pointer-events-none absolute inset-0 opacity-30">
@@ -109,7 +116,7 @@
 </div>
 </section>
 <!-- About & Skills -->
-<section class="mx-auto max-w-6xl px-4 py-14 sm:py-14">
+<section class="mx-auto max-w-6xl px-4 py-14 sm:py-14" id="about">
 <div class="grid lg:grid-cols-3 gap-6">
 <div class="lg:col-span-2">
 <h2 class="text-2xl font-semibold" data-i18n="about_title">Mój sposób działania</h2>
@@ -128,7 +135,7 @@
 </ul>
 </div>
 </div>
-<h2 class="text-2xl font-semibold mt-12" data-i18n="skills_title">Kompetencje kluczowe</h2>
+<h2 class="text-2xl font-semibold mt-12" data-i18n="skills_title" id="skills">Kompetencje kluczowe</h2>
 <div class="mt-6 grid md:grid-cols-3 gap-4" id="skillsGrid">
 <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_1">Zarządzanie cyklem życia produktu (PLM)</div>
 <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_2">Przywództwo projektowe &amp; R&amp;D</div>
@@ -142,15 +149,49 @@
 </div>
 </section>
 <!-- Clients -->
-<section class="mx-auto max-w-6xl px-4 py-14 sm:py-14">
+<section class="mx-auto max-w-6xl px-4 py-14 sm:py-14" id="clients">
 <h2 class="text-2xl font-semibold" data-i18n="clients_title">Klienci, których obsługiwałem</h2>
-<ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300">
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">Expondo — Senior Quality Engineer (2021–2025)</li>
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">LUG Light Factory — Project Lead R&amp;D (2018–2022)</li>
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">Farrell Furniture — CAM / Production Engineer (2005–2018)</li>
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">Wilo — Sales Engineer (2003–2004)</li>
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">Afriso — Sales Representative (2002–2003)</li>
-</ul>
+<ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300"><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+<div class="flex items-start gap-3">
+<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="expondo.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_expondo_title">Expondo — Senior Quality Engineer (2021–2025)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_expondo_desc">Europejski lider e-commerce B2B i B2C w sektorze urządzeń przemysłowych, gastronomicznych i warsztatowych.</p>
+</div>
+</div>
+</li><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+<div class="flex items-start gap-3">
+<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="lug.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_lug_title">LUG Light Factory — Project Lead R&amp;D (2018–2022)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_lug_desc">Polski producent profesjonalnych systemów oświetlenia LED dla sektora przemysłowego i publicznego, działający globalnie.</p>
+</div>
+</div>
+</li><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+<div class="flex items-start gap-3">
+<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="farrell.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_farrell_title">Farrell Furniture — CAM / Production Engineer (2005–2018)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_farrell_desc">Irlandzki producent mebli biurowych i szkolnych, specjalizujący się w rozwiązaniach kontraktowych.</p>
+</div>
+</div>
+</li><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+<div class="flex items-start gap-3">
+<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="wilo.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_wilo_title">Wilo — Sales Engineer (2003–2004)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_wilo_desc">Niemiecki koncern produkujący pompy i systemy pompowe dla instalacji grzewczych, wodnych i przemysłowych.</p>
+</div>
+</div>
+</li><li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">
+<div class="flex items-start gap-3">
+<img alt="" class="h-10 w-10 rounded-md object-cover ring-1 ring-white/20 flex-shrink-0" src="afriso.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_afriso_title">Afriso — Sales Representative (2002–2003)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_afriso_desc">Niemiecki producent aparatury kontrolno‑pomiarowej dla branży grzewczej, przemysłowej i ekologicznej.</p>
+</div>
+</div>
+</li></ul>
 </section>
 <!-- Contact -->
 <section class="mx-auto max-w-6xl px-4 py-14 sm:py-14" id="contact">
@@ -175,6 +216,21 @@
 </div>
 </div>
 </footer>
+
+<script>
+    // AUTO-INJECTED: paths to your own logo files — edit by replacing files in the repo only.
+    // Main brand logo (page header & hero):
+    window.__MC_LOGO_URL = "./logo%20MC%20core%20produkt.png"; // rename your file exactly like this, spaces encoded in HTML
+    
+    // Client logos mapping (replace files in repo with real logos, keep filenames or change below):
+    window.__CLIENT_LOGOS = {
+      expondo: "./expondo.png",
+      lug: "./lug.png",
+      farrell: "./farrell.png",
+      wilo: "./wilo.png",
+      afriso: "./afriso.png"
+    };
+  </script>
 <script>
       // Fallback logo as data URL (purple/orange glow)
       const FALLBACK_LOGO = "data:image/svg+xml;utf8," + encodeURIComponent(`
@@ -315,6 +371,35 @@
       document.getElementById('year').textContent = new Date().getFullYear();
       setLogo(document.getElementById('logoSmall'));
       setLogo(document.getElementById('logoHero'));
+    
+      // Mobile menu toggle
+      (function menu(){
+        const btn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('mobileNav');
+        if(btn && nav){
+          btn.addEventListener('click', ()=>{
+            nav.classList.toggle('hidden');
+          });
+        }
+      })();
+      // Back to top visibility
+      (function backToTop(){
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', ()=>{
+          if(window.scrollY > 400){ btn.classList.remove('hidden'); } else { btn.classList.add('hidden'); }
+        });
+        btn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+      })();
+      // Optional: client logos override via window.__CLIENT_LOGOS = {expondo:'...', lug:'...', ...}
+      (function clientLogos(){
+        if(window.__CLIENT_LOGOS){
+          const map = window.__CLIENT_LOGOS;
+          for(const key of ['expondo','lug','farrell','wilo','afriso']){
+            const img = document.querySelector(`img[src$="${key}.png"]`);
+            if(img && map[key]) img.src = map[key];
+          }
+        }
+      })();
     </script>
-</body>
+<button class="fixed bottom-6 right-4 z-40 hidden rounded-full px-3 py-2 bg-white/10 border border-white/20 text-white backdrop-blur hover:bg-white/20" id="backToTop">⬆</button></body>
 </html>
