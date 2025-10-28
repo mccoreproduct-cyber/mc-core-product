@@ -12,6 +12,12 @@
     </script>
     <style>
       * { transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
+      @keyframes pulseGlow {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(249,115,22,0.5)); }
+        50% { transform: scale(1.05); filter: drop-shadow(0 0 14px rgba(217,70,239,0.85)); }
+      }
+      .logo-pulse { animation: pulseGlow 3s infinite ease-in-out; }
+      .btn { display:inline-flex; align-items:center; gap:.5rem; border-radius:.75rem; padding:.5rem .75rem; }
     </style>
   </head>
   <body class="min-h-screen bg-neutral-950 text-neutral-100">
@@ -19,13 +25,14 @@
     <header class="sticky top-0 z-40 backdrop-blur border-b border-fuchsia-500/20 bg-neutral-950/70">
       <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <img id="logoSmall" alt="MC Core Product Logo" class="h-10 w-10 rounded-full object-cover ring-2 ring-orange-500/40" />
-          <span class="font-semibold tracking-tight text-lg">MC‑Core Product</span>
+          <img id="logoSmall" alt="MC Core Product Logo" class="h-10 w-10 rounded-full object-cover ring-2 ring-orange-500/40 logo-pulse" />
+          <span class="font-semibold tracking-tight text-lg">MC-Core Product</span>
         </div>
-        <div class="flex items-center gap-4">
-          <button id="themeToggle" class="rounded-xl border border-fuchsia-500/30 px-3 py-2 hover:bg-fuchsia-500/10" title="Przełącz motyw" aria-label="Przełącz tryb motywu">🌓</button>
-          <a href="mailto:mccoreproduct@gmail.com" class="inline-flex items-center gap-2 rounded-xl border border-orange-500/30 px-3 py-2 text-sm hover:bg-orange-500/10">✉️ Napisz</a>
-          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-fuchsia-500 to-orange-500 text-black px-3 py-2 text-sm hover:opacity-90">in LinkedIn</a>
+        <div class="flex items-center gap-2 md:gap-4">
+          <button id="langToggle" class="btn border border-purple-500/40 hover:bg-purple-500/10" title="Language / Język" aria-label="Language toggle">🇵🇱/🇬🇧</button>
+          <button id="themeToggle" class="btn border border-fuchsia-500/30 hover:bg-fuchsia-500/10" title="Przełącz motyw" aria-label="Przełącz tryb motywu">🌓</button>
+          <a href="mailto:mccoreproduct@gmail.com" class="btn border border-orange-500/30 hover:bg-orange-500/10 text-sm" data-i18n="header_write">✉️ Napisz</a>
+          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="btn bg-gradient-to-r from-fuchsia-500 to-orange-500 text-black text-sm hover:opacity-90" data-i18n="header_linkedin">in LinkedIn</a>
         </div>
       </div>
     </header>
@@ -43,33 +50,33 @@
             <span class="block">Maciej Cieślak</span>
             <span class="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">MC‑Core Product</span>
           </h1>
-          <p class="mt-5 text-neutral-300 leading-relaxed max-w-prose">
-            Lider projektów i strateg biznesu z 23+ latami doświadczenia w pełnym cyklu życia produktu – od koncepcji,
+          <p id="heroIntro" class="mt-5 text-neutral-300 leading-relaxed max-w-prose" data-i18n="hero_intro">
+            Lider projektów i strateg biznesu z 23-letnim doświadczeniem w pełnym cyklu życia produktu – od koncepcji,
             przez R&amp;D i produkcję, po komercjalizację i skalowanie na rynku.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="mailto:mccoreproduct@gmail.com" class="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400">✉️ Skontaktuj się</a>
-            <a href="tel:+48500497680" class="inline-flex items-center gap-2 rounded-xl border border-fuchsia-500/40 px-4 py-2 hover:bg-fuchsia-500/10">📞 Zadzwoń</a>
+            <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400" data-i18n="hero_contact">✉️ Skontaktuj się</a>
+            <a href="tel:+48500497680" class="btn border border-fuchsia-500/40 px-4 py-2 hover:bg-fuchsia-500/10" data-i18n="hero_call">📞 Zadzwoń</a>
           </div>
           <div class="mt-8 grid grid-cols-3 gap-4">
             <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-              <div class="text-2xl font-bold text-white">23+ lat</div>
-              <div class="text-sm text-neutral-300">Doświadczenie</div>
+              <div class="text-2xl font-bold text-white">23</div>
+              <div class="text-sm text-neutral-300" data-i18n="stat_experience_label">lat doświadczenia</div>
             </div>
             <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
               <div class="text-2xl font-bold text-white">6000+</div>
-              <div class="text-sm text-neutral-300">SKU w portfelu</div>
+              <div class="text-sm text-neutral-300" data-i18n="stat_sku_label">SKU w portfelu</div>
             </div>
             <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
               <div class="text-2xl font-bold text-white">R&amp;D • E‑com • Produkcja</div>
-              <div class="text-sm text-neutral-300">Branże</div>
+              <div class="text-sm text-neutral-300" data-i18n="stat_industries_label">Branże</div>
             </div>
           </div>
         </div>
 
         <div class="flex items-center justify-center">
           <div class="relative">
-            <img id="logoHero" alt="MC Core Product Logo" class="h-44 w-44 rounded-full shadow-xl ring-2 ring-fuchsia-500/40 object-cover" />
+            <img id="logoHero" alt="MC Core Product Logo" class="h-44 w-44 rounded-full shadow-xl ring-2 ring-fuchsia-500/40 object-cover logo-pulse" />
             <div class="absolute inset-0 -z-10 blur-3xl opacity-60" style="background: radial-gradient(closest-side, rgba(217,70,239,.5), rgba(249,115,22,.35), transparent)"></div>
           </div>
         </div>
@@ -80,40 +87,40 @@
     <section class="mx-auto max-w-6xl px-4 py-14">
       <div class="grid lg:grid-cols-3 gap-6">
         <div class="lg:col-span-2">
-          <h2 class="text-2xl font-semibold">Mój sposób działania</h2>
-          <p class="mt-4 text-neutral-300 leading-relaxed">
+          <h2 class="text-2xl font-semibold" data-i18n="about_title">Mój sposób działania</h2>
+          <p class="mt-4 text-neutral-300 leading-relaxed" data-i18n="about_body">
             Łączę dyscyplinę finansową (ROI, struktury kosztów) z praktyką Lean i inżynierią produkcji. Potrafię łączyć zespoły
             międzyfunkcyjne, zarządzać roadmapą i upraszczać złożoność do decyzyjnych metryk. Pracuję zwinnie (JIRA),
             wykorzystuję AI do analizy danych i priorytetyzacji backlogu.
           </p>
         </div>
         <div class="rounded-2xl border border-orange-500/20 p-5 bg-orange-500/5">
-          <div class="text-sm text-orange-300">Snapshot</div>
-          <ul class="mt-3 space-y-2 text-sm text-neutral-300 list-disc list-inside">
-            <li>Claim rate ↓, rating ↑ dzięki działaniom poprawy jakości.</li>
-            <li>Operowanie portfelem 6000+ SKU w e-commerce.</li>
-            <li>Wdrożenia R&amp;D: prototyp → produkcja → rynek.</li>
+          <div class="text-sm text-orange-300" data-i18n="snapshot_title">Snapshot</div>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-300 list-disc list-inside" id="snapshotList">
+            <li data-i18n="snap_1">Claim rate ↓, rating ↑ dzięki działaniom poprawy jakości.</li>
+            <li data-i18n="snap_2">Operowanie portfelem 6000+ SKU w e‑commerce.</li>
+            <li data-i18n="snap_3">Wdrożenia R&amp;D: prototyp → produkcja → rynek.</li>
           </ul>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold mt-12">Kompetencje kluczowe</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200">Zarządzanie cyklem życia produktu (PLM)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200">Przywództwo projektowe &amp; R&amp;D</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200">Strategia e-commerce (6000+ SKU)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200">Redukcja reklamacji / satysfakcja klienta</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200">FMEA, Lean, Kaizen, 5S, ISO 9001</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200">Planowanie finansowe &amp; ROI</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200">Budowanie zespołów (mocne strony)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200">Procesy &amp; workflow (JIRA)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200">CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP</div>
+      <h2 class="text-2xl font-semibold mt-12" data-i18n="skills_title">Kompetencje kluczowe</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-4" id="skillsGrid">
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_1">Zarządzanie cyklem życia produktu (PLM)</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_2">Przywództwo projektowe &amp; R&amp;D</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_3">Strategia e-commerce (6000+ SKU)</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_4">Redukcja reklamacji / satysfakcja klienta</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_5">FMEA, Lean, Kaizen, 5S, ISO 9001</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_6">Planowanie finansowe &amp; ROI</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_7">Budowanie zespołów (mocne strony)</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_8">Procesy &amp; workflow (JIRA)</div>
+        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_9">CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP</div>
       </div>
     </section>
 
     <!-- Clients -->
     <section class="mx-auto max-w-6xl px-4 py-14">
-      <h2 class="text-2xl font-semibold">Klienci, których obsługiwałem</h2>
+      <h2 class="text-2xl font-semibold" data-i18n="clients_title">Klienci, których obsługiwałem</h2>
       <ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300">
         <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">Expondo — Senior Quality Engineer (2021–2025)</li>
         <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3">LUG Light Factory — Project Lead R&amp;D (2018–2022)</li>
@@ -126,12 +133,12 @@
     <!-- Contact -->
     <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
       <div class="rounded-3xl border border-fuchsia-500/25 bg-gradient-to-br from-fuchsia-600/10 via-purple-700/10 to-orange-500/10 p-6 md:p-10">
-        <h2 class="text-2xl font-semibold">Porozmawiajmy o Twoim produkcie</h2>
-        <p class="mt-2 text-neutral-300 max-w-prose">Jestem otwarty na umowę o pracę i B2B – zależnie od modelu współpracy.</p>
+        <h2 class="text-2xl font-semibold" data-i18n="contact_title">Porozmawiajmy o Twoim produkcie</h2>
+        <!-- usunięto zdanie o umowie o pracę i B2B na prośbę użytkownika -->
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="mailto:mccoreproduct@gmail.com" class="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400">✉️ Napisz</a>
-          <a href="tel:+48500497680" class="inline-flex items-center gap-2 rounded-xl border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10">📞 Zadzwoń</a>
-          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-purple-500/30 px-4 py-2 hover:bg-purple-500/10">in LinkedIn</a>
+          <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400" data-i18n="cta_email">✉️ Napisz</a>
+          <a href="tel:+48500497680" class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10" data-i18n="cta_call">📞 Zadzwoń</a>
+          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="btn border border-purple-500/30 px-4 py-2 hover:bg-purple-500/10" data-i18n="cta_linkedin">in LinkedIn</a>
         </div>
       </div>
     </section>
@@ -139,11 +146,11 @@
     <!-- Footer -->
     <footer class="border-t border-purple-500/20">
       <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-neutral-400 flex flex-wrap items-center justify-between gap-3">
-        <div>© <span id="year"></span> MC‑Core Product — Maciej Cieślak</div>
+        <div>© <span id="year"></span> MC-Core Product — Maciej Cieślak</div>
         <div class="flex items-center gap-4">
           <a class="hover:text-white" href="mailto:mccoreproduct@gmail.com">✉️ Email</a>
           <a class="hover:text-white" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer">in LinkedIn</a>
-          <span class="hover:text-white">📍 Zielona Góra, Polska</span>
+          <span class="hover:text-white">📍 <span data-i18n="footer_location">Zielona Góra, Polska</span></span>
         </div>
       </div>
     </footer>
@@ -178,7 +185,7 @@
         imgEl.onerror = () => { imgEl.src = FALLBACK_LOGO; };
       }
 
-      // Theme toggle + persist in localStorage
+      // Theme toggle + persist
       (function initTheme(){
         try {
           const saved = localStorage.getItem('mc_theme');
@@ -191,6 +198,97 @@
             localStorage.setItem('mc_theme', nowDark ? 'dark' : 'light');
           });
         } catch(e) {}
+      })();
+
+      // i18n
+      const I18N = {
+        pl: {
+          header_write: "✉️ Napisz",
+          header_linkedin: "in LinkedIn",
+          hero_intro: "Lider projektów i strateg biznesu z 23-letnim doświadczeniem w pełnym cyklu życia produktu – od koncepcji, przez R&D i produkcję, po komercjalizację i skalowanie na rynku.",
+          hero_contact: "✉️ Skontaktuj się",
+          hero_call: "📞 Zadzwoń",
+          stat_experience_label: "lat doświadczenia",
+          stat_sku_label: "SKU w portfelu",
+          stat_industries_label: "Branże",
+          about_title: "Mój sposób działania",
+          about_body: "Łączę dyscyplinę finansową (ROI, struktury kosztów) z praktyką Lean i inżynierią produkcji. Potrafię łączyć zespoły międzyfunkcyjne, zarządzać roadmapą i upraszczać złożoność do decyzyjnych metryk. Pracuję zwinnie (JIRA), wykorzystuję AI do analizy danych i priorytetyzacji backlogu.",
+          snapshot_title: "Snapshot",
+          snap_1: "Claim rate ↓, rating ↑ dzięki działaniom poprawy jakości.",
+          snap_2: "Operowanie portfelem 6000+ SKU w e‑commerce.",
+          snap_3: "Wdrożenia R&D: prototyp → produkcja → rynek.",
+          skills_title: "Kompetencje kluczowe",
+          sk_1: "Zarządzanie cyklem życia produktu (PLM)",
+          sk_2: "Przywództwo projektowe & R&D",
+          sk_3: "Strategia e-commerce (6000+ SKU)",
+          sk_4: "Redukcja reklamacji / satysfakcja klienta",
+          sk_5: "FMEA, Lean, Kaizen, 5S, ISO 9001",
+          sk_6: "Planowanie finansowe & ROI",
+          sk_7: "Budowanie zespołów (mocne strony)",
+          sk_8: "Procesy & workflow (JIRA)",
+          sk_9: "CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP",
+          clients_title: "Klienci, których obsługiwałem",
+          contact_title: "Porozmawiajmy o Twoim produkcie",
+          cta_email: "✉️ Napisz",
+          cta_call: "📞 Zadzwoń",
+          cta_linkedin: "in LinkedIn",
+          footer_location: "Zielona Góra, Polska"
+        },
+        en: {
+          header_write: "✉️ Email me",
+          header_linkedin: "in LinkedIn",
+          hero_intro: "Project leader and business strategist with 23 years of experience across the full product lifecycle — from concept through R&D and production to commercialization and scaling.",
+          hero_contact: "✉️ Get in touch",
+          hero_call: "📞 Call",
+          stat_experience_label: "years experience",
+          stat_sku_label: "SKUs in portfolio",
+          stat_industries_label: "Industries",
+          about_title: "How I operate",
+          about_body: "I combine financial discipline (ROI, cost structures) with Lean practice and manufacturing engineering. I connect cross‑functional teams, manage the roadmap, and simplify complexity into decision‑making metrics. I work in agile tools (JIRA) and use AI for analysis and prioritization.",
+          snapshot_title: "Snapshot",
+          snap_1: "Claim rate ↓, rating ↑ thanks to quality improvements.",
+          snap_2: "Managing a 6000+ SKU portfolio in e‑commerce.",
+          snap_3: "R&D implementations: prototype → production → market.",
+          skills_title: "Core competencies",
+          sk_1: "Product lifecycle management (PLM)",
+          sk_2: "Project leadership & R&D",
+          sk_3: "E‑commerce strategy (6000+ SKUs)",
+          sk_4: "Claims reduction / customer satisfaction",
+          sk_5: "FMEA, Lean, Kaizen, 5S, ISO 9001",
+          sk_6: "Financial planning & ROI",
+          sk_7: "Team building (strengths‑based)",
+          sk_8: "Processes & workflow (JIRA)",
+          sk_9: "CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP",
+          clients_title: "Clients I have served",
+          contact_title: "Let's talk about your product",
+          cta_email: "✉️ Email me",
+          cta_call: "📞 Call",
+          cta_linkedin: "in LinkedIn",
+          footer_location: "Zielona Góra, Poland"
+        }
+      };
+
+      function applyI18n(lang) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if (I18N[lang] && I18N[lang][key]) el.textContent = I18N[lang][key];
+        });
+      }
+
+      // Language toggle + persist
+      (function initLang(){
+        const saved = localStorage.getItem("mc_lang") || "pl";
+        applyI18n(saved);
+        const btn = document.getElementById("langToggle");
+        btn.textContent = saved === "pl" ? "🇵🇱 PL" : "🇬🇧 EN";
+        btn.addEventListener("click", () => {
+          const cur = document.documentElement.lang || "pl";
+          const next = cur === "pl" ? "en" : "pl";
+          applyI18n(next);
+          localStorage.setItem("mc_lang", next);
+          btn.textContent = next === "pl" ? "🇵🇱 PL" : "🇬🇧 EN";
+        });
       })();
 
       // Set dynamic bits

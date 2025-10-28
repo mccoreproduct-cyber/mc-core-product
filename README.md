@@ -1,9 +1,9 @@
 # MC-Core Product — Maciej Cieślak
 
-Oficjalna strona portfolio prezentująca doświadczenie, kompetencje i klientów obsługiwanych przez Macieja Cieślaka.  
-Strona działa w ciemnym motywie z akcentami **pomarańczy** i **fioletu**, symbolizującymi energię oraz innowacyjność.
+Oficjalna strona portfolio prezentująca kompetencje i klientów obsługiwanych przez Macieja Cieślaka.  
+Strona działa w ciemnym motywie z akcentami **pomarańczy** i **fioletu**.
 
-🔗 **Live:** [https://twojanazwa.github.io/mc-core-product](https://twojanazwa.github.io/mc-core-product)
+🔗 **Live:** https://mccoreproduct-cyber.github.io/mc-core-product/
 
 ---
 
@@ -11,24 +11,39 @@ Strona działa w ciemnym motywie z akcentami **pomarańczy** i **fioletu**, symb
 
 ```
 mc-core-product/
-├── index.html       # Główna strona
-├── logo.png         # Logo MC-Core Product (opcjonalne)
+├── index.html       # Główna strona (statyczny plik, działa bez Reacta)
+├── logo.png         # Opcjonalne: Twoje logo (jeśli używasz własnego pliku)
 └── README.md        # Ten plik
 ```
 
+> Jeśli masz logo o innej nazwie (np. `logo MC core produkt.png`), możesz:
+> - zmienić nazwę na `logo.png` i zostawić obok `index.html`, **albo**
+> - dodać w `index.html` przed zamknięciem `</body>` skrypt:
+>   ```html
+>   <script>window.__MC_LOGO_URL = "./logo%20MC%20core%20produkt.png";</script>
+>   ```
+
 ---
 
-## 🚀 Publikacja na GitHub Pages
+## 🚀 Publikacja na GitHub Pages (to repo)
 
-1. Przejdź do repozytorium na GitHub.
-2. Kliknij **Add file → Upload files**.
-3. Przeciągnij `index.html`, `logo.png` i `README.md`.
-4. Zapisz zmiany (**Commit changes**).
-5. W zakładce **Settings → Pages** ustaw:
+1. Wejdź: **Settings → Pages**.  
+2. W sekcji **Build and deployment** ustaw:
    - **Source:** `Deploy from a branch`
    - **Branch:** `main`
    - **Folder:** `/ (root)`
-6. Kliknij **Save** – po chwili strona będzie dostępna online.
+3. Kliknij **Save**.  
+4. Po 30–90 s strona będzie dostępna pod adresem:  
+   **https://mccoreproduct-cyber.github.io/mc-core-product/**
+
+---
+
+## ♻️ Aktualizacja strony
+
+1. Wejdź do repo → **Add file → Upload files**.  
+2. Przeciągnij nowy `index.html` (i ewentualnie `logo.png`).  
+3. **Commit changes** – GitHub Pages zaktualizuje stronę w ~1–2 minuty.
+   - Jeśli zmiana nie jest widoczna, odśwież stronę z `Ctrl+F5` lub wyczyść cache.
 
 ---
 
@@ -40,5 +55,4 @@ mc-core-product/
 
 ---
 
-© 2025 **MC-Core Product — Maciej Cieślak**  
-Wszelkie prawa zastrzeżone.
+© 2025 **MC-Core Product — Maciej Cieślak**
