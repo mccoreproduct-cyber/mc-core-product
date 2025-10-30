@@ -1,31 +1,30 @@
-<!doctype html>
-<html lang="pl" class="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MC-Core Product — Maciej Cieślak</title>
-    <meta name="description" content="Portfolio MC-Core Product — Maciej Cieślak. Product & R&D leadership.">
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<!DOCTYPE html>
 
-    <!-- SEO / OpenGraph -->
-    <link rel="canonical" href="https://mccoreproduct-cyber.github.io/mc-core-product/" />
-    <meta name="robots" content="index,follow">
-    <meta name="theme-color" content="#0a0a0a" />
-    <link rel="icon" type="image/png" href="favicon.png" sizes="256x256" />
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pl_PL">
-    <meta property="og:title" content="MC-Core Product — Maciej Cieślak">
-    <meta property="og:description" content="Project leadership • R&D • E‑commerce. 23 years of experience across the full product lifecycle.">
-    <meta property="og:url" content="https://mccoreproduct-cyber.github.io/mc-core-product/">
-    <meta property="og:image" content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MC-Core Product — Maciej Cieślak">
-    <meta name="twitter:description" content="Project leadership • R&D • E‑commerce. 23 years of experience across the full product lifecycle.">
-    <meta name="twitter:image" content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png">
-
-    <!-- JSON-LD Schema.org -->
-    <script type="application/ld+json">
+<html class="dark" lang="pl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>MC-Core Product — Maciej Cieślak</title>
+<meta content="Portfolio MC-Core Product — Maciej Cieślak. Product &amp; R&amp;D leadership." name="description"/>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- SEO / OpenGraph -->
+<link href="https://mccoreproduct-cyber.github.io/mc-core-product/" rel="canonical"/>
+<meta content="index,follow" name="robots"/>
+<meta content="#0a0a0a" name="theme-color">
+<link href="favicon.png" rel="icon" sizes="256x256" type="image/png"/>
+<meta content="website" property="og:type"/>
+<meta content="pl_PL" property="og:locale"/>
+<meta content="MC-Core Product — Maciej Cieślak" property="og:title"/>
+<meta content="Project leadership • R&amp;D • E‑commerce. 23 years of experience across the full product lifecycle." property="og:description"/>
+<meta content="https://mccoreproduct-cyber.github.io/mc-core-product/" property="og:url"/>
+<meta content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="MC-Core Product — Maciej Cieślak" name="twitter:title"/>
+<meta content="Project leadership • R&amp;D • E‑commerce. 23 years of experience across the full product lifecycle." name="twitter:description"/>
+<meta content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png" name="twitter:image"/>
+<!-- JSON-LD Schema.org -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -37,11 +36,10 @@
       "sameAs": ["https://www.linkedin.com/in/maciej-cieslak-911bbb94"]
     }
     </script>
-
-    <script>
+<script>
       tailwind.config = { theme: { extend: {} } };
     </script>
-    <style>
+<style>
       * { transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
       @keyframes pulseGlow {
         0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(249,115,22,0.5)); }
@@ -98,364 +96,358 @@
       @media (prefers-reduced-motion: reduce) {
         .cta-glow { transition: none !important; }
       }
-</style>
-  </head>
-  <body class="min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden">
-    <!-- Header -->
-    <header class="sticky top-0 z-40 backdrop-blur border-b border-fuchsia-500/20 bg-neutral-950/70">
-      <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <img id="logoSmall" alt="MC Core Product Logo" class="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover ring-2 ring-orange-500/40 logo-pulse" />
-          <span class="font-semibold tracking-tight text-lg">MC-Core Product</span>
-        </div>
-        <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
-          <a href="#about" class="hover:text-white" data-i18n="nav_about">O mnie</a>
-          <a href="#skills" class="hover:text-white" data-i18n="nav_skills">Kompetencje</a>
-          <a href="#services" class="hover:text-white" data-i18n="nav_services">Usługi</a>
-          <a href="#cases" class="hover:text-white" data-i18n="nav_cases">Case studies</a>
-          <a href="#testimonials" class="hover:text-white" data-i18n="nav_testimonials">Referencje</a>
-          <a href="#clients" class="hover:text-white" data-i18n="nav_clients">Klienci</a>
-          <a href="#contact" class="hover:text-white" data-i18n="nav_contact">Kontakt</a>
-        </nav>
-        <div class="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4">
-          <button id="mobileMenuBtn" class="md:hidden btn border border-purple-500/40 hover:bg-purple-500/10" aria-label="Menu">☰ Menu</button>
-          <button id="langToggle" class="btn border border-purple-500/40 hover:bg-purple-500/10" title="Language / Język" aria-label="Language toggle">🇵🇱 PL</button>
-          <button id="themeToggle" class="btn border border-fuchsia-500/30 hover:bg-fuchsia-500/10" title="Przełącz motyw" aria-label="Przełącz tryb motywu">🌓</button>
-          <a href="mailto:mccoreproduct@gmail.com" class="btn border border-orange-500/30 hover:bg-orange-500/10 text-sm min-h-[44px] min-w-[44px]" data-i18n="header_write">✉️ Napisz</a>
-          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="btn bg-gradient-to-r from-fuchsia-500 to-orange-500 text-black text-sm hover:opacity-90 min-h-[44px] min-w-[44px]" data-i18n="header_linkedin">in LinkedIn</a>
-        </div>
-      </div>
-    </header>
-    <div id="mobileNav" class="md:hidden px-4 pb-3 hidden">
-      <ul class="flex flex-col gap-2 text-sm text-neutral-300">
-        <li><a class="hover:text-white" href="#about" data-i18n="nav_about">O mnie</a></li>
-        <li><a class="hover:text-white" href="#skills" data-i18n="nav_skills">Kompetencje</a></li>
-        <li><a class="hover:text-white" href="#services" data-i18n="nav_services">Usługi</a></li>
-        <li><a class="hover:text-white" href="#cases" data-i18n="nav_cases">Case studies</a></li>
-        <li><a class="hover:text-white" href="#testimonials" data-i18n="nav_testimonials">Referencje</a></li>
-        <li><a class="hover:text-white" href="#clients" data-i18n="nav_clients">Klienci</a></li>
-        <li><a class="hover:text-white" href="#contact" data-i18n="nav_contact">Kontakt</a></li>
-      </ul>
-    </div>
 
-    <!-- Hero -->
-    <section class="relative overflow-hidden hero-gradient">
-      <div class="hero-aura"></div>
-      <div class="mx-auto max-w-6xl px-4 py-10 sm:py-14 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            <span class="block">Maciej Cieślak</span>
-            <span class="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">MC‑Core Product</span>
-          </h1>
-          <p id="heroIntro" class="mt-5 text-neutral-300 leading-relaxed max-w-prose" data-i18n="hero_intro">
+      /* Small profile avatar in hero (top-right of text column) */
+      @keyframes avatarBreath { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2px);} }
+      .avatar-glow { animation: avatarBreath 4.5s ease-in-out infinite;
+        filter: drop-shadow(0 0 8px rgba(168,85,247,.25)) drop-shadow(0 0 10px rgba(249,115,22,.2)); }
+      @media (max-width: 767px) { #profileAvatar { display:none; } }
+</style>
+</meta></head>
+<body class="min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-40 backdrop-blur border-b border-fuchsia-500/20 bg-neutral-950/70">
+<div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="MC Core Product Logo" class="h-8 w-8 md:h-10 md:w-10 rounded-full object-cover ring-2 ring-orange-500/40 logo-pulse" id="logoSmall"/>
+<span class="font-semibold tracking-tight text-lg">MC-Core Product</span>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
+<a class="hover:text-white" data-i18n="nav_about" href="#about">O mnie</a>
+<a class="hover:text-white" data-i18n="nav_skills" href="#skills">Kompetencje</a>
+<a class="hover:text-white" data-i18n="nav_services" href="#services">Usługi</a>
+<a class="hover:text-white" data-i18n="nav_cases" href="#cases">Case studies</a>
+<a class="hover:text-white" data-i18n="nav_testimonials" href="#testimonials">Referencje</a>
+<a class="hover:text-white" data-i18n="nav_clients" href="#clients">Klienci</a>
+<a class="hover:text-white" data-i18n="nav_contact" href="#contact">Kontakt</a>
+</nav>
+<div class="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4">
+<button aria-label="Menu" class="md:hidden btn border border-purple-500/40 hover:bg-purple-500/10" id="mobileMenuBtn">☰ Menu</button>
+<button aria-label="Language toggle" class="btn border border-purple-500/40 hover:bg-purple-500/10" id="langToggle" title="Language / Język">🇵🇱 PL</button>
+<button aria-label="Przełącz tryb motywu" class="btn border border-fuchsia-500/30 hover:bg-fuchsia-500/10" id="themeToggle" title="Przełącz motyw">🌓</button>
+<a class="btn border border-orange-500/30 hover:bg-orange-500/10 text-sm min-h-[44px] min-w-[44px]" data-i18n="header_write" href="mailto:mccoreproduct@gmail.com">✉️ Napisz</a>
+<a class="btn bg-gradient-to-r from-fuchsia-500 to-orange-500 text-black text-sm hover:opacity-90 min-h-[44px] min-w-[44px]" data-i18n="header_linkedin" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" rel="noreferrer" target="_blank">in LinkedIn</a>
+</div>
+</div>
+</header>
+<div class="md:hidden px-4 pb-3 hidden" id="mobileNav">
+<ul class="flex flex-col gap-2 text-sm text-neutral-300">
+<li><a class="hover:text-white" data-i18n="nav_about" href="#about">O mnie</a></li>
+<li><a class="hover:text-white" data-i18n="nav_skills" href="#skills">Kompetencje</a></li>
+<li><a class="hover:text-white" data-i18n="nav_services" href="#services">Usługi</a></li>
+<li><a class="hover:text-white" data-i18n="nav_cases" href="#cases">Case studies</a></li>
+<li><a class="hover:text-white" data-i18n="nav_testimonials" href="#testimonials">Referencje</a></li>
+<li><a class="hover:text-white" data-i18n="nav_clients" href="#clients">Klienci</a></li>
+<li><a class="hover:text-white" data-i18n="nav_contact" href="#contact">Kontakt</a></li>
+</ul>
+</div>
+<!-- Hero -->
+<section class="relative overflow-hidden hero-gradient">
+<div class="hero-aura"></div>
+<div class="mx-auto max-w-6xl px-4 py-10 sm:py-14 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+<div class="relative">
+<h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+<span class="block">Maciej Cieślak</span>
+<span class="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">MC‑Core Product</span>
+</h1><img alt="Maciej Cieślak — profil" class="hidden md:block absolute right-0 -top-4 h-20 w-20 rounded-full object-cover ring-2 ring-purple-400/40 shadow-xl avatar-glow" id="profileAvatar" src="./maciej_cieslak.jpg"/>
+<p class="mt-5 text-neutral-300 leading-relaxed max-w-prose" data-i18n="hero_intro" id="heroIntro">
             Lider projektów i strateg biznesu z 23-letnim doświadczeniem w pełnym cyklu życia produktu — od koncepcji,
             przez R&amp;D i produkcję, po komercjalizację i skalowanie na rynku.
           </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="hero_contact">✉️ Skontaktuj się</a>
-            <a href="tel:+48500497680" class="btn border border-fuchsia-500/40 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="hero_call">📞 Zadzwoń</a>
-          </div>
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-              <div class="text-2xl font-bold text-white">23</div>
-              <div class="text-sm text-neutral-300" data-i18n="stat_experience_label">lat doświadczenia</div>
-            </div>
-            <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-              <div class="text-2xl font-bold text-white">6000+</div>
-              <div class="text-sm text-neutral-300" data-i18n="stat_sku_label">SKU w portfelu</div>
-            </div>
-            <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-              <div class="text-2xl font-bold text-white">R&amp;D • E‑com • Produkcja</div>
-              <div class="text-sm text-neutral-300" data-i18n="stat_industries_label">Branże</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Visuals: logo + photo -->
-        <div class="flex items-center justify-center">
-          <div class="relative flex flex-col sm:flex-row items-center justify-center gap-5">
-            <!-- Pulsing logo -->
-            <div class="relative">
-              <img id="logoHero" alt="MC Core Product Logo" class="h-28 w-28 md:h-40 md:w-40 rounded-full shadow-xl ring-2 ring-fuchsia-500/40 object-cover logo-pulse" />
-              <div class="absolute inset-0 -z-10 blur-3xl opacity-60" style="background: radial-gradient(closest-side, rgba(217,70,239,.5), rgba(249,115,22,.35), transparent)"></div>
-            </div>
-            <!-- User photo -->
-            <div class="relative photo-frame ring-2 ring-orange-500/30">
-              <img src="./maciej_cieslak.jpg" alt="Maciej Cieślak" class="photo-pulse max-w-[260px] md:max-w-[320px] object-contain" />
-              <div class="absolute inset-0 -z-10 blur-3xl opacity-50" style="background: radial-gradient(closest-side, rgba(217,70,239,.35), rgba(249,115,22,.25), transparent)"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About & Snapshot & Skills -->
-    <section id="about" class="mx-auto max-w-6xl px-4 py-14">
-      <div class="grid lg:grid-cols-3 gap-6">
-        <div class="lg:col-span-2">
-          <h2 class="text-2xl font-semibold" data-i18n="about_title">Mój sposób działania</h2>
-          <p class="mt-4 text-neutral-300 leading-relaxed" data-i18n="about_body">
+<div class="mt-6 flex flex-wrap gap-3">
+<a class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="hero_contact" href="mailto:mccoreproduct@gmail.com">✉️ Skontaktuj się</a>
+<a class="btn border border-fuchsia-500/40 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="hero_call" href="tel:+48500497680">📞 Zadzwoń</a>
+</div>
+<div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
+<div class="text-2xl font-bold text-white">23</div>
+<div class="text-sm text-neutral-300" data-i18n="stat_experience_label">lat doświadczenia</div>
+</div>
+<div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
+<div class="text-2xl font-bold text-white">6000+</div>
+<div class="text-sm text-neutral-300" data-i18n="stat_sku_label">SKU w portfelu</div>
+</div>
+<div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
+<div class="text-2xl font-bold text-white">R&amp;D • E‑com • Produkcja</div>
+<div class="text-sm text-neutral-300" data-i18n="stat_industries_label">Branże</div>
+</div>
+</div>
+</div>
+<!-- Visuals: logo + photo -->
+<div class="flex items-center justify-center">
+<div class="relative flex flex-col sm:flex-row items-center justify-center gap-5">
+<!-- Pulsing logo -->
+<div class="relative">
+<img alt="MC Core Product Logo" class="h-28 w-28 md:h-40 md:w-40 rounded-full shadow-xl ring-2 ring-fuchsia-500/40 object-cover logo-pulse" id="logoHero"/>
+<div class="absolute inset-0 -z-10 blur-3xl opacity-60" style="background: radial-gradient(closest-side, rgba(217,70,239,.5), rgba(249,115,22,.35), transparent)"></div>
+</div>
+<!-- User photo -->
+<div class="relative photo-frame ring-2 ring-orange-500/30">
+<img alt="Maciej Cieślak" class="photo-pulse max-w-[260px] md:max-w-[320px] object-contain" src="./maciej_cieslak.jpg"/>
+<div class="absolute inset-0 -z-10 blur-3xl opacity-50" style="background: radial-gradient(closest-side, rgba(217,70,239,.35), rgba(249,115,22,.25), transparent)"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About & Snapshot & Skills -->
+<section class="mx-auto max-w-6xl px-4 py-14" id="about">
+<div class="grid lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2">
+<h2 class="text-2xl font-semibold" data-i18n="about_title">Mój sposób działania</h2>
+<p class="mt-4 text-neutral-300 leading-relaxed" data-i18n="about_body">
             Łączę dyscyplinę finansową (ROI, struktury kosztów) z praktyką Lean i inżynierią produkcji. Potrafię łączyć zespoły
             międzyfunkcyjne, zarządzać roadmapą i upraszczać złożoność do decyzyjnych metryk. Pracuję zwinnie (JIRA),
             wykorzystuję AI do analizy danych i priorytetyzacji backlogu.
           </p>
-        </div>
-        <!-- Snapshot as graphic cards -->
-        <div>
-          <div class="text-sm text-orange-300" data-i18n="snapshot_title">Snapshot</div>
-          <div class="mt-3 grid gap-3">
-            <!-- Card 1 -->
-            <div class="card p-4 flex gap-3 items-start">
-              <svg class="icon flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path class="anim-draw" d="M3 3v6h6" stroke="url(#g1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="anim-draw" d="M21 21v-6h-6" stroke="url(#g2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="anim-float" d="M3 9c3-3 6-6 9-6s6 3 9 6" stroke="url(#g1)" stroke-width="2" opacity=".6"/>
-                <defs>
-                  <linearGradient id="g1" x1="0" y1="0" x2="24" y2="24">
-                    <stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/>
-                  </linearGradient>
-                  <linearGradient id="g2" x1="24" y1="24" x2="0" y2="0">
-                    <stop stop-color="#F97316"/><stop offset="1" stop-color="#A855F7"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div>
-                <div class="font-medium text-white" data-i18n="snap_card1_title">Claim rate ↓ / Rating ↑</div>
-                <p class="text-sm text-neutral-300" data-i18n="snap_card1_desc">Program poprawy jakości: redukcja reklamacji, wzrost ocen produktu.</p>
-              </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="card p-4 flex gap-3 items-start">
-              <svg class="icon flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <rect class="anim-pulse-soft" x="3" y="3" width="7" height="7" rx="2" stroke="url(#g3)" stroke-width="2"/>
-                <rect class="anim-pulse-soft" x="14" y="3" width="7" height="7" rx="2" stroke="url(#g3)" stroke-width="2"/>
-                <rect class="anim-pulse-soft" x="3" y="14" width="7" height="7" rx="2" stroke="url(#g3)" stroke-width="2"/>
-                <rect class="anim-pulse-soft" x="14" y="14" width="7" height="7" rx="2" stroke="url(#g3)" stroke-width="2"/>
-                <defs>
-                  <linearGradient id="g3" x1="0" y1="0" x2="24" y2="24">
-                    <stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div>
-                <div class="font-medium text-white" data-i18n="snap_card2_title">6000+ SKU</div>
-                <p class="text-sm text-neutral-300" data-i18n="snap_card2_desc">Zarządzanie szerokim portfelem produktów w e‑commerce.</p>
-              </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="card p-4 flex gap-3 items-start">
-              <svg class="icon flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path class="anim-rotate" d="M12 2v4M12 18v4M4 12H2m20 0h-2M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" stroke="url(#g4)" stroke-width="2" stroke-linecap="round"/>
-                <circle class="anim-pulse-soft" cx="12" cy="12" r="3.5" stroke="url(#g4)" stroke-width="2"/>
-                <defs>
-                  <linearGradient id="g4" x1="0" y1="0" x2="24" y2="24">
-                    <stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div>
-                <div class="font-medium text-white" data-i18n="snap_card3_title">R&amp;D → Rynek</div>
-                <p class="text-sm text-neutral-300" data-i18n="snap_card3_desc">Pełny cykl: prototyp, testy, produkcja, komercjalizacja.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h2 id="skills" class="text-2xl font-semibold mt-12" data-i18n="skills_title">Kompetencje kluczowe</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-4" id="skillsGrid">
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_1">Zarządzanie cyklem życia produktu (PLM)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_2">Przywództwo projektowe &amp; R&amp;D</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_3">Strategia e-commerce (6000+ SKU)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_4">Redukcja reklamacji / satysfakcja klienta</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_5">FMEA, Lean, Kaizen, 5S, ISO 9001</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_6">Planowanie finansowe &amp; ROI</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_7">Budowanie zespołów (mocne strony)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_8">Procesy &amp; workflow (JIRA)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_9">CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP</div>
-      </div>
-    </section>
-
-    <!-- Services / Offer -->
-    <section id="services" class="mx-auto max-w-6xl px-4 py-14">
-      <h2 class="text-2xl font-semibold" data-i18n="services_title">Usługi / Oferta</h2>
-      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
-          <div class="font-semibold text-white" data-i18n="svc_quality_title">Audyt jakości</div>
-          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_quality_desc">Analiza claim rate, NPS/CSAT, szybkie działania naprawcze i roadmapa jakości.</p>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
-          <div class="font-semibold text-white" data-i18n="svc_plm_title">Wdrożenie PLM</div>
-          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_plm_desc">Procesy i narzędzia PLM: od koncepcji do EOL. Standaryzacja danych produktu.</p>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
-          <div class="font-semibold text-white" data-i18n="svc_cost_title">Optymalizacja kosztów</div>
-          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_cost_desc">Analiza BOM/TCO, sourcing, negocjacje, redesign pod koszty bez straty jakości.</p>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
-          <div class="font-semibold text-white" data-i18n="svc_rd_title">Rozwój R&amp;D</div>
-          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_rd_desc">Szybkie prototypowanie, testy, transfer do produkcji. Harmonogram i KPI.</p>
-        </div>
-      </div>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="services_cta_email">✉️ Zamów konsultację</a>
-        <a href="tel:+48500497680" class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="services_cta_call">📞 Umów rozmowę</a>
-      </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section id="cases" class="mx-auto max-w-6xl px-4 py-14">
-      <h2 class="text-2xl font-semibold" data-i18n="cases_title">Case studies</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
-          <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" aria-hidden="true">
-            <defs><linearGradient id="cs1" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
-            <path d="M4 12l4 4 12-12" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M3 21h18" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round" opacity=".6"/>
-          </svg>
-          <div class="mt-3 font-semibold text-white" data-i18n="case1_title">Jakość: mniej reklamacji, lepsze ratingi</div>
-          <p class="mt-2 text-sm text-neutral-300" data-i18n="case1_desc">Wdrożenie audytów, quick-wins i planu jakości: stabilizacja parametrów, standaryzacja testów.</p>
-          <div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case1_kpi">-32% claim rate</div>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
-          <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" aria-hidden="true">
-            <defs><linearGradient id="cs2" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
-            <path d="M12 3v18M7 7h7a3 3 0 110 6H8a3 3 0 100 6h8" stroke="url(#cs2)" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <div class="mt-3 font-semibold text-white" data-i18n="case2_title">Koszty: TCO/BOM i sourcing</div>
-          <p class="mt-2 text-sm text-neutral-300" data-i18n="case2_desc">Redesign pod koszty, alternatywni dostawcy, negocjacje i optymalizacja logistyki.</p>
-          <div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case2_kpi">-18% koszt jednostkowy</div>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
-          <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" aria-hidden="true">
-            <defs><linearGradient id="cs3" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
-            <path d="M3 13h6M3 17h10M3 9h14" stroke="url(#cs3)" stroke-width="2" stroke-linecap="round"/>
-            <path d="M21 12l-4 4v-8l4 4z" fill="url(#cs3)"/>
-          </svg>
-          <div class="mt-3 font-semibold text-white" data-i18n="case3_title">Czas do rynku: prototyp → produkcja</div>
-          <p class="mt-2 text-sm text-neutral-300" data-i18n="case3_desc">Warsztaty z R&D, sprinty decyzyjne, DFM/DFA, szybkie testy i transfer do produkcji.</p>
-          <div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case3_kpi">-41% time‑to‑market</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="mx-auto max-w-6xl px-4 py-14">
-      <h2 class="text-2xl font-semibold" data-i18n="testi_title">Referencje / Testimonials</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-center gap-3">
-            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">KS</div>
-            <div>
-              <div class="font-medium text-white" data-i18n="t1_name">Kirill Singer</div>
-              <div class="text-xs text-neutral-300" data-i18n="t1_role">Web Design & Graphic Design — współpraca w jednym zespole</div>
-            </div>
-          </div>
-          <p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t1_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Maciej wnosi do zespołu połączenie wiedzy inżynierskiej i dojrzałego product managementu. Świetnie identyfikuje problemy jakościowe i potrafi je szybko rozwiązać, jasno komunikując cele między zespołami. Polecam — silny gracz zespołowy i skuteczny lider jakości.</p>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-center gap-3">
-            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">SD</div>
-            <div>
-              <div class="font-medium text-white" data-i18n="t2_name">Simon de Groot</div>
-              <div class="text-xs text-neutral-300" data-i18n="t2_role">Head of Product Development — współpraca między zespołami</div>
-            </div>
-          </div>
-          <p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t2_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Pracowałem z Maciejem przy wielu projektach. Ogarnia cały cykl życia produktu: od koncepcji, przez R&D i produkcję, po launch. Dostarcza wyniki pod presją i buduje zmotywowane zespoły. Orientacja na klienta przy zachowaniu dyscypliny kosztowej.</p>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-center gap-3">
-            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">WP</div>
-            <div>
-              <div class="font-medium text-white" data-i18n="t3_name">Włodzimierz Parafiński</div>
-              <div class="text-xs text-neutral-300" data-i18n="t3_role">Technik serwisu — klient Expondo</div>
-            </div>
-          </div>
-          <p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t3_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Współpraca z Maciejem to konkret i szybkie działania. Jego interwencje u producenta przekładały się na realne usprawnienia i jakość. Z tych, z którymi chce się pracować także po godzinach.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Clients -->
-    <section id="clients" class="mx-auto max-w-6xl px-4 py-14">
-      <h2 class="text-2xl font-semibold" data-i18n="clients_title">Klienci, którzy mi zaufali</h2>
-      <ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300">
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./expondo.png" alt="Expondo" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_expondo_title">Expondo — Senior Quality Engineer (2021–2025)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_expondo_desc">Europejski lider e-commerce B2B i B2C w sektorze urządzeń przemysłowych, gastronomicznych i warsztatowych.</p>
-            </div>
-          </div>
-        </li>
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./lug.png" alt="LUG Light Factory" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_lug_title">LUG Light Factory — Project Lead R&amp;D (2018–2022)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_lug_desc">Polski producent profesjonalnych systemów oświetlenia LED dla sektora przemysłowego i publicznego, działający globalnie.</p>
-            </div>
-          </div>
-        </li>
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./farrell.png" alt="Farrell Furniture" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_farrell_title">Farrell Furniture — CAM / Production Engineer (2005–2018)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_farrell_desc">Irlandzki producent mebli biurowych i szkolnych, specjalizujący się w rozwiązaniach kontraktowych.</p>
-            </div>
-          </div>
-        </li>
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./wilo.png" alt="Wilo" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_wilo_title">Wilo — Sales Engineer (2003–2004)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_wilo_desc">Niemiecki koncern produkujący pompy i systemy pompowe dla instalacji grzewczych, wodnych i przemysłowych.</p>
-            </div>
-          </div>
-        </li>
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./afriso.png" alt="Afriso" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_afriso_title">Afriso — Sales Representative (2002–2003)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_afriso_desc">Niemiecki producent aparatury kontrolno‑pomiarowej dla branży grzewczej, przemysłowej i ekologicznej.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
-      <div class="rounded-3xl border border-fuchsia-500/25 bg-gradient-to-br from-fuchsia-600/10 via-purple-700/10 to-orange-500/10 p-6 md:p-10">
-        <h2 class="text-2xl font-semibold" data-i18n="contact_title">Porozmawiajmy o Twoim produkcie</h2>
-        <div class="mt-5 flex flex-wrap gap-3">
-          <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="cta_email">✉️ Napisz</a>
-          <a href="tel:+48500497680" class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_call">📞 Zadzwoń</a>
-          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="btn border border-purple-500/30 px-4 py-2 hover:bg-purple-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_linkedin">in LinkedIn</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-purple-500/20">
-      <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-neutral-400 flex flex-wrap items-center justify-between gap-3">
-        <div>© <span id="year"></span> MC-Core Product — Maciej Cieślak</div>
-        <div class="flex items-center gap-4">
-          <a class="hover:text-white" href="mailto:mccoreproduct@gmail.com">✉️ Email</a>
-          <a class="hover:text-white" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer">in LinkedIn</a>
-          <span class="hover:text-white">📍 <span data-i18n="footer_location">Zielona Góra, Polska</span></span>
-        </div>
-      </div>
-    </footer>
-
-    <button id="backToTop" class="fixed bottom-6 right-4 z-40 hidden rounded-full px-3 py-2 bg-white/10 border border-white/20 text-white backdrop-blur hover:bg-white/20">⬆</button>
-
-    <!-- AUTO-INJECTED: paths to brand & client logos -->
-    <script>
+</div>
+<!-- Snapshot as graphic cards -->
+<div>
+<div class="text-sm text-orange-300" data-i18n="snapshot_title">Snapshot</div>
+<div class="mt-3 grid gap-3">
+<!-- Card 1 -->
+<div class="card p-4 flex gap-3 items-start">
+<svg aria-hidden="true" class="icon flex-shrink-0" fill="none" viewbox="0 0 24 24">
+<path class="anim-draw" d="M3 3v6h6" stroke="url(#g1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path class="anim-draw" d="M21 21v-6h-6" stroke="url(#g2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path class="anim-float" d="M3 9c3-3 6-6 9-6s6 3 9 6" opacity=".6" stroke="url(#g1)" stroke-width="2"></path>
+<defs>
+<lineargradient id="g1" x1="0" x2="24" y1="0" y2="24">
+<stop stop-color="#A855F7"></stop><stop offset="1" stop-color="#F97316"></stop>
+</lineargradient>
+<lineargradient id="g2" x1="24" x2="0" y1="24" y2="0">
+<stop stop-color="#F97316"></stop><stop offset="1" stop-color="#A855F7"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div>
+<div class="font-medium text-white" data-i18n="snap_card1_title">Claim rate ↓ / Rating ↑</div>
+<p class="text-sm text-neutral-300" data-i18n="snap_card1_desc">Program poprawy jakości: redukcja reklamacji, wzrost ocen produktu.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="card p-4 flex gap-3 items-start">
+<svg aria-hidden="true" class="icon flex-shrink-0" fill="none" viewbox="0 0 24 24">
+<rect class="anim-pulse-soft" height="7" rx="2" stroke="url(#g3)" stroke-width="2" width="7" x="3" y="3"></rect>
+<rect class="anim-pulse-soft" height="7" rx="2" stroke="url(#g3)" stroke-width="2" width="7" x="14" y="3"></rect>
+<rect class="anim-pulse-soft" height="7" rx="2" stroke="url(#g3)" stroke-width="2" width="7" x="3" y="14"></rect>
+<rect class="anim-pulse-soft" height="7" rx="2" stroke="url(#g3)" stroke-width="2" width="7" x="14" y="14"></rect>
+<defs>
+<lineargradient id="g3" x1="0" x2="24" y1="0" y2="24">
+<stop stop-color="#A855F7"></stop><stop offset="1" stop-color="#F97316"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div>
+<div class="font-medium text-white" data-i18n="snap_card2_title">6000+ SKU</div>
+<p class="text-sm text-neutral-300" data-i18n="snap_card2_desc">Zarządzanie szerokim portfelem produktów w e‑commerce.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="card p-4 flex gap-3 items-start">
+<svg aria-hidden="true" class="icon flex-shrink-0" fill="none" viewbox="0 0 24 24">
+<path class="anim-rotate" d="M12 2v4M12 18v4M4 12H2m20 0h-2M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" stroke="url(#g4)" stroke-linecap="round" stroke-width="2"></path>
+<circle class="anim-pulse-soft" cx="12" cy="12" r="3.5" stroke="url(#g4)" stroke-width="2"></circle>
+<defs>
+<lineargradient id="g4" x1="0" x2="24" y1="0" y2="24">
+<stop stop-color="#A855F7"></stop><stop offset="1" stop-color="#F97316"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div>
+<div class="font-medium text-white" data-i18n="snap_card3_title">R&amp;D → Rynek</div>
+<p class="text-sm text-neutral-300" data-i18n="snap_card3_desc">Pełny cykl: prototyp, testy, produkcja, komercjalizacja.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 class="text-2xl font-semibold mt-12" data-i18n="skills_title" id="skills">Kompetencje kluczowe</h2>
+<div class="mt-6 grid md:grid-cols-3 gap-4" id="skillsGrid">
+<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_1">Zarządzanie cyklem życia produktu (PLM)</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_2">Przywództwo projektowe &amp; R&amp;D</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_3">Strategia e-commerce (6000+ SKU)</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_4">Redukcja reklamacji / satysfakcja klienta</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_5">FMEA, Lean, Kaizen, 5S, ISO 9001</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_6">Planowanie finansowe &amp; ROI</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_7">Budowanie zespołów (mocne strony)</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_8">Procesy &amp; workflow (JIRA)</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_9">CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP</div>
+</div>
+</section>
+<!-- Services / Offer -->
+<section class="mx-auto max-w-6xl px-4 py-14" id="services">
+<h2 class="text-2xl font-semibold" data-i18n="services_title">Usługi / Oferta</h2>
+<div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+<div class="font-semibold text-white" data-i18n="svc_quality_title">Audyt jakości</div>
+<p class="text-sm text-neutral-300 mt-2" data-i18n="svc_quality_desc">Analiza claim rate, NPS/CSAT, szybkie działania naprawcze i roadmapa jakości.</p>
+</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+<div class="font-semibold text-white" data-i18n="svc_plm_title">Wdrożenie PLM</div>
+<p class="text-sm text-neutral-300 mt-2" data-i18n="svc_plm_desc">Procesy i narzędzia PLM: od koncepcji do EOL. Standaryzacja danych produktu.</p>
+</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+<div class="font-semibold text-white" data-i18n="svc_cost_title">Optymalizacja kosztów</div>
+<p class="text-sm text-neutral-300 mt-2" data-i18n="svc_cost_desc">Analiza BOM/TCO, sourcing, negocjacje, redesign pod koszty bez straty jakości.</p>
+</div>
+<div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+<div class="font-semibold text-white" data-i18n="svc_rd_title">Rozwój R&amp;D</div>
+<p class="text-sm text-neutral-300 mt-2" data-i18n="svc_rd_desc">Szybkie prototypowanie, testy, transfer do produkcji. Harmonogram i KPI.</p>
+</div>
+</div>
+<div class="mt-6 flex flex-wrap gap-3">
+<a class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="services_cta_email" href="mailto:mccoreproduct@gmail.com">✉️ Zamów konsultację</a>
+<a class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="services_cta_call" href="tel:+48500497680">📞 Umów rozmowę</a>
+</div>
+</section>
+<!-- Case Studies -->
+<section class="mx-auto max-w-6xl px-4 py-14" id="cases">
+<h2 class="text-2xl font-semibold" data-i18n="cases_title">Case studies</h2>
+<div class="mt-6 grid md:grid-cols-3 gap-4">
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
+<svg aria-hidden="true" class="h-8 w-8" fill="none" viewbox="0 0 24 24">
+<defs><lineargradient id="cs1" x1="0" x2="24" y1="0" y2="24"><stop stop-color="#A855F7"></stop><stop offset="1" stop-color="#F97316"></stop></lineargradient></defs>
+<path d="M4 12l4 4 12-12" stroke="url(#cs1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M3 21h18" opacity=".6" stroke="url(#cs1)" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<div class="mt-3 font-semibold text-white" data-i18n="case1_title">Jakość: mniej reklamacji, lepsze ratingi</div>
+<p class="mt-2 text-sm text-neutral-300" data-i18n="case1_desc">Wdrożenie audytów, quick-wins i planu jakości: stabilizacja parametrów, standaryzacja testów.</p>
+<div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case1_kpi">-32% claim rate</div>
+</div>
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
+<svg aria-hidden="true" class="h-8 w-8" fill="none" viewbox="0 0 24 24">
+<defs><lineargradient id="cs2" x1="0" x2="24" y1="0" y2="24"><stop stop-color="#A855F7"></stop><stop offset="1" stop-color="#F97316"></stop></lineargradient></defs>
+<path d="M12 3v18M7 7h7a3 3 0 110 6H8a3 3 0 100 6h8" stroke="url(#cs2)" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<div class="mt-3 font-semibold text-white" data-i18n="case2_title">Koszty: TCO/BOM i sourcing</div>
+<p class="mt-2 text-sm text-neutral-300" data-i18n="case2_desc">Redesign pod koszty, alternatywni dostawcy, negocjacje i optymalizacja logistyki.</p>
+<div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case2_kpi">-18% koszt jednostkowy</div>
+</div>
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
+<svg aria-hidden="true" class="h-8 w-8" fill="none" viewbox="0 0 24 24">
+<defs><lineargradient id="cs3" x1="0" x2="24" y1="0" y2="24"><stop stop-color="#A855F7"></stop><stop offset="1" stop-color="#F97316"></stop></lineargradient></defs>
+<path d="M3 13h6M3 17h10M3 9h14" stroke="url(#cs3)" stroke-linecap="round" stroke-width="2"></path>
+<path d="M21 12l-4 4v-8l4 4z" fill="url(#cs3)"></path>
+</svg>
+<div class="mt-3 font-semibold text-white" data-i18n="case3_title">Czas do rynku: prototyp → produkcja</div>
+<p class="mt-2 text-sm text-neutral-300" data-i18n="case3_desc">Warsztaty z R&amp;D, sprinty decyzyjne, DFM/DFA, szybkie testy i transfer do produkcji.</p>
+<div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case3_kpi">-41% time‑to‑market</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="mx-auto max-w-6xl px-4 py-14" id="testimonials">
+<h2 class="text-2xl font-semibold" data-i18n="testi_title">Referencje / Testimonials</h2>
+<div class="mt-6 grid md:grid-cols-3 gap-4">
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">KS</div>
+<div>
+<div class="font-medium text-white" data-i18n="t1_name">Kirill Singer</div>
+<div class="text-xs text-neutral-300" data-i18n="t1_role">Web Design &amp; Graphic Design — współpraca w jednym zespole</div>
+</div>
+</div>
+<p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t1_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Maciej wnosi do zespołu połączenie wiedzy inżynierskiej i dojrzałego product managementu. Świetnie identyfikuje problemy jakościowe i potrafi je szybko rozwiązać, jasno komunikując cele między zespołami. Polecam — silny gracz zespołowy i skuteczny lider jakości.</p>
+</div>
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">SD</div>
+<div>
+<div class="font-medium text-white" data-i18n="t2_name">Simon de Groot</div>
+<div class="text-xs text-neutral-300" data-i18n="t2_role">Head of Product Development — współpraca między zespołami</div>
+</div>
+</div>
+<p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t2_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Pracowałem z Maciejem przy wielu projektach. Ogarnia cały cykl życia produktu: od koncepcji, przez R&amp;D i produkcję, po launch. Dostarcza wyniki pod presją i buduje zmotywowane zespoły. Orientacja na klienta przy zachowaniu dyscypliny kosztowej.</p>
+</div>
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">WP</div>
+<div>
+<div class="font-medium text-white" data-i18n="t3_name">Włodzimierz Parafiński</div>
+<div class="text-xs text-neutral-300" data-i18n="t3_role">Technik serwisu — klient Expondo</div>
+</div>
+</div>
+<p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t3_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Współpraca z Maciejem to konkret i szybkie działania. Jego interwencje u producenta przekładały się na realne usprawnienia i jakość. Z tych, z którymi chce się pracować także po godzinach.</p>
+</div>
+</div>
+</section>
+<!-- Clients -->
+<section class="mx-auto max-w-6xl px-4 py-14" id="clients">
+<h2 class="text-2xl font-semibold" data-i18n="clients_title">Klienci, którzy mi zaufali</h2>
+<ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300">
+<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="flex items-start gap-3">
+<img alt="Expondo" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./expondo.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_expondo_title">Expondo — Senior Quality Engineer (2021–2025)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_expondo_desc">Europejski lider e-commerce B2B i B2C w sektorze urządzeń przemysłowych, gastronomicznych i warsztatowych.</p>
+</div>
+</div>
+</li>
+<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="flex items-start gap-3">
+<img alt="LUG Light Factory" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./lug.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_lug_title">LUG Light Factory — Project Lead R&amp;D (2018–2022)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_lug_desc">Polski producent profesjonalnych systemów oświetlenia LED dla sektora przemysłowego i publicznego, działający globalnie.</p>
+</div>
+</div>
+</li>
+<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="flex items-start gap-3">
+<img alt="Farrell Furniture" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./farrell.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_farrell_title">Farrell Furniture — CAM / Production Engineer (2005–2018)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_farrell_desc">Irlandzki producent mebli biurowych i szkolnych, specjalizujący się w rozwiązaniach kontraktowych.</p>
+</div>
+</div>
+</li>
+<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="flex items-start gap-3">
+<img alt="Wilo" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./wilo.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_wilo_title">Wilo — Sales Engineer (2003–2004)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_wilo_desc">Niemiecki koncern produkujący pompy i systemy pompowe dla instalacji grzewczych, wodnych i przemysłowych.</p>
+</div>
+</div>
+</li>
+<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="flex items-start gap-3">
+<img alt="Afriso" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./afriso.png"/>
+<div>
+<div class="font-medium text-white" data-i18n="client_afriso_title">Afriso — Sales Representative (2002–2003)</div>
+<p class="text-sm text-neutral-300 mt-1" data-i18n="client_afriso_desc">Niemiecki producent aparatury kontrolno‑pomiarowej dla branży grzewczej, przemysłowej i ekologicznej.</p>
+</div>
+</div>
+</li>
+</ul>
+</section>
+<!-- Contact -->
+<section class="mx-auto max-w-6xl px-4 py-14" id="contact">
+<div class="rounded-3xl border border-fuchsia-500/25 bg-gradient-to-br from-fuchsia-600/10 via-purple-700/10 to-orange-500/10 p-6 md:p-10">
+<h2 class="text-2xl font-semibold" data-i18n="contact_title">Porozmawiajmy o Twoim produkcie</h2>
+<div class="mt-5 flex flex-wrap gap-3">
+<a class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="cta_email" href="mailto:mccoreproduct@gmail.com">✉️ Napisz</a>
+<a class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_call" href="tel:+48500497680">📞 Zadzwoń</a>
+<a class="btn border border-purple-500/30 px-4 py-2 hover:bg-purple-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_linkedin" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" rel="noreferrer" target="_blank">in LinkedIn</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="border-t border-purple-500/20">
+<div class="mx-auto max-w-6xl px-4 py-8 text-sm text-neutral-400 flex flex-wrap items-center justify-between gap-3">
+<div>© <span id="year"></span> MC-Core Product — Maciej Cieślak</div>
+<div class="flex items-center gap-4">
+<a class="hover:text-white" href="mailto:mccoreproduct@gmail.com">✉️ Email</a>
+<a class="hover:text-white" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" rel="noreferrer" target="_blank">in LinkedIn</a>
+<span class="hover:text-white">📍 <span data-i18n="footer_location">Zielona Góra, Polska</span></span>
+</div>
+</div>
+</footer>
+<button class="fixed bottom-6 right-4 z-40 hidden rounded-full px-3 py-2 bg-white/10 border border-white/20 text-white backdrop-blur hover:bg-white/20" id="backToTop">⬆</button>
+<!-- AUTO-INJECTED: paths to brand & client logos -->
+<script>
       // Główne logo (nagłówek + hero). Plik w tym samym folderze co index.html (spacje w URL są ok).
       window.__MC_LOGO_URL = "./logo%20MC%20core%20produkt.png";
       // Logotypy klientów — pliki w tym samym folderze:
@@ -467,8 +459,7 @@
         afriso: "./afriso.png"
       };
     </script>
-
-    <script>
+<script>
       // Fallback logo as data URL (purple/orange glow)
       const FALLBACK_LOGO = "data:image/svg+xml;utf8," + encodeURIComponent(`
         <svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
@@ -718,7 +709,6 @@
       setLogo(document.getElementById('logoSmall'));
       setLogo(document.getElementById('logoHero'));
     </script>
-  
 <script>
   // --- Subtelny parallax dla tła hero ---
   (function heroParallax() {
@@ -736,8 +726,6 @@
     });
   })();
 </script>
-
-
 <script>
 // --- Parallax reagujący na ruch myszki (desktop only) ---
 (function heroMouseParallax() {
@@ -763,8 +751,6 @@
   enable();
 })();
 </script>
-
-
 <script>
   // --- Magnetic hover micro-interaction for CTA buttons ---
   (function magneticCTA(){
@@ -795,8 +781,6 @@
     });
   })();
 </script>
-
-
 <script>
   // --- In-view glow for CTA buttons (IntersectionObserver) ---
   (function ctaInViewGlow(){
@@ -820,6 +804,5 @@
     targets.forEach(t => io.observe(t));
   })();
 </script>
-
 </body>
 </html>
