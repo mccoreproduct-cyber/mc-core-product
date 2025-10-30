@@ -103,7 +103,18 @@
         filter: drop-shadow(0 0 8px rgba(168,85,247,.25)) drop-shadow(0 0 10px rgba(249,115,22,.2)); }
       @media (max-width: 767px) { #profileAvatar { display:none; } }
 </style>
-</meta></head>
+</meta>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHX2MGCECB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EHX2MGCECB');
+  </script>
+
+<link rel="manifest" href="/manifest.webmanifest">
+</head>
 <body class="min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden">
 <!-- Header -->
 <header class="sticky top-0 z-40 backdrop-blur border-b border-fuchsia-500/20 bg-neutral-950/70">
@@ -149,8 +160,7 @@
 <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
 <span class="block">Maciej Cieślak</span>
 <span class="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">MC‑Core Product</span>
-</h1><img alt="Maciej Cieślak — profil" class="hidden md:block absolute right-0 -top-4 h-20 w-20 rounded-full object-cover ring-2 ring-purple-400/40 shadow-xl avatar-glow" id="profileAvatar" src="./maciej_cieslak.jpg"/>
-<p class="mt-5 text-neutral-300 leading-relaxed max-w-prose" data-i18n="hero_intro" id="heroIntro">
+</h1><p class="mt-5 text-neutral-300 leading-relaxed max-w-prose" data-i18n="hero_intro" id="heroIntro">
             Lider projektów i strateg biznesu z 23-letnim doświadczeniem w pełnym cyklu życia produktu — od koncepcji,
             przez R&amp;D i produkcję, po komercjalizację i skalowanie na rynku.
           </p>
@@ -182,9 +192,6 @@
 <div class="absolute inset-0 -z-10 blur-3xl opacity-60" style="background: radial-gradient(closest-side, rgba(217,70,239,.5), rgba(249,115,22,.35), transparent)"></div>
 </div>
 <!-- User photo -->
-<div class="relative photo-frame ring-2 ring-orange-500/30">
-<img alt="Maciej Cieślak" class="photo-pulse max-w-[260px] md:max-w-[320px] object-contain" src="./maciej_cieslak.jpg"/>
-<div class="absolute inset-0 -z-10 blur-3xl opacity-50" style="background: radial-gradient(closest-side, rgba(217,70,239,.35), rgba(249,115,22,.25), transparent)"></div>
 </div>
 </div>
 </div>
