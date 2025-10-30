@@ -157,15 +157,15 @@
 <a class="btn border border-fuchsia-500/40 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="hero_call" href="tel:+48500497680">📞 Zadzwoń</a>
 </div>
 <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-<div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
+<div class="rounded-2xl border border-purple-500/20 bg-white/15 p-4">
 <div class="text-2xl font-bold text-white">23</div>
 <div class="text-sm text-neutral-300" data-i18n="stat_experience_label">lat doświadczenia</div>
 </div>
-<div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
+<div class="rounded-2xl border border-purple-500/20 bg-white/15 p-4">
 <div class="text-2xl font-bold text-white">6000+</div>
 <div class="text-sm text-neutral-300" data-i18n="stat_sku_label">SKU w portfelu</div>
 </div>
-<div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
+<div class="rounded-2xl border border-purple-500/20 bg-white/15 p-4">
 <div class="text-2xl font-bold text-white">R&amp;D • E‑com • Produkcja</div>
 <div class="text-sm text-neutral-300" data-i18n="stat_industries_label">Branże</div>
 </div>
@@ -277,19 +277,19 @@
 <section class="mx-auto max-w-6xl px-4 py-14" id="services">
 <h2 class="text-2xl font-semibold" data-i18n="services_title">Usługi / Oferta</h2>
 <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-<div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+<div class="rounded-2xl border border-fuchsia-500/20 bg-white/15 p-5">
 <div class="font-semibold text-white" data-i18n="svc_quality_title">Audyt jakości</div>
 <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_quality_desc">Analiza claim rate, NPS/CSAT, szybkie działania naprawcze i roadmapa jakości.</p>
 </div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+<div class="rounded-2xl border border-fuchsia-500/20 bg-white/15 p-5">
 <div class="font-semibold text-white" data-i18n="svc_plm_title">Wdrożenie PLM</div>
 <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_plm_desc">Procesy i narzędzia PLM: od koncepcji do EOL. Standaryzacja danych produktu.</p>
 </div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+<div class="rounded-2xl border border-fuchsia-500/20 bg-white/15 p-5">
 <div class="font-semibold text-white" data-i18n="svc_cost_title">Optymalizacja kosztów</div>
 <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_cost_desc">Analiza BOM/TCO, sourcing, negocjacje, redesign pod koszty bez straty jakości.</p>
 </div>
-<div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
+<div class="rounded-2xl border border-fuchsia-500/20 bg-white/15 p-5">
 <div class="font-semibold text-white" data-i18n="svc_rd_title">Rozwój R&amp;D</div>
 <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_rd_desc">Szybkie prototypowanie, testy, transfer do produkcji. Harmonogram i KPI.</p>
 </div>
@@ -302,8 +302,18 @@
 <!-- Case Studies -->
 <section class="mx-auto max-w-6xl px-4 py-14" id="cases">
 <h2 class="text-2xl font-semibold" data-i18n="cases_title">Case studies</h2>
-<div class="mt-6 grid md:grid-cols-3 gap-4">
-<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
+<div class="mt-6 grid md:grid-cols-3 gap-4"><div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
+  <svg aria-hidden="true" class="h-8 w-8" viewBox="0 0 24 24" fill="none">
+    <defs><linearGradient id="cs1" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
+    <path d="M4 12l4 4 12-12" stroke="url(#cs1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path d="M3 21h18" opacity=".6" stroke="url(#cs1)" stroke-linecap="round" stroke-width="2"/>
+  </svg>
+  <div class="mt-3 font-semibold text-white" data-i18n="case1_title">Jakość: mniej reklamacji, lepsze ratingi</div>
+  <p class="mt-2 text-sm text-neutral-300" data-i18n="case1_desc">Wdrożenie audytów, quick-wins i planu jakości: stabilizacja parametrów, standaryzacja testów.</p>
+  <div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent">-32% claim rate reduction</div>
+</div>
+
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/15 p-5 flex flex-col">
 <svg aria-hidden="true" class="h-8 w-8" viewBox="0 0 24 24" fill="none">
   <defs>
     <linearGradient id="usd" x1="0" y1="0" x2="24" y2="24">
@@ -318,7 +328,7 @@
 <p class="mt-2 text-sm text-neutral-300" data-i18n="case2_desc">Redesign pod koszty, alternatywni dostawcy, negocjacje i optymalizacja logistyki.</p>
 <div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case2_kpi">-18% unit cost reduction</div>
 </div>
-<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/15 p-5 flex flex-col">
 <svg aria-hidden="true" class="h-8 w-8" fill="none" viewbox="0 0 24 24">
 <defs><lineargradient id="cs3" x1="0" x2="24" y1="0" y2="24"><stop stop-color="#A855F7"></stop><stop offset="1" stop-color="#F97316"></stop></lineargradient></defs>
 <path d="M3 13h6M3 17h10M3 9h14" stroke="url(#cs3)" stroke-linecap="round" stroke-width="2"></path>
@@ -334,7 +344,7 @@
 <section class="mx-auto max-w-6xl px-4 py-14" id="testimonials">
 <h2 class="text-2xl font-semibold" data-i18n="testi_title">Referencje / Testimonials</h2>
 <div class="mt-6 grid md:grid-cols-3 gap-4">
-<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/15 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
 <div class="flex items-center gap-3">
 <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">KS</div>
 <div>
@@ -344,7 +354,7 @@
 </div>
 <p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t1_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Maciej wnosi do zespołu połączenie wiedzy inżynierskiej i dojrzałego product managementu. Świetnie identyfikuje problemy jakościowe i potrafi je szybko rozwiązać, jasno komunikując cele między zespołami. Polecam — silny gracz zespołowy i skuteczny lider jakości.</p>
 </div>
-<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/15 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
 <div class="flex items-center gap-3">
 <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">SD</div>
 <div>
@@ -354,7 +364,7 @@
 </div>
 <p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t2_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Pracowałem z Maciejem przy wielu projektach. Ogarnia cały cykl życia produktu: od koncepcji, przez R&amp;D i produkcję, po launch. Dostarcza wyniki pod presją i buduje zmotywowane zespoły. Orientacja na klienta przy zachowaniu dyscypliny kosztowej.</p>
 </div>
-<div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<div class="rounded-2xl border border-fuchsia-500/25 bg-white/15 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
 <div class="flex items-center gap-3">
 <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">WP</div>
 <div>
@@ -370,45 +380,45 @@
 <section class="mx-auto max-w-6xl px-4 py-14" id="clients">
 <h2 class="text-2xl font-semibold" data-i18n="clients_title">Klienci, którzy mi zaufali</h2>
 <ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300">
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<li class="rounded-xl border border-purple-500/20 bg-white/15 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
 <div class="flex items-start gap-3">
-<img alt="Expondo" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./expondo.png"/>
+<img alt="Expondo" class="logo-tile ring-1 ring-white/20 flex-shrink-0 shadow-sm" src="./expondo.png"/>
 <div>
 <div class="font-medium text-white" data-i18n="client_expondo_title">Expondo — Senior Quality Engineer (2021–2025)</div>
 <p class="text-sm text-neutral-300 mt-1" data-i18n="client_expondo_desc">Europejski lider e-commerce B2B i B2C w sektorze urządzeń przemysłowych, gastronomicznych i warsztatowych.</p>
 </div>
 </div>
 </li>
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<li class="rounded-xl border border-purple-500/20 bg-white/15 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
 <div class="flex items-start gap-3">
-<img alt="LUG Light Factory" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./lug.png"/>
+<img alt="LUG Light Factory" class="logo-tile ring-1 ring-white/20 flex-shrink-0 shadow-sm" src="./lug.png"/>
 <div>
 <div class="font-medium text-white" data-i18n="client_lug_title">LUG Light Factory — Project Lead R&amp;D (2018–2022)</div>
 <p class="text-sm text-neutral-300 mt-1" data-i18n="client_lug_desc">Polski producent profesjonalnych systemów oświetlenia LED dla sektora przemysłowego i publicznego, działający globalnie.</p>
 </div>
 </div>
 </li>
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<li class="rounded-xl border border-purple-500/20 bg-white/15 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
 <div class="flex items-start gap-3">
-<img alt="Farrell Furniture" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./farrell.png"/>
+<img alt="Farrell Furniture" class="logo-tile ring-1 ring-white/20 flex-shrink-0 shadow-sm" src="./farrell.png"/>
 <div>
 <div class="font-medium text-white" data-i18n="client_farrell_title">Farrell Furniture — CAM / Production Engineer (2005–2018)</div>
 <p class="text-sm text-neutral-300 mt-1" data-i18n="client_farrell_desc">Irlandzki producent mebli biurowych i szkolnych, specjalizujący się w rozwiązaniach kontraktowych.</p>
 </div>
 </div>
 </li>
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<li class="rounded-xl border border-purple-500/20 bg-white/15 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
 <div class="flex items-start gap-3">
-<img alt="Wilo" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./wilo.png"/>
+<img alt="Wilo" class="logo-tile ring-1 ring-white/20 flex-shrink-0 shadow-sm" src="./wilo.png"/>
 <div>
 <div class="font-medium text-white" data-i18n="client_wilo_title">Wilo — Sales Engineer (2003–2004)</div>
 <p class="text-sm text-neutral-300 mt-1" data-i18n="client_wilo_desc">Niemiecki koncern produkujący pompy i systemy pompowe dla instalacji grzewczych, wodnych i przemysłowych.</p>
 </div>
 </div>
 </li>
-<li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
+<li class="rounded-xl border border-purple-500/20 bg-white/15 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
 <div class="flex items-start gap-3">
-<img alt="Afriso" class="logo-tile ring-1 ring-white/20 flex-shrink-0" src="./afriso.png"/>
+<img alt="Afriso" class="logo-tile ring-1 ring-white/20 flex-shrink-0 shadow-sm" src="./afriso.png"/>
 <div>
 <div class="font-medium text-white" data-i18n="client_afriso_title">Afriso — Sales Representative (2002–2003)</div>
 <p class="text-sm text-neutral-300 mt-1" data-i18n="client_afriso_desc">Niemiecki producent aparatury kontrolno‑pomiarowej dla branży grzewczej, przemysłowej i ekologicznej.</p>
