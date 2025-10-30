@@ -1,9 +1,10 @@
-# MC-Core Product — Maciej Cieślak (final)
+# MC-Core Product (final v2)
+Zmiany:
+- tytuł strony: „MC-Core Product” (bez imienia i nazwiska),
+- usunięto duże zdjęcie, zostawiono okrągłe (maciej_cieslak.jpg),
+- wszystkie kluczowe treści w liczbie mnogiej (PL/EN),
+- nowy przełącznik języka „PL | EN”,
+- dodano Google Analytics (G-EHX2MGCECB),
+- dodano manifest, robots, sitemap i favicon.svg.
 
-Ta paczka zawiera zmodyfikowany `index.html` (bez dużego zdjęcia, z GA `G-EHX2MGCECB`) oraz pliki: `manifest.webmanifest`, `robots.txt`, `sitemap.xml`, `favicon.svg`.
-
-## Jak wdrożyć
-- Wgraj wszystkie pliki do katalogu głównego hostingu (np. GitHub Pages, Netlify, Vercel, serwer www).
-- Zaktualizuj domenę w `robots.txt` i `sitemap.xml` (pole `Sitemap:` i `<loc>`).
-- Jeśli korzystasz z favicon w PNG, utrzymaj istniejący `favicon.png`; dodatkowo dostarczamy `favicon.svg`.
-- Grafiki klientów i logo definiowane są w skrypcie `window.__MC_LOGO_URL` i `window.__CLIENT_LOGOS` w `index.html`.
+Wgrywaj pliki bezpośrednio do katalogu głównego hostingu.
