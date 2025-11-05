@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://mccoreproduct-cyber.github.io/mc-core-product/sitemap.xml
+
+Sitemap: https://mc-core-product.example/sitemap.xml
