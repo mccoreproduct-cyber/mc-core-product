@@ -48,6 +48,56 @@
         50% { transform: scale(1.05); filter: drop-shadow(0 0 14px rgba(217,70,239,0.85)); }
       }
       .logo-pulse { animation: pulseGlow 3s infinite ease-in-out; }
+      @keyframes heroTitlePulse {
+        0%, 100% { transform: scale(1); text-shadow: 0 0 20px rgba(249,115,22,0.35), 0 0 40px rgba(168,85,247,0.25); }
+        50% { transform: scale(1.04); text-shadow: 0 0 30px rgba(249,115,22,0.55), 0 0 55px rgba(168,85,247,0.45); }
+      }
+      .hero-logo-title {
+        display: inline-block;
+        font-size: clamp(2.6rem, 8vw, 4.8rem);
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        position: relative;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        background-image: url("./logo MC core produkt.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: heroTitlePulse 3.5s ease-in-out infinite;
+      }
+      .hero-logo-title::selection {
+        color: #f97316;
+        background: transparent;
+      }
+      @supports not (-webkit-background-clip: text) {
+        .hero-logo-title {
+          color: #f97316;
+          -webkit-text-fill-color: initial;
+          background-image: none;
+        }
+      }
+      .hero-logo-subtitle {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: clamp(.85rem, 2vw, 1.1rem);
+        letter-spacing: .35em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,.75);
+      }
+      .hero-logo-subtitle::before,
+      .hero-logo-subtitle::after {
+        content: "";
+        flex: 1 1 40px;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(168,85,247,.4), rgba(249,115,22,.4));
+      }
+      .hero-logo-subtitle::before { margin-right: .75rem; }
+      .hero-logo-subtitle::after { margin-left: .75rem; }
       .btn { display:inline-flex; align-items:center; gap:.5rem; border-radius:.75rem; padding:.5rem .75rem; }
       .card { border-radius:1rem; border:1px solid rgba(168,85,247,.2); background: rgba(255,255,255,.05); }
       .card:hover { border-color: rgba(168,85,247,.35); box-shadow: 0 0 0 1px rgba(168,85,247,.25) inset; }
@@ -143,10 +193,13 @@
       <div class="hero-aura"></div>
       <div class="mx-auto max-w-6xl px-4 py-10 sm:py-14 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            <span class="block"></span>
-            <span class="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">MC‑Core Product</span>
-          </h1>
+          <div class="space-y-3">
+            <span class="hero-logo-subtitle" data-i18n="hero_overline">Strategy • R&amp;D • Produkcja</span>
+            <h1 class="font-bold tracking-tight">
+              <span class="hero-logo-title">MC Core Product</span>
+            </h1>
+            <span class="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-orange-400 bg-clip-text text-transparent text-xl sm:text-2xl font-semibold" data-i18n="hero_tagline">Product leadership &amp; growth</span>
+          </div>
           <p id="heroIntro" class="mt-5 text-neutral-300 leading-relaxed max-w-prose" data-i18n="hero_intro">
             Lider projektów i strateg biznesu z 23-letnim doświadczeniem w pełnym cyklu życia produktu — od koncepcji,
             przez R&amp;D i produkcję, po komercjalizację i skalowanie na rynku.
