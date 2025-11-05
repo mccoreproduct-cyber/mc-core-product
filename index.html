@@ -30,6 +30,18 @@
       .list-check li{display:flex;gap:.5rem;margin:.35rem 0}
       .list-check li::before{content:"✓";color:#16a34a;font-weight:700}
       .link{color:#334155;text-decoration:underline;}
+
+      /* Accordion */
+      details.acc{border:1px solid var(--stroke);border-radius:16px;background:#fff;box-shadow:0 10px 30px rgba(17,24,39,.04);padding:.25rem}
+      details.acc + details.acc{margin-top:16px}
+      details.acc[open]{box-shadow:0 12px 34px rgba(17,24,39,.07)}
+      details.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-radius:14px;gap:12px}
+      details.acc summary::-webkit-details-marker{display:none}
+      .acc-title{font-weight:600}
+      .acc-icon{transition:transform .2s ease}
+      details[open] .acc-icon{transform:rotate(180deg)}
+      .acc-body{padding:0 18px 16px 18px;color:var(--muted)}
+
     </style>
 
     <!-- Schema.org -->
@@ -95,54 +107,94 @@
     </section>
 
     <!-- Services -->
+    
     <section id="services" class="container px-4 py-12">
       <h2 class="text-2xl md:text-3xl font-bold">Usługi</h2>
       <p class="text-[var(--muted)] mt-2" data-i18n="svc_lead">Konkretne obszary, w których wchodzę i dowożę:</p>
-      <div class="grid-3 mt-6">
-        <div class="card p-5 shadow-soft">
-          <div class="font-semibold">Audyt jakości &amp; program naprawczy</div>
-          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
-            <li>Analiza reklamacji, 8D, standaryzacja testów</li>
-            <li>KPI: claim rate, rating, NPS/CSAT</li>
-          </ul>
-        </div>
-        <div class="card p-5 shadow-soft">
-          <div class="font-semibold">PLM &amp; porządek danych produktu</div>
-          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
-            <li>Struktury danych, workflow, wersjonowanie</li>
-            <li>Integracja z R&amp;D, produkcją i e‑commerce</li>
-          </ul>
-        </div>
-        <div class="card p-5 shadow-soft">
-          <div class="font-semibold">Optymalizacja kosztów</div>
-          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
-            <li>BOM/TCO, sourcing, negocjacje</li>
-            <li>Redesign pod koszty bez utraty jakości</li>
-          </ul>
-        </div>
-        <div class="card p-5 shadow-soft">
-          <div class="font-semibold">R&amp;D → Produkcja → Rynek</div>
-          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
-            <li>Sprinty decyzyjne, DFM/DFA, testy</li>
-            <li>Transfer do produkcji i launch</li>
-          </ul>
-        </div>
-        <div class="card p-5 shadow-soft">
-          <div class="font-semibold">E‑commerce i portfel SKU</div>
-          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
-            <li>Zarządzanie 6000+ SKU</li>
-            <li>Content, jakość, zwroty, marże</li>
-          </ul>
-        </div>
-        <div class="card p-5 shadow-soft">
-          <div class="font-semibold">Procesy i narzędzia</div>
-          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
-            <li>JIRA, Lean/Kaizen, ISO 9001, FMEA</li>
-            <li>Raportowanie KPI i rutyny zespołowe</li>
-          </ul>
-        </div>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-4">
+
+        <details class="acc">
+          <summary><span class="acc-title">Audyt jakości &amp; program naprawczy</span><span class="acc-icon">▾</span></summary>
+          <div class="acc-body">
+            <p>Diagnoza problemów jakościowych i szybkie działania naprawcze.</p>
+            <ul class="list-check mt-2">
+              <li>Analiza reklamacji (pareto, severity, lead time)</li>
+              <li>8D / CAPA, standard testów, plan kontroli</li>
+              <li>KPI: claim rate, rating, NPS/CSAT z trendami</li>
+            </ul>
+            <p class="mt-2 text-sm">Rezultat: spadek reklamacji i wzrost ocen w 2–3 sprintach.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="acc-title">PLM &amp; porządek danych produktu</span><span class="acc-icon">▾</span></summary>
+          <div class="acc-body">
+            <p>Układam dane produktu i przepływ zmian tak, by każdy pracował na tej samej prawdzie.</p>
+            <ul class="list-check mt-2">
+              <li>Struktury danych (BOM, atrybuty, media)</li>
+              <li>Workflow zmian (wersjonowanie, release gates)</li>
+              <li>Integracja z R&amp;D, produkcją i e‑commerce</li>
+            </ul>
+            <p class="mt-2 text-sm">Rezultat: mniejsza liczba błędów i przyspieszenie wdrożeń.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="acc-title">Optymalizacja kosztów</span><span class="acc-icon">▾</span></summary>
+          <div class="acc-body">
+            <p>Systematycznie obniżam TCO bez spadku jakości.</p>
+            <ul class="list-check mt-2">
+              <li>Analiza BOM/TCO i alternatywne komponenty</li>
+              <li>Sourcing, RFQ, negocjacje, wolumeny</li>
+              <li>Redesign pod koszty (DFM/DFA)</li>
+            </ul>
+            <p class="mt-2 text-sm">Rezultat: trwałe % oszczędności na SKU i całych liniach.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="acc-title">R&amp;D → Produkcja → Rynek</span><span class="acc-icon">▾</span></summary>
+          <div class="acc-body">
+            <p>Dowodzenie ścieżką od prototypu do stabilnej serii.</p>
+            <ul class="list-check mt-2">
+              <li>Sprinty decyzyjne, risk log, bramki jakości</li>
+              <li>Testy, certyfikacja, ramp‑up, first article</li>
+              <li>Transfer do produkcji i launch</li>
+            </ul>
+            <p class="mt-2 text-sm">Rezultat: krótszy time‑to‑market i mniej wpadek po starcie.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="acc-title">E‑commerce i portfel SKU</span><span class="acc-icon">▾</span></summary>
+          <div class="acc-body">
+            <p>Skalowanie oferty z kontrolą jakości i zwrotów.</p>
+            <ul class="list-check mt-2">
+              <li>Zarządzanie 6000+ SKU, lifecycle i content</li>
+              <li>Review mining, QA contentu, return reasons</li>
+              <li>Marżowość i plan wycofań</li>
+            </ul>
+            <p class="mt-2 text-sm">Rezultat: wyższa sprzedaż przy niższych kosztach obsługi.</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary><span class="acc-title">Procesy i narzędzia</span><span class="acc-icon">▾</span></summary>
+          <div class="acc-body">
+            <p>Ustawiam rytm pracy i przejrzyste metryki.</p>
+            <ul class="list-check mt-2">
+              <li>JIRA, tablice, przeglądy i SLA</li>
+              <li>Lean/Kaizen, FMEA, ISO 9001</li>
+              <li>Raportowanie KPI i rutyny zespołowe</li>
+            </ul>
+            <p class="mt-2 text-sm">Rezultat: przewidywalna dostawa i mniej gaszenia pożarów.</p>
+          </div>
+        </details>
+
       </div>
     </section>
+
 
     <!-- Packages -->
     <section id="packages" class="container px-4 py-12">
