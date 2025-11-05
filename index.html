@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl">
+<html lang="pl" class="">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -101,13 +101,15 @@
 </style>
   
     <style>
-      :root{color-scheme:light dark;--bg:#fff;--fg:#111;--muted:#374151;--surface-1:rgba(0,0,0,.03);--surface-2:rgba(0,0,0,.06);--header:rgba(255,255,255,.7)}
-      :root[data-theme="dark"]{--bg:#0a0a0a;--fg:#e5e5e5;--muted:#d1d5db;--surface-1:rgba(255,255,255,.05);--surface-2:rgba(255,255,255,.08);--header:rgba(10,10,10,.7)}
-      .bg-app{background-color:var(--bg)}.text-app{color:var(--fg)}.text-muted{color:var(--muted)}.bg-surface{background:var(--surface-1)}.bg-surface-2{background:var(--surface-2)}.bg-header{background:var(--header)}
+      :root { color-scheme: light dark; --bg:#ffffff; --fg:#111111; --muted:#374151;
+              --surface-1:rgba(0,0,0,.03); --surface-2:rgba(0,0,0,.06); --header:rgba(255,255,255,.7); }
+      :root[data-theme="dark"] { --bg:#0a0a0a; --fg:#e5e5e5; --muted:#d1d5db;
+              --surface-1:rgba(255,255,255,.05); --surface-2:rgba(255,255,255,.08); --header:rgba(10,10,10,.7); }
+      .bg-app{background-color:var(--bg);} .text-app{color:var(--fg);} .text-muted{color:var(--muted);}
+      .bg-surface{background:var(--surface-1);} .bg-surface-2{background:var(--surface-2);} .bg-header{background:var(--header);}
     </style>
-    
 </head>
-  <body class="min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden" class="bg-app text-app min-h-screen">
+  <body class="bg-app text-app min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden">
     <!-- Header -->
     <header class="sticky top-0 z-40 backdrop-blur border-b border-fuchsia-500/20 bg-neutral-950/70">
       <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
@@ -826,7 +828,16 @@
 </script>
 
 
-    <script>(function(){try{const r=document.documentElement;const b=document.getElementById('themeToggle');function g(){return r.getAttribute('data-theme')||'light'}function s(t){r.setAttribute('data-theme',t);try{localStorage.setItem('mc_theme',t)}catch(e){}} if(b){b.addEventListener('click',()=>s(g()==='dark'?'light':'dark'));}}catch(e){}})();</script>
-    
+    <script>
+      (function initThemeToggle(){
+        try {
+          var root = document.documentElement;
+          var btn = document.getElementById('themeToggle');
+          function get(){ return root.getAttribute('data-theme') || 'light'; }
+          function set(t){ root.setAttribute('data-theme', t); try{ localStorage.setItem('mc_theme', t);}catch(e){} }
+          if (btn) { btn.addEventListener('click', function(){ set(get()==='dark' ? 'light' : 'dark'); }); }
+        } catch(e){}
+      })();
+    </script>
 </body>
 </html>
