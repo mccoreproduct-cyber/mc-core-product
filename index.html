@@ -1,843 +1,308 @@
 <!doctype html>
-<html lang="pl" class="">
+<html lang="pl">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MC‑Core Product</title>
-    <meta name="description" content="Portfolio MC-Core Product — Maciej Cieślak. Product & R&D leadership.">
-    <!-- Tailwind CDN -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MC‑Core Product — Project & R&D Leadership</title>
+    <meta name="description" content="MC‑Core Product: doradztwo i prowadzenie projektów. Jakość, R&D, PLM, e‑commerce.">
+    <link rel="icon" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root{
+        --bg:#ffffff; --fg:#0b1220; --muted:#56607a; --brand:#6d28d9; --accent:#f97316; --stroke:#eaecf0;
+      }
+      html,body{background:#fff;color:var(--fg);}
+      .container{max-width:1080px;margin:0 auto;}
+      .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:12px;padding:.75rem 1rem;font-weight:600;border:1px solid var(--stroke);}
+      .btn-primary{background:var(--accent);color:#0b1220;border-color:transparent;}
+      .btn-primary:hover{filter:brightness(1.05)}
+      .btn-ghost:hover{background:#f8fafc}
+      .card{border:1px solid var(--stroke);border-radius:16px;background:#fff;}
+      .badge{border:1px solid var(--stroke);padding:.25rem .5rem;border-radius:999px;font-size:.75rem;color:var(--muted);}
+      .grad{background:linear-gradient(120deg,#7c3aed, #f97316);-webkit-background-clip:text;background-clip:text;color:transparent;}
+      .shadow-soft{box-shadow:0 10px 30px rgba(17,24,39,.06);}
+      .grid-3{display:grid;grid-template-columns:repeat(1,1fr);gap:16px}
+      @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr);}}
+      .price{font-size:40px;line-height:1.1;font-weight:800;}
+      .hero-img{border-radius:16px;border:1px solid var(--stroke);}
+      .logo-tile{height:44px;object-fit:contain;filter:grayscale(100%);opacity:.85}
+      .logo-tile:hover{opacity:1;filter:none}
+      .list-check li{display:flex;gap:.5rem;margin:.35rem 0}
+      .list-check li::before{content:"✓";color:#16a34a;font-weight:700}
+      .link{color:#334155;text-decoration:underline;}
+    </style>
 
-    <!-- SEO / OpenGraph -->
-    <link rel="canonical" href="https://mccoreproduct-cyber.github.io/mc-core-product/" />
-    <meta name="robots" content="index,follow">
-    <meta name="theme-color" content="#0a0a0a" />
-    <link rel="icon" href="favicon.png" type="image/png"/>
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pl_PL">
-    <meta property="og:title" content="MC‑Core Product">
-    <meta property="og:description" content="Project leadership • R&D • E‑commerce. 23 years of experience across the full product lifecycle.">
-    <meta property="og:url" content="https://mccoreproduct-cyber.github.io/mc-core-product/">
-    <meta property="og:image" content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MC‑Core Product">
-    <meta name="twitter:description" content="Project leadership • R&D • E‑commerce. 23 years of experience across the full product lifecycle.">
-    <meta name="twitter:image" content="https://mccoreproduct-cyber.github.io/mc-core-product/og-image.png">
-
-    <!-- JSON-LD Schema.org -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Maciej Cieślak",
-      "url": "https://mccoreproduct-cyber.github.io/mc-core-product/",
-      "jobTitle": "Product Manager / Project Lead",
-      "email": "mailto:mccoreproduct@gmail.com",
-      "address": {"@type":"PostalAddress", "addressLocality":"Zielona Góra", "addressCountry":"PL"},
+      "@type": "Organization",
+      "name": "MC‑Core Product",
+      "url": "https://example.com",
+      "logo": "https://example.com/logo.png",
       "sameAs": ["https://www.linkedin.com/in/maciej-cieslak-911bbb94"]
     }
     </script>
-
-    <script>
-      tailwind.config = { theme: { extend: {} } };
-    </script>
-    <style>
-      * { transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
-      @keyframes pulseGlow {
-        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(249,115,22,0.5)); }
-        50% { transform: scale(1.05); filter: drop-shadow(0 0 14px rgba(217,70,239,0.85)); }
-      }
-      .logo-pulse { animation: pulseGlow 3s infinite ease-in-out; }
-      .btn { display:inline-flex; align-items:center; gap:.5rem; border-radius:.75rem; padding:.5rem .75rem; }
-      .card { border-radius:1rem; border:1px solid rgba(168,85,247,.2); background: rgba(255,255,255,.05); }
-      .card:hover { border-color: rgba(168,85,247,.35); box-shadow: 0 0 0 1px rgba(168,85,247,.25) inset; }
-      .icon { width: 40px; height: 40px; }
-      /* Client logo tile sizing */
-      .logo-tile { width: 48px; height: 48px; padding: .25rem; object-fit: contain; background: #ffffff; border-radius: .5rem; }
-      /* Snapshot animations */
-      @media (prefers-reduced-motion: no-preference) {
-        .anim-draw { stroke-dasharray: 60; stroke-dashoffset: 60; animation: draw 2.2s ease-out infinite; }
-        @keyframes draw { to { stroke-dashoffset: 0; } }
-        .anim-float { animation: floatY 3s ease-in-out infinite; transform-origin: center; }
-        @keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
-        .anim-rotate { animation: spin 6s linear infinite; transform-origin: 12px 12px; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        .anim-pulse-soft { animation: pulseSoft 2.6s ease-in-out infinite; transform-origin: center; }
-        @keyframes pulseSoft { 0%,100% { transform: scale(1); opacity:.95 } 50% { transform: scale(1.06); opacity:1 } }
-      }
-      /* Hero gradient + photo aura */
-      .hero-gradient {
-        position: relative;
-        background-image:
-          linear-gradient(180deg, rgba(20,10,30,0.85) 0%, rgba(10,10,12,0.9) 40%, rgba(0,0,0,0.95) 100%);
-      }
-      .hero-aura {
-        position: absolute; inset: 0; pointer-events: none;
-        background:
-          radial-gradient(600px 400px at 15% 10%, rgba(168,85,247,0.22), transparent 60%),
-          radial-gradient(500px 380px at 85% 90%, rgba(249,115,22,0.18), transparent 55%);
-        opacity: .9;
-      }
-      @keyframes photoBreath {
-        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(249,115,22,0.35)) drop-shadow(0 0 0 rgba(217,70,239,0.35)); }
-        50% { transform: scale(1.015); filter: drop-shadow(0 0 10px rgba(249,115,22,0.35)) drop-shadow(0 0 14px rgba(217,70,239,0.35)); }
-      }
-      .photo-pulse { animation: photoBreath 5s ease-in-out infinite; }
-      .photo-frame { border-radius: 14px; overflow: hidden; }
-    
-      /* Magnetic hover for CTA buttons */
-      .magnetic { will-change: transform; transition: transform .15s ease-out, box-shadow .2s ease; }
-      .magnetic:hover { box-shadow: 0 10px 30px -10px rgba(249,115,22,.35); }
-      @media (prefers-reduced-motion: reduce) {
-        .magnetic { transition: none !important; transform: none !important; }
-      }
-
-      /* CTA in-view glow */
-      .cta-glow { transition: box-shadow .5s ease, border-color .5s ease; }
-      .cta-inview { box-shadow: 0 0 0 2px rgba(168,85,247,.25), 0 10px 30px -10px rgba(249,115,22,.35) !important; }
-      @media (prefers-reduced-motion: reduce) {
-        .cta-glow { transition: none !important; }
-      }
-</style>
-  
-    <style>
-      :root { color-scheme: light dark; --bg:#ffffff; --fg:#111111; --muted:#374151;
-              --surface-1:rgba(0,0,0,.03); --surface-2:rgba(0,0,0,.06); --header:rgba(255,255,255,.7); }
-      :root[data-theme="dark"] { --bg:#0a0a0a; --fg:#e5e5e5; --muted:#d1d5db;
-              --surface-1:rgba(255,255,255,.05); --surface-2:rgba(255,255,255,.08); --header:rgba(10,10,10,.7); }
-      .bg-app{background-color:var(--bg);} .text-app{color:var(--fg);} .text-muted{color:var(--muted);}
-      .bg-surface{background:var(--surface-1);} .bg-surface-2{background:var(--surface-2);} .bg-header{background:var(--header);}
-    </style>
-</head>
-  <body class="bg-app text-app min-h-screen bg-neutral-950 text-neutral-100 overflow-x-hidden">
-    <!-- Header -->
-    <header class="sticky top-0 z-40 backdrop-blur border-b border-fuchsia-500/20 bg-neutral-950/70">
-      <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+  </head>
+  <body>
+    <!-- Topbar -->
+    <header class="border-b border-[var(--stroke)] sticky top-0 bg-white/90 backdrop-blur z-50">
+      <div class="container px-4 py-3 flex items-center justify-between gap-4">
         <div class="flex items-center gap-3">
-          <img id="logoSmall" alt="MC Core Product Logo" class="logo-pulse h-8 w-8 md:h-10 md:w-10 rounded-full object-cover ring-2 ring-orange-500/40 logo-pulse" />
-          <span class="font-semibold tracking-tight text-lg">MC-Core Product</span>
+          <img src="logo.png" alt="MC‑Core Product" class="h-8 w-8 rounded-full ring-2 ring-purple-300 object-cover" onerror="this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27&gt;&lt;rect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27#eee%27/&gt;&lt;text x=%2732%27 y=%2739%27 text-anchor=%27middle%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2732%27 fill=%27#6d28d9%27&gt;MC&lt;/text&gt;&lt;/svg&gt;';">
+          <span class="font-semibold">MC‑Core Product</span>
         </div>
-        <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
-          <a href="#about" class="hover:text-white" data-i18n="nav_about">O mnie</a>
-          <a href="#skills" class="hover:text-white" data-i18n="nav_skills">Kompetencje</a>
-          <a href="#services" class="hover:text-white" data-i18n="nav_services">Usługi</a>
-          <a href="#cases" class="hover:text-white" data-i18n="nav_cases">Case studies</a>
-          <a href="#testimonials" class="hover:text-white" data-i18n="nav_testimonials">Referencje</a>
-          <a href="#clients" class="hover:text-white" data-i18n="nav_clients">Klienci</a>
-          <a href="#contact" class="hover:text-white" data-i18n="nav_contact">Kontakt</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-[var(--muted)]">
+          <a href="#services" class="hover:text-[var(--fg)]" data-i18n="nav_services">Usługi</a>
+          <a href="#packages" class="hover:text-[var(--fg)]" data-i18n="nav_packages">Pakiety</a>
+          <a href="#training" class="hover:text-[var(--fg)]" data-i18n="nav_training">Szkolenia</a>
+          <a href="#cases" class="hover:text-[var(--fg)]" data-i18n="nav_cases">Case studies</a>
+          <a href="#contact" class="hover:text-[var(--fg)]" data-i18n="nav_contact">Kontakt</a>
         </nav>
-        <div class="flex items-center flex-wrap gap-2 sm:gap-3 md:gap-4">
-          <button id="mobileMenuBtn" class="md:hidden btn border border-purple-500/40 hover:bg-purple-500/10" aria-label="Menu">☰ Menu</button>
-          <button id="langToggle" class="btn border border-purple-500/40 hover:bg-purple-500/10" title="Language / Język" aria-label="Language toggle">🇵🇱 PL</button>
-          <button id="themeToggle" class="btn border border-fuchsia-500/30 hover:bg-fuchsia-500/10" title="Przełącz motyw" aria-label="Przełącz tryb motywu">🌓</button>
-          <a href="mailto:mccoreproduct@gmail.com" class="btn border border-orange-500/30 hover:bg-orange-500/10 text-sm min-h-[44px] min-w-[44px]" data-i18n="header_write">✉️ Napisz</a>
-          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="btn bg-gradient-to-r from-fuchsia-500 to-orange-500 text-black text-sm hover:opacity-90 min-h-[44px] min-w-[44px]" data-i18n="header_linkedin">in LinkedIn</a>
+        <div class="flex items-center gap-2">
+          <button id="lang" class="btn btn-ghost text-sm" aria-label="Language">PL | EN</button>
+          <a href="mailto:mccoreproduct@gmail.com" class="btn btn-primary">✉️ <span data-i18n="cta_contact">Skontaktuj się</span></a>
         </div>
       </div>
     </header>
-    <div id="mobileNav" class="md:hidden px-4 pb-3 hidden">
-      <ul class="flex flex-col gap-2 text-sm text-neutral-300">
-        <li><a class="hover:text-white" href="#about" data-i18n="nav_about">O mnie</a></li>
-        <li><a class="hover:text-white" href="#skills" data-i18n="nav_skills">Kompetencje</a></li>
-        <li><a class="hover:text-white" href="#services" data-i18n="nav_services">Usługi</a></li>
-        <li><a class="hover:text-white" href="#cases" data-i18n="nav_cases">Case studies</a></li>
-        <li><a class="hover:text-white" href="#testimonials" data-i18n="nav_testimonials">Referencje</a></li>
-        <li><a class="hover:text-white" href="#clients" data-i18n="nav_clients">Klienci</a></li>
-        <li><a class="hover:text-white" href="#contact" data-i18n="nav_contact">Kontakt</a></li>
-      </ul>
-    </div>
 
     <!-- Hero -->
-    <section class="relative overflow-hidden hero-gradient">
-      <div class="hero-aura"></div>
-      <div class="mx-auto max-w-6xl px-4 py-10 sm:py-14 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+    <section class="container px-4 py-12 md:py-16">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-            <span class="block"></span>
-            <span class="block bg-gradient-to-r from-fuchsia-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">MC‑Core Product</span>
+          <div class="badge mb-4" data-i18n="hero_badge">Project & R&D Leadership</div>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+            <span class="grad">Buduję produkty, które dowożą KPI.</span>
           </h1>
-          <p id="heroIntro" class="mt-5 text-neutral-300 leading-relaxed max-w-prose" data-i18n="hero_intro">
-            Lider projektów i strateg biznesu z 23-letnim doświadczeniem w pełnym cyklu życia produktu — od koncepcji,
-            przez R&amp;D i produkcję, po komercjalizację i skalowanie na rynku.
+          <p class="mt-4 text-[var(--muted)] max-w-prose" data-i18n="hero_copy">
+            Pomagam firmom uporządkować proces rozwoju produktu, jakość i koszty — od koncepcji, przez R&amp;D i produkcję, po skalowanie w e‑commerce.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="hero_contact">✉️ Skontaktuj się</a>
-            <a href="tel:+48500497680" class="btn border border-fuchsia-500/40 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="hero_call">📞 Zadzwoń</a>
+            <a href="#packages" class="btn btn-primary" data-i18n="hero_cta1">Zobacz pakiety</a>
+            <a href="#services" class="btn btn-ghost" data-i18n="hero_cta2">Lista usług</a>
           </div>
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-              <div class="text-2xl font-bold text-white">23</div>
-              <div class="text-sm text-neutral-300" data-i18n="stat_experience_label">lat doświadczenia</div>
-            </div>
-            <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-              <div class="text-2xl font-bold text-white">6000+</div>
-              <div class="text-sm text-neutral-300" data-i18n="stat_sku_label">SKU w portfelu</div>
-            </div>
-            <div class="rounded-2xl border border-purple-500/20 bg-white/5 p-4">
-              <div class="text-2xl font-bold text-white">R&amp;D • E‑com • Produkcja</div>
-              <div class="text-sm text-neutral-300" data-i18n="stat_industries_label">Branże</div>
-            </div>
-          </div>
+          <ul class="mt-6 text-sm text-[var(--muted)] grid grid-cols-2 gap-2 list-check">
+            <li data-i18n="hero_b1">Claim rate ↓, rating ↑</li>
+            <li data-i18n="hero_b2">PLM i porządek danych</li>
+            <li data-i18n="hero_b3">Optymalizacja BOM/TCO</li>
+            <li data-i18n="hero_b4">Time‑to‑market szybciej</li>
+          </ul>
         </div>
-
-        <!-- Visuals: logo + photo -->
-        <div class="flex items-center justify-center">
-          <div class="relative flex flex-col sm:flex-row items-center justify-center gap-5">
-            <!-- Pulsing logo -->
-            <div class="relative">
-              <img id="logoHero" alt="MC Core Product Logo" class="logo-pulse h-28 w-28 md:h-40 md:w-40 rounded-full shadow-xl ring-2 ring-fuchsia-500/40 object-cover logo-pulse" />
-              <div class="absolute inset-0 -z-10 blur-3xl opacity-60" style="background: radial-gradient(closest-side, rgba(217,70,239,.5), rgba(249,115,22,.35), transparent)"></div>
-            </div>
-            <!-- User photo -->
-            <div class="relative photo-frame ring-2 ring-orange-500/30">
-              <img src="./maciej_cieslak.jpg" alt="Maciej Cieślak" class="photo-pulse max-w-[260px] md:max-w-[320px] object-contain" />
-              <div class="absolute inset-0 -z-10 blur-3xl opacity-50" style="background: radial-gradient(closest-side, rgba(217,70,239,.35), rgba(249,115,22,.25), transparent)"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About & Snapshot & Skills -->
-    <section id="about" class="mx-auto max-w-6xl px-4 py-14">
-      <div class="grid lg:grid-cols-3 gap-6">
-        <div class="lg:col-span-2">
-          <h2 class="text-2xl font-semibold" data-i18n="about_title">Mój sposób działania</h2>
-          <p class="mt-4 text-neutral-300 leading-relaxed" data-i18n="about_body">
-            Łączę dyscyplinę finansową (ROI, struktury kosztów) z praktyką Lean i inżynierią produkcji. Potrafię łączyć zespoły
-            międzyfunkcyjne, zarządzać roadmapą i upraszczać złożoność do decyzyjnych metryk. Pracuję zwinnie (JIRA),
-            wykorzystuję AI do analizy danych i priorytetyzacji backlogu.
-          </p>
-        </div>
-        <!-- Snapshot as graphic cards -->
         <div>
-          <div class="text-sm text-orange-300" data-i18n="snapshot_title">Snapshot</div>
-          <div class="mt-3 grid gap-3">
-            <!-- Card 1 -->
-            <div class="card p-4 flex gap-3 items-start">
-              <svg class="icon flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path class="anim-draw" d="M3 3v6h6" stroke="url(#g1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="anim-draw" d="M21 21v-6h-6" stroke="url(#g2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path class="anim-float" d="M3 9c3-3 6-6 9-6s6 3 9 6" stroke="url(#g1)" stroke-width="2" opacity=".6"/>
-                <defs>
-                  <linearGradient id="g1" x1="0" y1="0" x2="24" y2="24">
-                    <stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/>
-                  </linearGradient>
-                  <linearGradient id="g2" x1="24" y1="24" x2="0" y2="0">
-                    <stop stop-color="#F97316"/><stop offset="1" stop-color="#A855F7"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div>
-                <div class="font-medium text-white" data-i18n="snap_card1_title">Claim rate ↓ / Rating ↑</div>
-                <p class="text-sm text-neutral-300" data-i18n="snap_card1_desc">Program poprawy jakości: redukcja reklamacji, wzrost ocen produktu.</p>
-              </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="card p-4 flex gap-3 items-start">
-              <svg class="icon flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <rect class="anim-pulse-soft" x="3" y="3" width="7" height="7" rx="2" stroke="url(#g3)" stroke-width="2"/>
-                <rect class="anim-pulse-soft" x="14" y="3" width="7" height="7" rx="2" stroke="url(#g3)" stroke-width="2"/>
-                <rect class="anim-pulse-soft" x="3" y="14" width="7" height="7" rx="2" stroke="url(#g3)" stroke-width="2"/>
-                <rect class="anim-pulse-soft" x="14" y="14" width="7" height="7" rx="2" stroke="url(#g3)" stroke-width="2"/>
-                <defs>
-                  <linearGradient id="g3" x1="0" y1="0" x2="24" y2="24">
-                    <stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div>
-                <div class="font-medium text-white" data-i18n="snap_card2_title">6000+ SKU</div>
-                <p class="text-sm text-neutral-300" data-i18n="snap_card2_desc">Zarządzanie szerokim portfelem produktów w e‑commerce.</p>
-              </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="card p-4 flex gap-3 items-start">
-              <svg class="icon flex-shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path class="anim-rotate" d="M12 2v4M12 18v4M4 12H2m20 0h-2M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" stroke="url(#g4)" stroke-width="2" stroke-linecap="round"/>
-                <circle class="anim-pulse-soft" cx="12" cy="12" r="3.5" stroke="url(#g4)" stroke-width="2"/>
-                <defs>
-                  <linearGradient id="g4" x1="0" y1="0" x2="24" y2="24">
-                    <stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div>
-                <div class="font-medium text-white" data-i18n="snap_card3_title">R&amp;D → Rynek</div>
-                <p class="text-sm text-neutral-300" data-i18n="snap_card3_desc">Pełny cykl: prototyp, testy, produkcja, komercjalizacja.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h2 id="skills" class="text-2xl font-semibold mt-12" data-i18n="skills_title">Kompetencje kluczowe</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-4" id="skillsGrid">
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_1">Zarządzanie cyklem życia produktu (PLM)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_2">Przywództwo projektowe &amp; R&amp;D</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_3">Strategia e-commerce (6000+ SKU)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_4">Redukcja reklamacji / satysfakcja klienta</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_5">FMEA, Lean, Kaizen, 5S, ISO 9001</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_6">Planowanie finansowe &amp; ROI</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_7">Budowanie zespołów (mocne strony)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_8">Procesy &amp; workflow (JIRA)</div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-4 text-sm text-neutral-200" data-i18n="sk_9">CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP</div>
-      </div>
-    </section>
-
-    <!-- Services / Offer -->
-    <section id="services" class="mx-auto max-w-6xl px-4 py-14">
-      <h2 class="text-2xl font-semibold" data-i18n="services_title">Usługi / Oferta</h2>
-      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
-          <div class="font-semibold text-white" data-i18n="svc_quality_title">Audyt jakości</div>
-          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_quality_desc">Analiza claim rate, NPS/CSAT, szybkie działania naprawcze i roadmapa jakości.</p>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
-          <div class="font-semibold text-white" data-i18n="svc_plm_title">Wdrożenie PLM</div>
-          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_plm_desc">Procesy i narzędzia PLM: od koncepcji do EOL. Standaryzacja danych produktu.</p>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
-          <div class="font-semibold text-white" data-i18n="svc_cost_title">Optymalizacja kosztów</div>
-          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_cost_desc">Analiza BOM/TCO, sourcing, negocjacje, redesign pod koszty bez straty jakości.</p>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/20 bg-white/5 p-5">
-          <div class="font-semibold text-white" data-i18n="svc_rd_title">Rozwój R&amp;D</div>
-          <p class="text-sm text-neutral-300 mt-2" data-i18n="svc_rd_desc">Szybkie prototypowanie, testy, transfer do produkcji. Harmonogram i KPI.</p>
-        </div>
-      </div>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="services_cta_email">✉️ Zamów konsultację</a>
-        <a href="tel:+48500497680" class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="services_cta_call">📞 Umów rozmowę</a>
-      </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section id="cases" class="mx-auto max-w-6xl px-4 py-14">
-      <h2 class="text-2xl font-semibold" data-i18n="cases_title">Case studies</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
-          <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" aria-hidden="true">
-            <defs><linearGradient id="cs1" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
-            <path d="M4 12l4 4 12-12" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M3 21h18" stroke="url(#cs1)" stroke-width="2" stroke-linecap="round" opacity=".6"/>
-          </svg>
-          <div class="mt-3 font-semibold text-white" data-i18n="case1_title">Jakość: mniej reklamacji, lepsze ratingi</div>
-          <p class="mt-2 text-sm text-neutral-300" data-i18n="case1_desc">Wdrożenie audytów, quick-wins i planu jakości: stabilizacja parametrów, standaryzacja testów.</p>
-          <div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case1_kpi">-32% claim rate</div>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
-          <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" aria-hidden="true"><defs><linearGradient id="cs2" x1="0" y1="0" x2="24" y2="24"><stop offset="0" stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs><text x="12" y="17" text-anchor="middle" font-size="16" font-weight="700" fill="url(#cs2)">$</text></svg>
-          <div class="mt-3 font-semibold text-white" data-i18n="case2_title">Koszty: TCO/BOM i sourcing</div>
-          <p class="mt-2 text-sm text-neutral-300" data-i18n="case2_desc">Redesign pod koszty, alternatywni dostawcy, negocjacje i optymalizacja logistyki.</p>
-          <div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case2_kpi">-18% koszt jednostkowy</div>
-        </div>
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col">
-          <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" aria-hidden="true">
-            <defs><linearGradient id="cs3" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
-            <path d="M3 13h6M3 17h10M3 9h14" stroke="url(#cs3)" stroke-width="2" stroke-linecap="round"/>
-            <path d="M21 12l-4 4v-8l4 4z" fill="url(#cs3)"/>
-          </svg>
-          <div class="mt-3 font-semibold text-white" data-i18n="case3_title">Czas do rynku: prototyp → produkcja</div>
-          <p class="mt-2 text-sm text-neutral-300" data-i18n="case3_desc">Warsztaty z R&D, sprinty decyzyjne, DFM/DFA, szybkie testy i transfer do produkcji.</p>
-          <div class="mt-4 text-3xl font-bold bg-gradient-to-r from-fuchsia-400 to-orange-400 bg-clip-text text-transparent" data-i18n="case3_kpi">-41% time‑to‑market</div>
+          <img src="hero.jpg" alt="MC‑Core Product — praca z zespołem i danymi" class="hero-img shadow-soft w-full h-auto">
         </div>
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="mx-auto max-w-6xl px-4 py-14">
-      <h2 class="text-2xl font-semibold" data-i18n="testi_title">Referencje / Testimonials</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-center gap-3">
-            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">KS</div>
-            <div>
-              <div class="font-medium text-white" data-i18n="t1_name">Kirill Singer</div>
-              <div class="text-xs text-neutral-300" data-i18n="t1_role">Web Design & Graphic Design — współpraca w jednym zespole</div>
-            </div>
-          </div>
-          <p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t1_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Maciej wnosi do zespołu połączenie wiedzy inżynierskiej i dojrzałego product managementu. Świetnie identyfikuje problemy jakościowe i potrafi je szybko rozwiązać, jasno komunikując cele między zespołami. Polecam — silny gracz zespołowy i skuteczny lider jakości.</p>
+    <!-- Services -->
+    <section id="services" class="container px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-bold">Usługi</h2>
+      <p class="text-[var(--muted)] mt-2" data-i18n="svc_lead">Konkretne obszary, w których wchodzę i dowożę:</p>
+      <div class="grid-3 mt-6">
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">Audyt jakości &amp; program naprawczy</div>
+          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
+            <li>Analiza reklamacji, 8D, standaryzacja testów</li>
+            <li>KPI: claim rate, rating, NPS/CSAT</li>
+          </ul>
         </div>
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-center gap-3">
-            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">SD</div>
-            <div>
-              <div class="font-medium text-white" data-i18n="t2_name">Simon de Groot</div>
-              <div class="text-xs text-neutral-300" data-i18n="t2_role">Head of Product Development — współpraca między zespołami</div>
-            </div>
-          </div>
-          <p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t2_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Pracowałem z Maciejem przy wielu projektach. Ogarnia cały cykl życia produktu: od koncepcji, przez R&D i produkcję, po launch. Dostarcza wyniki pod presją i buduje zmotywowane zespoły. Orientacja na klienta przy zachowaniu dyscypliny kosztowej.</p>
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">PLM &amp; porządek danych produktu</div>
+          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
+            <li>Struktury danych, workflow, wersjonowanie</li>
+            <li>Integracja z R&amp;D, produkcją i e‑commerce</li>
+          </ul>
         </div>
-        <div class="rounded-2xl border border-fuchsia-500/25 bg-white/5 p-5 flex flex-col gap-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-center gap-3">
-            <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-600/50 to-orange-500/50 ring-1 ring-white/20 flex items-center justify-center text-white/90 text-sm">WP</div>
-            <div>
-              <div class="font-medium text-white" data-i18n="t3_name">Włodzimierz Parafiński</div>
-              <div class="text-xs text-neutral-300" data-i18n="t3_role">Technik serwisu — klient Expondo</div>
-            </div>
-          </div>
-          <p class="relative text-sm text-neutral-300 leading-relaxed pl-6" data-i18n="t3_quote"><span class="absolute left-0 top-0 text-xl text-fuchsia-400">❝</span>Współpraca z Maciejem to konkret i szybkie działania. Jego interwencje u producenta przekładały się na realne usprawnienia i jakość. Z tych, z którymi chce się pracować także po godzinach.</p>
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">Optymalizacja kosztów</div>
+          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
+            <li>BOM/TCO, sourcing, negocjacje</li>
+            <li>Redesign pod koszty bez utraty jakości</li>
+          </ul>
+        </div>
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">R&amp;D → Produkcja → Rynek</div>
+          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
+            <li>Sprinty decyzyjne, DFM/DFA, testy</li>
+            <li>Transfer do produkcji i launch</li>
+          </ul>
+        </div>
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">E‑commerce i portfel SKU</div>
+          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
+            <li>Zarządzanie 6000+ SKU</li>
+            <li>Content, jakość, zwroty, marże</li>
+          </ul>
+        </div>
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">Procesy i narzędzia</div>
+          <ul class="text-sm text-[var(--muted)] mt-3 list-check">
+            <li>JIRA, Lean/Kaizen, ISO 9001, FMEA</li>
+            <li>Raportowanie KPI i rutyny zespołowe</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="container px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-bold" data-i18n="pkg_title">Pakiety współpracy</h2>
+      <p class="text-[var(--muted)] mt-2" data-i18n="pkg_lead">Rozliczanie prosto: minimalny czas pracy miesiąc. Ceny netto.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-6">
+        <div class="card p-6 shadow-soft">
+          <div class="badge">Start</div>
+          <div class="price mt-2">15 000 zł</div>
+          <div class="text-sm text-[var(--muted)]">/ miesiąc</div>
+          <ul class="list-check text-[var(--muted)] mt-4">
+            <li>Audyt i quick‑wins</li>
+            <li>Roadmapa 30/60/90</li>
+            <li>2 warsztaty decyzyjne</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary mt-6 w-full" data-i18n="pkg_cta">Rezerwuj termin</a>
+        </div>
+        <div class="card p-6 shadow-soft border-purple-300">
+          <div class="badge">Core</div>
+          <div class="price mt-2">24 000 zł</div>
+          <div class="text-sm text-[var(--muted)]">/ miesiąc</div>
+          <ul class="list-check text-[var(--muted)] mt-4">
+            <li>Prowadzenie projektów (PLM/R&amp;D)</li>
+            <li>KPI jakości i kosztów</li>
+            <li>Stałe spotkania zespołu</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary mt-6 w-full" data-i18n="pkg_cta">Rezerwuj termin</a>
+        </div>
+        <div class="card p-6 shadow-soft">
+          <div class="badge">Scale</div>
+          <div class="price mt-2">34 000 zł</div>
+          <div class="text-sm text-[var(--muted)]">/ miesiąc</div>
+          <ul class="list-check text-[var(--muted)] mt-4">
+            <li>Transformacja procesów</li>
+            <li>Optymalizacja BOM/TCO</li>
+            <li>On‑site + coaching liderów</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary mt-6 w-full" data-i18n="pkg_cta">Rezerwuj termin</a>
+        </div>
+      </div>
+      <p class="text-xs text-[var(--muted)] mt-3">Indywidualne wyceny dla zakresów produkcyjnych na miejscu.</p>
+    </section>
+
+    <!-- Training -->
+    <section id="training" class="container px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-bold">Szkolenia</h2>
+      <div class="grid md:grid-cols-2 gap-4 mt-6">
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">Quality Essentials for E‑commerce</div>
+          <p class="text-sm text-[var(--muted)] mt-2">Claim rate, rating, NPS/CSAT, 8D, test plans.</p>
+        </div>
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">PLM w praktyce</div>
+          <p class="text-sm text-[var(--muted)] mt-2">Dane produktu, zmiany inżynierskie, release flow.</p>
+        </div>
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">Koszty produktu bez tajemnic</div>
+          <p class="text-sm text-[var(--muted)] mt-2">BOM, TCO, sourcing, alternatywy i negocjacje.</p>
+        </div>
+        <div class="card p-5 shadow-soft">
+          <div class="font-semibold">R&amp;D → Produkcja → Rynek</div>
+          <p class="text-sm text-[var(--muted)] mt-2">DFM/DFA, sprinty decyzyjne, testy, launch.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases -->
+    <section id="cases" class="container px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-bold">Case studies</h2>
+      <div class="grid md:grid-cols-3 gap-4 mt-6">
+        <div class="card p-5 shadow-soft">
+          <div class="text-sm text-[var(--muted)]">Jakość</div>
+          <div class="font-semibold mt-1">-32% claim rate w 4 miesiące</div>
+          <p class="text-sm text-[var(--muted)] mt-2">Standaryzacja testów, 8D, poprawa contentu.</p>
+        </div>
+        <div class="card p-5 shadow-soft">
+          <div class="text-sm text-[var(--muted)]">Koszty</div>
+          <div class="font-semibold mt-1">-18% koszt jednostkowy</div>
+          <p class="text-sm text-[var(--muted)] mt-2">BOM/TCO, alternatywne komponenty, negocjacje.</p>
+        </div>
+        <div class="card p-5 shadow-soft">
+          <div class="text-sm text-[var(--muted)]">Time‑to‑market</div>
+          <div class="font-semibold mt-1">-41% TTM</div>
+          <p class="text-sm text-[var(--muted)] mt-2">Decyzyjne sprinty, DFM/DFA, szybkie testy.</p>
         </div>
       </div>
     </section>
 
     <!-- Clients -->
-    <section id="clients" class="mx-auto max-w-6xl px-4 py-14">
-      <h2 class="text-2xl font-semibold" data-i18n="clients_title">Klienci, którzy nam zaufali</h2>
-      <ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300">
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./expondo.png" alt="Expondo" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_expondo_title">Expondo — Senior Quality Engineer (2021–2025)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_expondo_desc">Europejski lider e-commerce B2B i B2C w sektorze urządzeń przemysłowych, gastronomicznych i warsztatowych.</p>
-            </div>
-          </div>
-        </li>
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./lug.png" alt="LUG Light Factory" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_lug_title">LUG Light Factory — Project Lead R&amp;D (2018–2022)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_lug_desc">Polski producent profesjonalnych systemów oświetlenia LED dla sektora przemysłowego i publicznego, działający globalnie.</p>
-            </div>
-          </div>
-        </li>
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./farrell.png" alt="Farrell Furniture" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_farrell_title">Farrell Furniture — CAM / Production Engineer (2005–2018)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_farrell_desc">Irlandzki producent mebli biurowych i szkolnych, specjalizujący się w rozwiązaniach kontraktowych.</p>
-            </div>
-          </div>
-        </li>
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./wilo.png" alt="Wilo" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_wilo_title">Wilo — Sales Engineer (2003–2004)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_wilo_desc">Niemiecki koncern produkujący pompy i systemy pompowe dla instalacji grzewczych, wodnych i przemysłowych.</p>
-            </div>
-          </div>
-        </li>
-        <li class="rounded-xl border border-purple-500/20 bg-white/5 px-4 py-3 hover:shadow-lg hover:shadow-fuchsia-500/10">
-          <div class="flex items-start gap-3">
-            <img src="./afriso.png" alt="Afriso" class="logo-tile ring-1 ring-white/20 flex-shrink-0" />
-            <div>
-              <div class="font-medium text-white" data-i18n="client_afriso_title">Afriso — Sales Representative (2002–2003)</div>
-              <p class="text-sm text-neutral-300 mt-1" data-i18n="client_afriso_desc">Niemiecki producent aparatury kontrolno‑pomiarowej dla branży grzewczej, przemysłowej i ekologicznej.</p>
-            </div>
-          </div>
-        </li>
-      </ul>
+    <section class="container px-4 py-12">
+      <h2 class="text-2xl md:text-3xl font-bold">Zaufali</h2>
+      <div class="mt-4 grid grid-cols-2 md:grid-cols-5 gap-6 items-center">
+        <img src="expondo.png" alt="Expondo" class="logo-tile">
+        <img src="lug.png" alt="LUG Light Factory" class="logo-tile">
+        <img src="farrell.png" alt="Farrell Furniture" class="logo-tile">
+        <img src="wilo.png" alt="Wilo" class="logo-tile">
+        <img src="afriso.png" alt="Afriso" class="logo-tile">
+      </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
-      <div class="rounded-3xl border border-fuchsia-500/25 bg-gradient-to-br from-fuchsia-600/10 via-purple-700/10 to-orange-500/10 p-6 md:p-10">
-        <h2 class="text-2xl font-semibold" data-i18n="contact_title">Porozmawiajmy o Twoim produkcie</h2>
+    <section id="contact" class="container px-4 py-14">
+      <div class="card p-6 md:p-8 shadow-soft">
+        <h2 class="text-2xl md:text-3xl font-bold">Kontakt</h2>
+        <p class="text-[var(--muted)] mt-2">Najprościej: wyślij krótką wiadomość z kontekstem. Odezwę się z propozycją terminu.</p>
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="mailto:mccoreproduct@gmail.com" class="btn bg-orange-500 px-4 py-2 font-medium text-black hover:bg-orange-400 min-h-[44px] min-w-[44px]" data-i18n="cta_email">✉️ Napisz</a>
-          <a href="tel:+48500497680" class="btn border border-fuchsia-500/30 px-4 py-2 hover:bg-fuchsia-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_call">📞 Zadzwoń</a>
-          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer" class="btn border border-purple-500/30 px-4 py-2 hover:bg-purple-500/10 min-h-[44px] min-w-[44px]" data-i18n="cta_linkedin">in LinkedIn</a>
+          <a href="mailto:mccoreproduct@gmail.com" class="btn btn-primary">✉️ Email</a>
+          <a href="tel:+48500497680" class="btn">📞 +48 500 497 680</a>
+          <a href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" class="btn">in LinkedIn</a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-purple-500/20">
-      <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-neutral-400 flex flex-wrap items-center justify-between gap-3">
-        <div>© <span id="year"></span> MC-Core Product — Maciej Cieślak</div>
-        <div class="flex items-center gap-4">
-          <a class="hover:text-white" href="mailto:mccoreproduct@gmail.com">✉️ Email</a>
-          <a class="hover:text-white" href="https://www.linkedin.com/in/maciej-cieslak-911bbb94" target="_blank" rel="noreferrer">in LinkedIn</a>
-          <span class="hover:text-white">📍 <span data-i18n="footer_location">Zielona Góra, Polska</span></span>
-        </div>
+    <footer class="border-t border-[var(--stroke)]">
+      <div class="container px-4 py-8 text-sm text-[var(--muted)] flex flex-wrap items-center justify-between gap-3">
+        <div>© <span id="year"></span> MC‑Core Product</div>
+        <div>📍 Zielona Góra, Polska</div>
       </div>
     </footer>
 
-    <button id="backToTop" class="fixed bottom-6 right-4 z-40 hidden rounded-full px-3 py-2 bg-white/10 border border-white/20 text-white backdrop-blur hover:bg-white/20">⬆</button>
-
-    <!-- AUTO-INJECTED: paths to brand & client logos -->
     <script>
-      // Główne logo (nagłówek + hero). Plik w tym samym folderze co index.html (spacje w URL są ok).
-      window.__MC_LOGO_URL = "./logo_MC_core_light.png";
-      // Logotypy klientów — pliki w tym samym folderze:
-      window.__CLIENT_LOGOS = {
-        expondo: "./expondo.png",
-        lug: "./lug.png",
-        farrell: "./farrell.png",
-        wilo: "./wilo.png",
-        afriso: "./afriso.png"
-      };
-    </script>
-
-    <script>
-      // Fallback logo as data URL (purple/orange glow)
-      const FALLBACK_LOGO = "data:image/svg+xml;utf8," + encodeURIComponent(`
-        <svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
-          <defs>
-            <radialGradient id='g' cx='50%' cy='50%' r='60%'>
-              <stop offset='0%' stop-color='rgba(168,85,247,0.45)'/>
-              <stop offset='60%' stop-color='rgba(249,115,22,0.35)'/>
-              <stop offset='100%' stop-color='rgba(0,0,0,0)'/>
-            </radialGradient>
-          </defs>
-          <rect width='100%' height='100%' fill='#0a0a0a'/>
-          <circle cx='256' cy='256' r='220' fill='url(#g)'/>
-          <circle cx='256' cy='256' r='200' fill='none' stroke='white' stroke-opacity='0.12' stroke-width='20'/>
-          <g fill='white' opacity='0.95' font-family='Arial, Helvetica, sans-serif' text-anchor='middle'>
-            <text x='256' y='235' font-size='170' font-weight='700'>MC</text>
-            <text x='256' y='315' font-size='72' font-weight='700' letter-spacing='3'>CORE</text>
-            <text x='256' y='380' font-size='60' font-weight='700' letter-spacing='2'>PRODUCT</text>
-          </g>
-        </svg>`);
-
-      // Resolve logo
-      function setLogo(imgEl) {
-        const src = (window.__MC_LOGO_URL && typeof window.__MC_LOGO_URL === 'string')
-          ? window.__MC_LOGO_URL
-          : FALLBACK_LOGO;
-        imgEl.src = src;
-        imgEl.onerror = () => { imgEl.src = FALLBACK_LOGO; };
-      }
-
-      // Theme toggle + persist
-      (function initTheme(){
-        try {
-          const saved = localStorage.getItem('mc_theme');
-          const prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const dark = saved ? saved === 'dark' : prefers;
-          document.documentElement.classList.toggle('dark', dark);
-          document.getElementById('themeToggle').addEventListener('click', () => {
-            const nowDark = !document.documentElement.classList.contains('dark');
-            document.documentElement.classList.toggle('dark', nowDark);
-            localStorage.setItem('mc_theme', nowDark ? 'dark' : 'light');
-          });
-        } catch(e) {}
-      })();
-
-      // i18n
+      // Simple PL/EN i18n
       const I18N = {
         pl: {
-          header_write: "✉️ Napisz",
-          header_linkedin: "in LinkedIn",
-          hero_intro: "Lider projektów i strateg biznesu z 23-letnim doświadczeniem w pełnym cyklu życia produktu — od koncepcji, przez R&D i produkcję, po komercjalizację i skalowanie na rynku.",
-          hero_contact: "✉️ Skontaktuj się",
-          hero_call: "📞 Zadzwoń",
-          stat_experience_label: "lat doświadczenia",
-          stat_sku_label: "SKU w portfelu",
-          stat_industries_label: "Branże",
-          about_title: "Mój sposób działania",
-          about_body: "Łączę dyscyplinę finansową (ROI, struktury kosztów) z praktyką Lean i inżynierią produkcji. Potrafię łączyć zespoły międzyfunkcyjne, zarządzać roadmapą i upraszczać złożoność do decyzyjnych metryk. Pracuję zwinnie (JIRA), wykorzystuję AI do analizy danych i priorytetyzacji backlogu.",
-          snapshot_title: "Snapshot",
-          snap_card1_title: "Claim rate ↓ / Rating ↑",
-          snap_card1_desc: "Program poprawy jakości: redukcja reklamacji, wzrost ocen produktu.",
-          snap_card2_title: "6000+ SKU",
-          snap_card2_desc: "Zarządzanie szerokim portfelem produktów w e‑commerce.",
-          snap_card3_title: "R&D → Rynek",
-          snap_card3_desc: "Pełny cykl: prototyp, testy, produkcja, komercjalizacja.",
-          skills_title: "Kompetencje kluczowe",
-          sk_1: "Zarządzanie cyklem życia produktu (PLM)",
-          sk_2: "Przywództwo projektowe & R&D",
-          sk_3: "Strategia e-commerce (6000+ SKU)",
-          sk_4: "Redukcja reklamacji / satysfakcja klienta",
-          sk_5: "FMEA, Lean, Kaizen, 5S, ISO 9001",
-          sk_6: "Planowanie finansowe & ROI",
-          sk_7: "Budowanie zespołów (mocne strony)",
-          sk_8: "Procesy & workflow (JIRA)",
-          sk_9: "CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP",
-          services_title:"Usługi / Oferta",
-          svc_quality_title:"Audyt jakości",
-          svc_quality_desc:"Analiza claim rate, NPS/CSAT, szybkie działania naprawcze i roadmapa jakości.",
-          svc_plm_title:"Wdrożenie PLM",
-          svc_plm_desc:"Procesy i narzędzia PLM: od koncepcji do EOL. Standaryzacja danych produktu.",
-          svc_cost_title:"Optymalizacja kosztów",
-          svc_cost_desc:"Analiza BOM/TCO, sourcing, negocjacje, redesign pod koszty bez straty jakości.",
-          svc_rd_title:"Rozwój R&D",
-          svc_rd_desc:"Szybkie prototypowanie, testy, transfer do produkcji. Harmonogram i KPI.",
-          services_cta_email:"✉️ Zamów konsultację",
-          services_cta_call:"📞 Umów rozmowę",
-          cases_title:"Case studies",
-          case1_title:"Jakość: mniej reklamacji, lepsze ratingi",
-          case1_desc:"Wdrożenie audytów, quick-wins i planu jakości: stabilizacja parametrów, standaryzacja testów.",
-          case1_kpi:"-32% claim rate",
-          case2_title:"Koszty: TCO/BOM i sourcing",
-          case2_desc:"Redesign pod koszty, alternatywni dostawcy, negocjacje i optymalizacja logistyki.",
-          case2_kpi:"-18% koszt jednostkowy",
-          case3_title:"Czas do rynku: prototyp → produkcja",
-          case3_desc:"Warsztaty z R&D, sprinty decyzyjne, DFM/DFA, szybkie testy i transfer do produkcji.",
-          case3_kpi:"-41% time‑to‑market",
-          testi_title:"Referencje / Testimonials",
-          t1_name:"Kirill Singer",
-          t1_role:"Web Design & Graphic Design — współpraca w jednym zespole",
-          t1_quote:"Maciej wnosi do zespołu połączenie wiedzy inżynierskiej i dojrzałego product managementu. Świetnie identyfikuje problemy jakościowe i potrafi je szybko rozwiązać, jasno komunikując cele między zespołami. Polecam — silny gracz zespołowy i skuteczny lider jakości.",
-          t2_name:"Simon de Groot",
-          t2_role:"Head of Product Development — współpraca między zespołami",
-          t2_quote:"Pracowałem z Maciejem przy wielu projektach. Ogarnia cały cykl życia produktu: od koncepcji, przez R&D i produkcję, po launch. Dostarcza wyniki pod presją i buduje zmotywowane zespoły. Orientacja na klienta przy zachowaniu dyscypliny kosztowej.",
-          t3_name:"Włodzimierz Parafiński",
-          t3_role:"Technik serwisu — klient Expondo",
-          t3_quote:"Współpraca z Maciejem to konkret i szybkie działania. Jego interwencje u producenta przekładały się na realne usprawnienia i jakość. Z tych, z którymi chce się pracować także po godzinach.",
-          clients_title: "Klienci, którzy mi zaufali",
-          contact_title: "Porozmawiajmy o Twoim produkcie",
-          cta_email: "✉️ Napisz",
-          cta_call: "📞 Zadzwoń",
-          cta_linkedin: "in LinkedIn",
-          footer_location: "Zielona Góra, Polska",
-          nav_about:"O mnie", nav_skills:"Kompetencje", nav_clients:"Klienci", nav_contact:"Kontakt", nav_services:"Usługi", nav_cases:"Case studies", nav_testimonials:"Referencje"
+          nav_services:"Usługi", nav_packages:"Pakiety", nav_training:"Szkolenia", nav_cases:"Case studies", nav_contact:"Kontakt",
+          hero_badge:"Project & R&D Leadership",
+          hero_copy:"Pomagam firmom uporządkować proces rozwoju produktu, jakość i koszty — od koncepcji, przez R&D i produkcję, po skalowanie w e‑commerce.",
+          hero_cta1:"Zobacz pakiety", hero_cta2:"Lista usług",
+          svc_lead:"Konkretne obszary, w których wchodzę i dowożę:",
+          pkg_title:"Pakiety współpracy", pkg_lead:"Rozliczanie prosto: minimalny czas pracy miesiąc. Ceny netto.",
+          pkg_cta:"Rezerwuj termin", cta_contact:"Skontaktuj się"
         },
         en: {
-          header_write: "✉️ Email me",
-          header_linkedin: "in LinkedIn",
-          hero_intro: "Project leader and business strategist with 23 years of experience across the full product lifecycle — from concept through R&D and production to commercialization and scaling.",
-          hero_contact: "✉️ Get in touch",
-          hero_call: "📞 Call",
-          stat_experience_label: "years experience",
-          stat_sku_label: "SKUs in portfolio",
-          stat_industries_label: "Industries",
-          about_title: "How I operate",
-          about_body: "I combine financial discipline (ROI, cost structures) with Lean practice and manufacturing engineering. I connect cross‑functional teams, manage the roadmap, and simplify complexity into decision‑making metrics. I work in agile tools (JIRA) and use AI for analysis and prioritization.",
-          snapshot_title: "Snapshot",
-          snap_card1_title: "Claim rate ↓ / Rating ↑",
-          snap_card1_desc: "Quality improvement program: fewer claims, higher ratings.",
-          snap_card2_title: "6000+ SKUs",
-          snap_card2_desc: "Managing a wide product portfolio in e‑commerce.",
-          snap_card3_title: "R&D → Market",
-          snap_card3_desc: "Full cycle: prototype, testing, production, go‑to‑market.",
-          skills_title: "Core competencies",
-          sk_1: "Product lifecycle management (PLM)",
-          sk_2: "Project leadership & R&D",
-          sk_3: "E‑commerce strategy (6000+ SKUs)",
-          sk_4: "Claims reduction / customer satisfaction",
-          sk_5: "FMEA, Lean, Kaizen, 5S, ISO 9001",
-          sk_6: "Financial planning & ROI",
-          sk_7: "Team building (strengths‑based)",
-          sk_8: "Processes & workflow (JIRA)",
-          sk_9: "CAD/CAM: AutoCAD, SolidWorks, Alphacam, WoodWOP",
-          services_title:"Services / Offer",
-          svc_quality_title:"Quality audit",
-          svc_quality_desc:"Claim-rate, NPS/CSAT analysis, quick corrective actions and a quality roadmap.",
-          svc_plm_title:"PLM implementation",
-          svc_plm_desc:"Processes and PLM tooling from concept to EOL. Product data standardization.",
-          svc_cost_title:"Cost optimization",
-          svc_cost_desc:"BOM/TCO analysis, sourcing, negotiations, cost-down redesign without quality loss.",
-          svc_rd_title:"R&D development",
-          svc_rd_desc:"Rapid prototyping, testing, transfer to production. Timeline and KPIs.",
-          services_cta_email:"✉️ Request a consultation",
-          services_cta_call:"📞 Book a call",
-          cases_title:"Case studies",
-          case1_title:"Quality: fewer claims, better ratings",
-          case1_desc:"Audits, quick wins and a quality roadmap: stabilized parameters, standardized testing.",
-          case1_kpi:"-32% claim rate",
-          case2_title:"Costs: TCO/BOM & sourcing",
-          case2_desc:"Cost‑down redesign, alternative suppliers, negotiations and logistics optimization.",
-          case2_kpi:"-18% unit cost",
-          case3_title:"Time‑to‑market: prototype → production",
-          case3_desc:"R&D workshops, decision sprints, DFM/DFA, rapid tests and production transfer.",
-          case3_kpi:"-41% time‑to‑market",
-          testi_title:"Testimonials",
-          t1_name:"Kirill Singer",
-          t1_role:"Web Design & Graphic Design — same team",
-          t1_quote:"Maciej brings a mix of engineering insight and mature product management. He quickly identifies quality issues and resolves them, clearly aligning cross‑team goals. Strong team player and an effective quality leader.",
-          t2_name:"Simon de Groot",
-          t2_role:"Head of Product Development — cross‑team collaboration",
-          t2_quote:"I've worked with Maciej on several projects. He manages the full product lifecycle from concept through R&D and production to launch. Delivers under pressure and builds motivated teams. Customer‑centric with strong cost discipline.",
-          t3_name:"Włodzimierz Parafiński",
-          t3_role:"Service technician — Expondo client",
-          t3_quote:"Working with Maciej means decisive actions and quick results. His interventions with manufacturers led to tangible improvements and quality. One of the few people I stay in touch with outside of work.",
-          clients_title: "Clients who trusted me",
-          contact_title: "Let's talk about your product",
-          cta_email: "✉️ Email me",
-          cta_call: "📞 Call",
-          cta_linkedin: "in LinkedIn",
-          footer_location: "Zielona Góra, Poland",
-          nav_about:"About", nav_skills:"Skills", nav_clients:"Clients", nav_contact:"Contact", nav_services:"Services", nav_cases:"Case studies", nav_testimonials:"Testimonials"
+          nav_services:"Services", nav_packages:"Packages", nav_training:"Training", nav_cases:"Case studies", nav_contact:"Contact",
+          hero_badge:"Project & R&D Leadership",
+          hero_copy:"I help companies fix product development, quality and costs — from concept through R&D and production to e‑commerce scale.",
+          hero_cta1:"See packages", hero_cta2:"All services",
+          svc_lead:"Where I jump in and deliver:",
+          pkg_title:"Engagement packages", pkg_lead:"Simple billing: minimum one month. Prices net.",
+          pkg_cta:"Book a slot", cta_contact:"Contact me"
         }
       };
-
-      function applyI18n(lang) {
-        document.documentElement.lang = lang;
-        document.querySelectorAll("[data-i18n]").forEach(el => {
+      function applyI18n(lang){
+        document.querySelectorAll("[data-i18n]").forEach(el=>{
           const key = el.getAttribute("data-i18n");
-          if (I18N[lang] && I18N[lang][key]) el.textContent = I18N[lang][key];
+          if(I18N[lang] && I18N[lang][key]) el.textContent = I18N[lang][key];
         });
       }
-
-      // Language toggle + persist
-      (function initLang(){
-        const saved = localStorage.getItem("mc_lang") || "pl";
+      (function init(){
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const saved = localStorage.getItem("lang") || "pl";
         applyI18n(saved);
-        const btn = document.getElementById("langToggle");
-        btn.textContent = "PL | EN";
-        btn.addEventListener("click", () => {
-          const cur = document.documentElement.lang || "pl";
-          const next = cur === "pl" ? "en" : "pl";
+        const btn = document.getElementById("lang");
+        btn.addEventListener("click", ()=>{
+          const cur = localStorage.getItem("lang") || "pl";
+          const next = cur==="pl" ? "en" : "pl";
+          localStorage.setItem("lang", next);
           applyI18n(next);
-          localStorage.setItem("mc_lang", next);
-          btn.textContent = "PL | EN";
         });
       })();
-
-      // Mobile menu toggle
-      (function menu(){
-        const btn = document.getElementById('mobileMenuBtn');
-        const nav = document.getElementById('mobileNav');
-        if(btn && nav){
-          btn.addEventListener('click', ()=>{
-            nav.classList.toggle('hidden');
-          });
-        }
-      })();
-
-      // Back to top
-      (function backToTop(){
-        const btn = document.getElementById('backToTop');
-        window.addEventListener('scroll', ()=>{
-          if(window.scrollY > 400){ btn.classList.remove('hidden'); } else { btn.classList.add('hidden'); }
-        });
-        btn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
-      })();
-
-      // Client logos override if provided
-      (function clientLogos(){
-        if(window.__CLIENT_LOGOS){
-          const map = window.__CLIENT_LOGOS;
-          for(const key of ['expondo','lug','farrell','wilo','afriso']){
-            const img = document.querySelector(`img[src$="${key}.png"]`);
-            if(img && map[key]) img.src = map[key];
-          }
-        }
-      })();
-
-      // Set dynamic bits
-      document.getElementById('year').textContent = new Date().getFullYear();
-      function setLogo(imgEl) {
-        const src = (window.__MC_LOGO_URL && typeof window.__MC_LOGO_URL === 'string')
-          ? window.__MC_LOGO_URL
-          : '';
-        if (src) {
-          imgEl.src = src;
-        }
-      }
-      setLogo(document.getElementById('logoSmall'));
-      setLogo(document.getElementById('logoHero'));
     </script>
-  
-<script>
-  // --- Subtelny parallax dla tła hero ---
-  (function heroParallax() {
-    const aura = document.querySelector('.hero-aura');
-    if (!aura) return;
-    let lastY = 0;
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY || window.pageYOffset;
-      const translateY = Math.min(scrollY * 0.08, 30); // maks 30px
-      if (Math.abs(scrollY - lastY) > 1) {
-        aura.style.transform = `translateY(${translateY}px)`;
-        aura.style.transition = 'transform 0.15s ease-out';
-        lastY = scrollY;
-      }
-    });
-  })();
-</script>
-
-
-<script>
-// --- Parallax reagujący na ruch myszki (desktop only) ---
-(function heroMouseParallax() {
-  const aura = document.querySelector('.hero-aura');
-  if (!aura) return;
-  function onMouseMove(e){
-    const x = (e.clientX / window.innerWidth - 0.5) * 2;
-    const y = (e.clientY / window.innerHeight - 0.5) * 2;
-    const moveX = x * 20; // max 20px
-    const moveY = y * 15; // max 15px
-    aura.style.transform = `translate(${moveX}px, ${moveY}px)`;
-    aura.style.transition = 'transform 0.15s ease-out';
-  }
-  function enable(){
-    if (window.innerWidth >= 768) {
-      document.addEventListener('mousemove', onMouseMove);
-    } else {
-      document.removeEventListener('mousemove', onMouseMove);
-      aura.style.transform = 'translate(0,0)';
-    }
-  }
-  window.addEventListener('resize', enable);
-  enable();
-})();
-</script>
-
-
-<script>
-  // --- Magnetic hover micro-interaction for CTA buttons ---
-  (function magneticCTA(){
-    const els = document.querySelectorAll('.magnetic');
-    if (!els.length) return;
-    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) return;
-    const strength = 12; // max px offset
-    els.forEach(el => {
-      const rectCache = {x:0,y:0,w:0,h:0};
-      function updateRect(){ const r = el.getBoundingClientRect(); rectCache.x=r.left; rectCache.y=r.top; rectCache.w=r.width; rectCache.h=r.height; }
-      updateRect();
-      window.addEventListener('resize', updateRect);
-      window.addEventListener('scroll', updateRect, {passive:true});
-      el.addEventListener('mousemove', (e) => {
-        const relX = (e.clientX - rectCache.x) / rectCache.w - 0.5;
-        const relY = (e.clientY - rectCache.y) / rectCache.h - 0.5;
-        const tx = Math.max(Math.min(relX * strength, strength), -strength);
-        const ty = Math.max(Math.min(relY * strength, strength), -strength);
-        el.style.transform = `translate(${tx}px, ${ty}px)`;
-      });
-      el.addEventListener('mouseleave', () => {
-        el.style.transform = 'translate(0,0)';
-      });
-      // Keyboard focus accessibility: small nudge
-      el.addEventListener('focus', () => { el.style.transform = 'translate(0,-2px)'; });
-      el.addEventListener('blur', () => { el.style.transform = 'translate(0,0)'; });
-    });
-  })();
-</script>
-
-
-<script>
-  // --- In-view glow for CTA buttons (IntersectionObserver) ---
-  (function ctaInViewGlow(){
-    const keys = ['hero_contact','services_cta_email','cta_email'];
-    const targets = [];
-    keys.forEach(k => {
-      const el = document.querySelector(`[data-i18n="${k}"]`);
-      if (el) {
-        el.classList.add('cta-glow','cta-watch');
-        targets.push(el);
-      }
-    });
-    if (!targets.length) return;
-    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('cta-inview');
-        else entry.target.classList.remove('cta-inview');
-      });
-    }, { root: null, threshold: 0.5 });
-    targets.forEach(t => io.observe(t));
-  })();
-</script>
-
-
-    <script>
-      (function initThemeToggle(){
-        try {
-          var root = document.documentElement;
-          var btn = document.getElementById('themeToggle');
-          function get(){ return root.getAttribute('data-theme') || 'light'; }
-          function set(t){ root.setAttribute('data-theme', t); try{ localStorage.setItem('mc_theme', t);}catch(e){} }
-          if (btn) { btn.addEventListener('click', function(){ set(get()==='dark' ? 'light' : 'dark'); }); }
-        } catch(e){}
-      })();
-    </script>
-</body>
+  </body>
 </html>
