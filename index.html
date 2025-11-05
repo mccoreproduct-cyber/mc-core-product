@@ -30,10 +30,17 @@
       .list-check li{display:flex;gap:.5rem;margin:.35rem 0}
       .list-check li::before{content:"✓";color:#16a34a;font-weight:700}
       .link{color:#334155;text-decoration:underline;}
+      /* Mobile improvements */
+      @media (max-width: 640px){
+        .acc-body{padding:0 14px 14px 14px}
+        details.acc summary{padding:14px 16px}
+      }
+      .acc-icon{display:inline-block; width:20px; text-align:center; opacity:.7}
+
 
       /* Accordion */
       details.acc{border:1px solid var(--stroke);border-radius:16px;background:#fff;box-shadow:0 10px 30px rgba(17,24,39,.04);padding:.25rem}
-      details.acc + details.acc{margin-top:16px}
+      
       details.acc[open]{box-shadow:0 12px 34px rgba(17,24,39,.07)}
       details.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-radius:14px;gap:12px}
       details.acc summary::-webkit-details-marker{display:none}
@@ -101,7 +108,7 @@
           </ul>
         </div>
         <div>
-          <img src="maciej_cieslak.jpg" alt="Maciej Cieślak" class="hero-img shadow-soft w-full max-w-[280px] rounded-xl object-contain mx-auto md:ml-auto">
+          <img src="maciej_cieslak.jpg" alt="Maciej Cieślak" class="hero-img shadow-soft w-full max-w-[260px] rounded-xl object-contain mx-auto md:ml-auto">
         </div>
       </div>
     </section>
@@ -112,7 +119,7 @@
       <h2 class="text-2xl md:text-3xl font-bold">Usługi</h2>
       <p class="text-[var(--muted)] mt-2" data-i18n="svc_lead">Konkretne obszary, w których wchodzę i dowożę:</p>
 
-      <div class="mt-6 grid md:grid-cols-2 gap-4">
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-3">
 
         <details class="acc">
           <summary><span class="acc-title">Audyt jakości &amp; program naprawczy</span><span class="acc-icon">▾</span></summary>
