@@ -105,7 +105,7 @@
     <header class="sticky top-0 z-40 backdrop-blur border-b border-fuchsia-500/20 bg-neutral-950/70">
       <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <img id="logoSmall" alt="MC Core Product Logo" class="logo-pulse h-8 w-8 md:h-10 md:w-10 rounded-full object-cover ring-2 ring-orange-500/40 logo-pulse" />
+          <picture class="logo-pulse h-8 w-8 md:h-10 md:w-10 rounded-full ring-2 ring-orange-500/40 overflow-hidden block"><source srcset="./logo_mc_core_dark.png" media="(prefers-color-scheme: dark)" /><img id="logoSmall" alt="MC Core Product Logo" src="./logo_mc_core_light.png" class="h-full w-full object-contain" /></picture>
           <span class="font-semibold tracking-tight text-lg">MC-Core Product</span>
         </div>
         <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
@@ -176,7 +176,7 @@
           <div class="relative flex flex-col sm:flex-row items-center justify-center gap-5">
             <!-- Pulsing logo -->
             <div class="relative">
-              <img id="logoHero" alt="MC Core Product Logo" class="logo-pulse h-28 w-28 md:h-40 md:w-40 rounded-full shadow-xl ring-2 ring-fuchsia-500/40 object-cover logo-pulse" />
+              <picture class="logo-pulse h-28 w-28 md:h-40 md:w-40 rounded-full shadow-xl ring-2 ring-fuchsia-500/40 overflow-hidden block"><source srcset="./logo_mc_core_dark.png" media="(prefers-color-scheme: dark)" /><img id="logoHero" alt="MC Core Product Logo" src="./logo_mc_core_light.png" class="h-full w-full object-contain" /></picture>
               <div class="absolute inset-0 -z-10 blur-3xl opacity-60" style="background: radial-gradient(closest-side, rgba(217,70,239,.5), rgba(249,115,22,.35), transparent)"></div>
             </div>
             <!-- User photo -->
@@ -451,19 +451,7 @@
 
     <button id="backToTop" class="fixed bottom-6 right-4 z-40 hidden rounded-full px-3 py-2 bg-white/10 border border-white/20 text-white backdrop-blur hover:bg-white/20">⬆</button>
 
-    <!-- AUTO-INJECTED: paths to brand & client logos -->
-    <script>
-      // Główne logo (nagłówek + hero). Plik w tym samym folderze co index.html (spacje w URL są ok).
-      window.__MC_LOGO_URL = "./logo_MC_core_light.png";
-      // Logotypy klientów — pliki w tym samym folderze:
-      window.__CLIENT_LOGOS = {
-        expondo: "./expondo.png",
-        lug: "./lug.png",
-        farrell: "./farrell.png",
-        wilo: "./wilo.png",
-        afriso: "./afriso.png"
-      };
-    </script>
+    
 
     <script>
       // Fallback logo as data URL (purple/orange glow)
