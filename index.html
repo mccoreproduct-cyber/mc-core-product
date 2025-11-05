@@ -27,6 +27,23 @@
       .hero-img{border-radius:16px;border:1px solid var(--stroke);}
       .logo-tile{height:44px;object-fit:contain;filter:grayscale(100%);opacity:.85}
       .logo-tile:hover{opacity:1;filter:none}
+      /* Logo pulse */
+      @keyframes pulseGlow{0%,100%{transform:scale(1); box-shadow:0 0 0 0 rgba(59,130,246,.35);} 50%{transform:scale(1.04); box-shadow:0 0 0 8px rgba(59,130,246,.12);}}
+      .logo-pulse{animation:pulseGlow 2.6s ease-in-out infinite;}
+
+      /* Mobile header & menu */
+      .nav-desktop{display:none;}
+      .nav-toggle{display:inline-flex;}
+      @media (min-width: 768px){
+        .nav-desktop{display:flex;}
+        .nav-toggle{display:none;}
+      }
+
+      /* Sticky mobile CTA */
+      #mobileCta{position:fixed;left:0;right:0;bottom:12px;display:flex;justify-content:center;z-index:60}
+      #mobileCta .bar{background:#ffffff;border:1px solid var(--stroke);border-radius:999px;box-shadow:0 10px 30px rgba(17,24,39,.12);padding:8px;display:flex;gap:8px}
+      @media (min-width:768px){#mobileCta{display:none}}
+
       .list-check li{display:flex;gap:.5rem;margin:.35rem 0}
       .list-check li::before{content:"✓";color:#16a34a;font-weight:700}
       .link{color:#334155;text-decoration:underline;}
@@ -68,10 +85,11 @@
     <header class="border-b border-[var(--stroke)] sticky top-0 bg-white/90 backdrop-blur z-50">
       <div class="container px-4 py-3 flex items-center justify-between gap-4">
         <div class="flex items-center gap-3">
-          <img src="logo MC core produkt.png" alt="MC‑Core Product" class="h-9 w-9 rounded-full ring-2 ring-purple-300 object-cover bg-white p-0.5" onerror="this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27&gt;&lt;rect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27#eee%27/&gt;&lt;text x=%2732%27 y=%2739%27 text-anchor=%27middle%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2732%27 fill=%27#6d28d9%27&gt;MC&lt;/text&gt;&lt;/svg&gt;';">
+          <img src="logo MC core produkt.png" alt="MC‑Core Product" class="h-10 w-10 rounded-full object-cover bg-white p-0.5 ring-2 ring-blue-500 logo-pulse" onerror="this.src='data:image/svg+xml;utf8,&lt;svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27&gt;&lt;rect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27#eee%27/&gt;&lt;text x=%2732%27 y=%2739%27 text-anchor=%27middle%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2732%27 fill=%27#6d28d9%27&gt;MC&lt;/text&gt;&lt;/svg&gt;';">
           <span class="font-semibold">MC‑Core Product</span>
         </div>
-        <nav class="hidden md:flex items-center gap-6 text-sm text-[var(--muted)]">
+        <button id="menuBtn" class="nav-toggle btn btn-ghost text-sm" aria-label="Menu">☰</button>
+        <nav class="nav-desktop items-center gap-6 text-sm text-[var(--muted)]">
           <a href="#services" class="hover:text-[var(--fg)]" data-i18n="nav_services">Usługi</a>
           <a href="#packages" class="hover:text-[var(--fg)]" data-i18n="nav_packages">Pakiety</a>
           <a href="#training" class="hover:text-[var(--fg)]" data-i18n="nav_training">Szkolenia</a>
@@ -83,7 +101,18 @@
           <a href="mailto:mccoreproduct@gmail.com" class="btn btn-primary">✉️ <span data-i18n="cta_contact">Skontaktuj się</span></a>
         </div>
       </div>
-    </header>
+    
+    <div id="mobileMenu" class="md:hidden hidden border-t border-[var(--stroke)] bg-white">
+      <div class="container px-4 py-3 grid gap-3 text-[var(--muted)]">
+        <a href="#services">Usługi</a>
+        <a href="#packages">Pakiety</a>
+        <a href="#training">Szkolenia</a>
+        <a href="#cases">Case studies</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </div>
+
+</header>
 
     <!-- Hero -->
     <section class="container px-4 py-12 md:py-16">
@@ -363,5 +392,26 @@
         });
       })();
     </script>
-  </body>
+  
+    <div id="mobileCta">
+      <div class="bar">
+        <a href="mailto:mccoreproduct@gmail.com" class="btn btn-primary">✉️ Napisz</a>
+        <a href="tel:+48500497680" class="btn">📞 Zadzwoń</a>
+      </div>
+    </div>
+
+
+    <script>
+      (function(){
+        var btn = document.getElementById('menuBtn');
+        var menu = document.getElementById('mobileMenu');
+        if(btn && menu){
+          btn.addEventListener('click', function(){
+            menu.classList.toggle('hidden');
+          });
+        }
+      })();
+    </script>
+
+</body>
 </html>
