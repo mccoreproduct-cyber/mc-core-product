@@ -166,11 +166,11 @@
     
     <div id="mobileMenu" class="md:hidden hidden border-t border-[var(--stroke)] bg-white">
       <div class="container px-4 py-3 grid gap-3 text-[var(--muted)]">
-        <a href="#services">Usługi</a>
-        <a href="#packages">Pakiety</a>
-        <a href="#training">Szkolenia</a>
-        <a href="#cases">Case studies</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#services" data-i18n="nav_services">Usługi</a>
+        <a href="#packages" data-i18n="nav_packages">Pakiety</a>
+        <a href="#training" data-i18n="nav_training">Szkolenia</a>
+        <a href="#cases" data-i18n="nav_cases">Case studies</a>
+        <a href="#contact" data-i18n="nav_contact">Kontakt</a>
       </div>
     </div>
 
@@ -182,7 +182,7 @@
         <div>
           <div class="badge mb-4" data-i18n="hero_badge">Project & R&D Leadership</div>
           <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
-            <span class="grad">Buduję produkty, które dowożą KPI.</span>
+            <span class="grad" data-i18n="hero_title">Buduję produkty, które dowożą KPI.</span>
           </h1>
           <p class="mt-4 text-[var(--muted)] max-w-prose" data-i18n="hero_copy">
             Pomagam firmom uporządkować proces rozwoju produktu, jakość i koszty — od koncepcji, przez R&amp;D i produkcję, po skalowanie w e‑commerce.
@@ -207,86 +207,86 @@
     <!-- Services -->
     
     <section id="services" class="container px-4 py-12">
-      <h2 class="text-2xl md:text-3xl font-bold">Usługi</h2>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i18n="svc_title">Usługi</h2>
       <p class="text-[var(--muted)] mt-2" data-i18n="svc_lead">Konkretne obszary, w których wchodzę i dowożę:</p>
 
       <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-3">
 
         <details class="acc">
-          <summary><span class="acc-title">Audyt jakości &amp; program naprawczy</span><span class="acc-icon">▾</span></summary>
+          <summary><span class="acc-title" data-i18n="svc0_title">Audyt jakości &amp; program naprawczy</span><span class="acc-icon">▾</span></summary>
           <div class="acc-body">
-            <p>Diagnoza problemów jakościowych i szybkie działania naprawcze.</p>
+            <p data-i18n="svc0_intro">Diagnoza problemów jakościowych i szybkie działania naprawcze.</p>
             <ul class="list-check mt-2">
-              <li>Analiza reklamacji (pareto, severity, lead time)</li>
-              <li>8D / CAPA, standard testów, plan kontroli</li>
-              <li>KPI: claim rate, rating, NPS/CSAT z trendami</li>
+              <li data-i18n="svc0_li1">Analiza reklamacji (pareto, severity, lead time)</li>
+              <li data-i18n="svc0_li2">8D / CAPA, standard testów, plan kontroli</li>
+              <li data-i18n="svc0_li3">KPI: claim rate, rating, NPS/CSAT z trendami</li>
             </ul>
-            <p class="mt-2 text-sm">Rezultat: spadek reklamacji i wzrost ocen w 2–3 sprintach.</p>
+            <p class="mt-2 text-sm" data-i18n="svc0_result">Rezultat: spadek reklamacji i wzrost ocen w 2–3 sprintach.</p>
           </div>
         </details>
 
         <details class="acc">
-          <summary><span class="acc-title">PLM &amp; porządek danych produktu</span><span class="acc-icon">▾</span></summary>
+          <summary><span class="acc-title" data-i18n="svc1_title">PLM &amp; porządek danych produktu</span><span class="acc-icon">▾</span></summary>
           <div class="acc-body">
-            <p>Układam dane produktu i przepływ zmian tak, by każdy pracował na tej samej prawdzie.</p>
+            <p data-i18n="svc1_intro">Układam dane produktu i przepływ zmian tak, by każdy pracował na tej samej prawdzie.</p>
             <ul class="list-check mt-2">
-              <li>Struktury danych (BOM, atrybuty, media)</li>
-              <li>Workflow zmian (wersjonowanie, release gates)</li>
-              <li>Integracja z R&amp;D, produkcją i e‑commerce</li>
+              <li data-i18n="svc1_li1">Struktury danych (BOM, atrybuty, media)</li>
+              <li data-i18n="svc1_li2">Workflow zmian (wersjonowanie, release gates)</li>
+              <li data-i18n="svc1_li3">Integracja z R&amp;D, produkcją i e‑commerce</li>
             </ul>
-            <p class="mt-2 text-sm">Rezultat: mniejsza liczba błędów i przyspieszenie wdrożeń.</p>
+            <p class="mt-2 text-sm" data-i18n="svc1_result">Rezultat: mniejsza liczba błędów i przyspieszenie wdrożeń.</p>
           </div>
         </details>
 
         <details class="acc">
-          <summary><span class="acc-title">Optymalizacja kosztów</span><span class="acc-icon">▾</span></summary>
+          <summary><span class="acc-title" data-i18n="svc2_title">Optymalizacja kosztów</span><span class="acc-icon">▾</span></summary>
           <div class="acc-body">
-            <p>Systematycznie obniżam TCO bez spadku jakości.</p>
+            <p data-i18n="svc2_intro">Systematycznie obniżam TCO bez spadku jakości.</p>
             <ul class="list-check mt-2">
-              <li>Analiza BOM/TCO i alternatywne komponenty</li>
-              <li>Sourcing, RFQ, negocjacje, wolumeny</li>
-              <li>Redesign pod koszty (DFM/DFA)</li>
+              <li data-i18n="svc2_li1">Analiza BOM/TCO i alternatywne komponenty</li>
+              <li data-i18n="svc2_li2">Sourcing, RFQ, negocjacje, wolumeny</li>
+              <li data-i18n="svc2_li3">Redesign pod koszty (DFM/DFA)</li>
             </ul>
-            <p class="mt-2 text-sm">Rezultat: trwałe % oszczędności na SKU i całych liniach.</p>
+            <p class="mt-2 text-sm" data-i18n="svc2_result">Rezultat: trwałe % oszczędności na SKU i całych liniach.</p>
           </div>
         </details>
 
         <details class="acc">
-          <summary><span class="acc-title">R&amp;D → Produkcja → Rynek</span><span class="acc-icon">▾</span></summary>
+          <summary><span class="acc-title" data-i18n="svc3_title">R&amp;D → Produkcja → Rynek</span><span class="acc-icon">▾</span></summary>
           <div class="acc-body">
-            <p>Dowodzenie ścieżką od prototypu do stabilnej serii.</p>
+            <p data-i18n="svc3_intro">Dowodzenie ścieżką od prototypu do stabilnej serii.</p>
             <ul class="list-check mt-2">
-              <li>Sprinty decyzyjne, risk log, bramki jakości</li>
-              <li>Testy, certyfikacja, ramp‑up, first article</li>
-              <li>Transfer do produkcji i launch</li>
+              <li data-i18n="svc3_li1">Sprinty decyzyjne, risk log, bramki jakości</li>
+              <li data-i18n="svc3_li2">Testy, certyfikacja, ramp‑up, first article</li>
+              <li data-i18n="svc3_li3">Transfer do produkcji i launch</li>
             </ul>
-            <p class="mt-2 text-sm">Rezultat: krótszy time‑to‑market i mniej wpadek po starcie.</p>
+            <p class="mt-2 text-sm" data-i18n="svc3_result">Rezultat: krótszy time‑to‑market i mniej wpadek po starcie.</p>
           </div>
         </details>
 
         <details class="acc">
-          <summary><span class="acc-title">E‑commerce i portfel SKU</span><span class="acc-icon">▾</span></summary>
+          <summary><span class="acc-title" data-i18n="svc4_title">E‑commerce i portfel SKU</span><span class="acc-icon">▾</span></summary>
           <div class="acc-body">
-            <p>Skalowanie oferty z kontrolą jakości i zwrotów.</p>
+            <p data-i18n="svc4_intro">Skalowanie oferty z kontrolą jakości i zwrotów.</p>
             <ul class="list-check mt-2">
-              <li>Zarządzanie 6000+ SKU, lifecycle i content</li>
-              <li>Review mining, QA contentu, return reasons</li>
-              <li>Marżowość i plan wycofań</li>
+              <li data-i18n="svc4_li1">Zarządzanie 6000+ SKU, lifecycle i content</li>
+              <li data-i18n="svc4_li2">Review mining, QA contentu, return reasons</li>
+              <li data-i18n="svc4_li3">Marżowość i plan wycofań</li>
             </ul>
-            <p class="mt-2 text-sm">Rezultat: wyższa sprzedaż przy niższych kosztach obsługi.</p>
+            <p class="mt-2 text-sm" data-i18n="svc4_result">Rezultat: wyższa sprzedaż przy niższych kosztach obsługi.</p>
           </div>
         </details>
 
         <details class="acc">
-          <summary><span class="acc-title">Procesy i narzędzia</span><span class="acc-icon">▾</span></summary>
+          <summary><span class="acc-title" data-i18n="svc5_title">Procesy i narzędzia</span><span class="acc-icon">▾</span></summary>
           <div class="acc-body">
-            <p>Ustawiam rytm pracy i przejrzyste metryki.</p>
+            <p data-i18n="svc5_intro">Ustawiam rytm pracy i przejrzyste metryki.</p>
             <ul class="list-check mt-2">
-              <li>JIRA, tablice, przeglądy i SLA</li>
-              <li>Lean/Kaizen, FMEA, ISO 9001</li>
-              <li>Raportowanie KPI i rutyny zespołowe</li>
+              <li data-i18n="svc5_li1">JIRA, tablice, przeglądy i SLA</li>
+              <li data-i18n="svc5_li2">Lean/Kaizen, FMEA, ISO 9001</li>
+              <li data-i18n="svc5_li3">Raportowanie KPI i rutyny zespołowe</li>
             </ul>
-            <p class="mt-2 text-sm">Rezultat: przewidywalna dostawa i mniej gaszenia pożarów.</p>
+            <p class="mt-2 text-sm" data-i18n="svc5_result">Rezultat: przewidywalna dostawa i mniej gaszenia pożarów.</p>
           </div>
         </details>
 
@@ -302,88 +302,88 @@
         <div class="card p-6 shadow-soft">
           <div class="badge">Start</div>
           <div class="price mt-2">15 000 zł</div>
-          <div class="text-sm text-[var(--muted)]">/ miesiąc</div>
+          <div class="text-sm text-[var(--muted)]" data-i18n="pkg_per_month">/ miesiąc</div>
           <ul class="list-check text-[var(--muted)] mt-4">
-            <li>Audyt i quick‑wins</li>
-            <li>Roadmapa 30/60/90</li>
-            <li>2 warsztaty decyzyjne</li>
+            <li data-i18n="pkg1_li1">Audyt i quick‑wins</li>
+            <li data-i18n="pkg1_li2">Roadmapa 30/60/90</li>
+            <li data-i18n="pkg1_li3">2 warsztaty decyzyjne</li>
           </ul>
           <a href="#contact" class="btn btn-primary mt-6 w-full" data-i18n="pkg_cta">Rezerwuj termin</a>
         </div>
         <div class="card p-6 shadow-soft border-purple-300">
           <div class="badge">Core</div>
           <div class="price mt-2">24 000 zł</div>
-          <div class="text-sm text-[var(--muted)]">/ miesiąc</div>
+          <div class="text-sm text-[var(--muted)]" data-i18n="pkg_per_month">/ miesiąc</div>
           <ul class="list-check text-[var(--muted)] mt-4">
-            <li>Prowadzenie projektów (PLM/R&amp;D)</li>
-            <li>KPI jakości i kosztów</li>
-            <li>Stałe spotkania zespołu</li>
+            <li data-i18n="pkg2_li1">Prowadzenie projektów (PLM/R&amp;D)</li>
+            <li data-i18n="pkg2_li2">KPI jakości i kosztów</li>
+            <li data-i18n="pkg2_li3">Stałe spotkania zespołu</li>
           </ul>
           <a href="#contact" class="btn btn-primary mt-6 w-full" data-i18n="pkg_cta">Rezerwuj termin</a>
         </div>
         <div class="card p-6 shadow-soft">
           <div class="badge">Scale</div>
           <div class="price mt-2">34 000 zł</div>
-          <div class="text-sm text-[var(--muted)]">/ miesiąc</div>
+          <div class="text-sm text-[var(--muted)]" data-i18n="pkg_per_month">/ miesiąc</div>
           <ul class="list-check text-[var(--muted)] mt-4">
-            <li>Transformacja procesów</li>
-            <li>Optymalizacja BOM/TCO</li>
-            <li>On‑site + coaching liderów</li>
+            <li data-i18n="pkg3_li1">Transformacja procesów</li>
+            <li data-i18n="pkg3_li2">Optymalizacja BOM/TCO</li>
+            <li data-i18n="pkg3_li3">On‑site + coaching liderów</li>
           </ul>
           <a href="#contact" class="btn btn-primary mt-6 w-full" data-i18n="pkg_cta">Rezerwuj termin</a>
         </div>
       </div>
-      <p class="text-xs text-[var(--muted)] mt-3">Indywidualne wyceny dla zakresów produkcyjnych na miejscu.</p>
+      <p class="text-xs text-[var(--muted)] mt-3" data-i18n="pkg_note">Indywidualne wyceny dla zakresów produkcyjnych na miejscu.</p>
     </section>
 
     <!-- Training -->
     <section id="training" class="container px-4 py-12">
-      <h2 class="text-2xl md:text-3xl font-bold">Szkolenia</h2>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i18n="training_title">Szkolenia</h2>
       <div class="grid md:grid-cols-2 gap-4 mt-6">
         <div class="card p-5 shadow-soft">
-          <div class="font-semibold">Quality Essentials for E‑commerce</div>
-          <p class="text-sm text-[var(--muted)] mt-2">Claim rate, rating, NPS/CSAT, 8D, test plans.</p>
+          <div class="font-semibold" data-i18n="training1_title">Quality Essentials for E‑commerce</div>
+          <p class="text-sm text-[var(--muted)] mt-2" data-i18n="training1_desc">Claim rate, rating, NPS/CSAT, 8D, test plans.</p>
         </div>
         <div class="card p-5 shadow-soft">
-          <div class="font-semibold">PLM w praktyce</div>
-          <p class="text-sm text-[var(--muted)] mt-2">Dane produktu, zmiany inżynierskie, release flow.</p>
+          <div class="font-semibold" data-i18n="training2_title">PLM w praktyce</div>
+          <p class="text-sm text-[var(--muted)] mt-2" data-i18n="training2_desc">Dane produktu, zmiany inżynierskie, release flow.</p>
         </div>
         <div class="card p-5 shadow-soft">
-          <div class="font-semibold">Koszty produktu bez tajemnic</div>
-          <p class="text-sm text-[var(--muted)] mt-2">BOM, TCO, sourcing, alternatywy i negocjacje.</p>
+          <div class="font-semibold" data-i18n="training3_title">Koszty produktu bez tajemnic</div>
+          <p class="text-sm text-[var(--muted)] mt-2" data-i18n="training3_desc">BOM, TCO, sourcing, alternatywy i negocjacje.</p>
         </div>
         <div class="card p-5 shadow-soft">
-          <div class="font-semibold">R&amp;D → Produkcja → Rynek</div>
-          <p class="text-sm text-[var(--muted)] mt-2">DFM/DFA, sprinty decyzyjne, testy, launch.</p>
+          <div class="font-semibold" data-i18n="training4_title">R&amp;D → Produkcja → Rynek</div>
+          <p class="text-sm text-[var(--muted)] mt-2" data-i18n="training4_desc">DFM/DFA, sprinty decyzyjne, testy, launch.</p>
         </div>
       </div>
     </section>
 
     <!-- Cases -->
     <section id="cases" class="container px-4 py-12">
-      <h2 class="text-2xl md:text-3xl font-bold">Case studies</h2>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i18n="cases_title">Case studies</h2>
       <div class="grid md:grid-cols-3 gap-4 mt-6">
         <div class="card p-5 shadow-soft">
-          <div class="text-sm text-[var(--muted)]">Jakość</div>
-          <div class="font-semibold mt-1">-32% claim rate w 4 miesiące</div>
-          <p class="text-sm text-[var(--muted)] mt-2">Standaryzacja testów, 8D, poprawa contentu.</p>
+          <div class="text-sm text-[var(--muted)]" data-i18n="case1_label">Jakość</div>
+          <div class="font-semibold mt-1" data-i18n="case1_title">-32% claim rate w 4 miesiące</div>
+          <p class="text-sm text-[var(--muted)] mt-2" data-i18n="case1_desc">Standaryzacja testów, 8D, poprawa contentu.</p>
         </div>
         <div class="card p-5 shadow-soft">
-          <div class="text-sm text-[var(--muted)]">Koszty</div>
-          <div class="font-semibold mt-1">-18% koszt jednostkowy</div>
-          <p class="text-sm text-[var(--muted)] mt-2">BOM/TCO, alternatywne komponenty, negocjacje.</p>
+          <div class="text-sm text-[var(--muted)]" data-i18n="case2_label">Koszty</div>
+          <div class="font-semibold mt-1" data-i18n="case2_title">-18% koszt jednostkowy</div>
+          <p class="text-sm text-[var(--muted)] mt-2" data-i18n="case2_desc">BOM/TCO, alternatywne komponenty, negocjacje.</p>
         </div>
         <div class="card p-5 shadow-soft">
-          <div class="text-sm text-[var(--muted)]">Time‑to‑market</div>
-          <div class="font-semibold mt-1">-41% TTM</div>
-          <p class="text-sm text-[var(--muted)] mt-2">Decyzyjne sprinty, DFM/DFA, szybkie testy.</p>
+          <div class="text-sm text-[var(--muted)]" data-i18n="case3_label">Time‑to‑market</div>
+          <div class="font-semibold mt-1" data-i18n="case3_title">-41% TTM</div>
+          <p class="text-sm text-[var(--muted)] mt-2" data-i18n="case3_desc">Decyzyjne sprinty, DFM/DFA, szybkie testy.</p>
         </div>
       </div>
     </section>
 
     <!-- Clients -->
     <section class="container px-4 py-12">
-      <h2 class="text-2xl md:text-3xl font-bold">Zaufali</h2>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i18n="clients_title">Zaufali</h2>
       <div class="mt-4 grid grid-cols-2 md:grid-cols-5 gap-6 items-center">
         <img src="expondo.png" alt="Expondo" class="logo-tile">
         <img src="lug.png" alt="LUG Light Factory" class="logo-tile">
@@ -396,8 +396,8 @@
     <!-- Contact -->
     <section id="contact" class="container px-4 py-14">
       <div class="card p-6 md:p-8 shadow-soft">
-        <h2 class="text-2xl md:text-3xl font-bold">Kontakt</h2>
-        <p class="text-[var(--muted)] mt-2">Najprościej: wyślij krótką wiadomość z kontekstem. Odezwę się z propozycją terminu.</p>
+        <h2 class="text-2xl md:text-3xl font-bold" data-i18n="contact_title">Kontakt</h2>
+        <p class="text-[var(--muted)] mt-2" data-i18n="contact_body">Najprościej: wyślij krótką wiadomość z kontekstem. Odezwę się z propozycją terminu.</p>
         <div class="mt-5 flex flex-wrap gap-3">
           <a href="mailto:mccoreproduct@gmail.com" class="btn btn-primary">✉️ Email</a>
           <a href="tel:+48500497680" class="btn">📞 +48 500 497 680</a>
@@ -409,49 +409,142 @@
     <footer class="border-t border-[var(--stroke)]">
       <div class="container px-4 py-8 text-sm text-[var(--muted)] flex flex-wrap items-center justify-between gap-3">
         <div>© <span id="year"></span> MC‑Core Product</div>
-        <div>📍 Zielona Góra, Polska</div>
+        <div data-i18n="footer_location">📍 Zielona Góra, Polska</div>
       </div>
     </footer>
 
     <script>
-      // Simple PL/EN i18n
+      // Simple PL/EN i18n with runtime Polish snapshot
       const I18N = {
-        pl: {
-          nav_services:"Usługi", nav_packages:"Pakiety", nav_training:"Szkolenia", nav_cases:"Case studies", nav_contact:"Kontakt",
-          hero_badge:"Project & R&D Leadership",
-          hero_copy:"Pomagam firmom uporządkować proces rozwoju produktu, jakość i koszty — od koncepcji, przez R&D i produkcję, po skalowanie w e‑commerce.",
-          hero_cta1:"Zobacz pakiety", hero_cta2:"Lista usług",
-          svc_lead:"Konkretne obszary, w których wchodzę i dowożę:",
-          pkg_title:"Pakiety współpracy", pkg_lead:"Rozliczanie prosto: minimalny czas pracy miesiąc. Ceny netto.",
-          pkg_cta:"Rezerwuj termin", cta_contact:"Skontaktuj się"
-        },
-        en: {
-          nav_services:"Services", nav_packages:"Packages", nav_training:"Training", nav_cases:"Case studies", nav_contact:"Contact",
-          hero_badge:"Project & R&D Leadership",
-          hero_copy:"I help companies fix product development, quality and costs — from concept through R&D and production to e‑commerce scale.",
-          hero_cta1:"See packages", hero_cta2:"All services",
-          svc_lead:"Where I jump in and deliver:",
-          pkg_title:"Engagement packages", pkg_lead:"Simple billing: minimum one month. Prices net.",
-          pkg_cta:"Book a slot", cta_contact:"Contact me"
-        }
-      };
-      function applyI18n(lang){
-        document.querySelectorAll("[data-i18n]").forEach(el=>{
+  "pl": {},
+  "en": {
+    "nav_services": "Services",
+    "nav_packages": "Packages",
+    "nav_training": "Training",
+    "nav_cases": "Case studies",
+    "nav_contact": "Contact",
+    "hero_badge": "Project & R&D Leadership",
+    "hero_title": "I build products that actually deliver KPIs.",
+    "hero_copy": "I help companies fix product development, quality and costs — from early concept through R&D and production to e‑commerce scale.",
+    "hero_cta1": "See packages",
+    "hero_cta2": "All services",
+    "hero_b1": "Claim rate ↓, rating ↑",
+    "hero_b2": "PLM and clean product data",
+    "hero_b3": "BOM / TCO optimisation",
+    "hero_b4": "Faster time‑to‑market",
+    "svc_title": "Services",
+    "svc_lead": "Concrete areas where I jump in and deliver:",
+    "svc0_title": "Quality audit & recovery plan",
+    "svc0_intro": "Diagnosis of quality issues and fast corrective actions.",
+    "svc0_li1": "Complaint analysis (pareto, severity, lead time).",
+    "svc0_li2": "8D / CAPA, test standards, control plans.",
+    "svc0_li3": "KPIs: claim rate, rating, NPS / CSAT with trends.",
+    "svc0_result": "Result: lower claims and higher ratings within 2–3 sprints.",
+    "svc1_title": "PLM & product data order",
+    "svc1_intro": "We bring structure to product data and change management.",
+    "svc1_li1": "Data structures (BOM, attributes, media).",
+    "svc1_li2": "Change workflow (ECR / ECO, release gates).",
+    "svc1_li3": "Integration with R&D, production and e‑commerce.",
+    "svc1_result": "Result: fewer errors and faster releases.",
+    "svc2_title": "Product cost optimisation",
+    "svc2_intro": "We make unit economics and margins work again.",
+    "svc2_li1": "BOM / TCO analysis and alternative components.",
+    "svc2_li2": "Sourcing, RFQ, negotiations, volume strategy.",
+    "svc2_li3": "Cost‑driven redesign (DFM / DFA).",
+    "svc2_result": "Result: measurable % savings on SKUs and whole lines.",
+    "svc3_title": "R&D → Production → Market",
+    "svc3_intro": "We connect development, industrialisation and launch.",
+    "svc3_li1": "Decision sprints, risk logs, quality gates.",
+    "svc3_li2": "Tests, validation, ramp‑up, first article.",
+    "svc3_li3": "Transfer to production and launch.",
+    "svc3_result": "Result: shorter time‑to‑market and fewer surprises at launch.",
+    "svc4_title": "E‑commerce and SKU portfolio",
+    "svc4_intro": "Scaling assortment while controlling quality and returns.",
+    "svc4_li1": "Managing 6000+ SKUs, lifecycle and content.",
+    "svc4_li2": "Review mining, content QA, return reasons.",
+    "svc4_li3": "Profitability and phase‑out plan.",
+    "svc4_result": "Result: higher sales with lower service costs.",
+    "svc5_title": "Processes and tools",
+    "svc5_intro": "We design operating rhythm and clear metrics.",
+    "svc5_li1": "JIRA boards, reviews and SLAs.",
+    "svc5_li2": "Lean / Kaizen, FMEA, ISO 9001.",
+    "svc5_li3": "KPI reporting and team routines.",
+    "svc5_result": "Result: predictable delivery and less firefighting.",
+    "pkg_title": "Engagement packages",
+    "pkg_lead": "Simple billing: minimum one month of work. Prices net.",
+    "pkg_cta": "Book a slot",
+    "pkg_per_month": "/ month",
+    "pkg1_li1": "Quality audit and quick wins.",
+    "pkg1_li2": "30 / 60 / 90‑day roadmap.",
+    "pkg1_li3": "2 decision workshops.",
+    "pkg2_li1": "Running projects (PLM / R&D).",
+    "pkg2_li2": "Quality and cost KPIs.",
+    "pkg2_li3": "Regular leadership syncs.",
+    "pkg3_li1": "Process transformation.",
+    "pkg3_li2": "BOM / TCO optimisation.",
+    "pkg3_li3": "On‑site work + leader coaching.",
+    "pkg_note": "Custom pricing for on‑site production engagements.",
+    "cta_contact": "Contact me",
+    "training_title": "Training",
+    "training1_title": "Quality Essentials for E‑commerce",
+    "training1_desc": "Claim rate, rating, NPS / CSAT, 8D, test plans.",
+    "training2_title": "PLM in practice",
+    "training2_desc": "Product data, engineering changes, release flow.",
+    "training3_title": "Product costs without secrets",
+    "training3_desc": "BOM, TCO, sourcing, alternatives and negotiations.",
+    "training4_title": "R&D → Production → Market",
+    "training4_desc": "DFM / DFA, decision sprints, tests, launch.",
+    "cases_title": "Case studies",
+    "case1_label": "Quality",
+    "case1_title": "-32% claim rate in 4 months",
+    "case1_desc": "Standardised tests, 8D, improved content.",
+    "case2_label": "Costs",
+    "case2_title": "-18% unit cost",
+    "case2_desc": "BOM / TCO, alternative components, negotiations.",
+    "case3_label": "Time‑to‑market",
+    "case3_title": "-41% TTM",
+    "clients_title": "Trusted by",
+    "contact_title": "Contact",
+    "contact_body": "The simplest way: send a short message with context. I will come back with a proposed time.",
+    "footer_location": "📍 Zielona Góra, Poland",
+    "case3_desc": "Decision sprints, DFM / DFA, fast testing."
+  }
+};
+
+      function applyI18n(lang) {
+        document.querySelectorAll("[data-i18n]").forEach(el => {
           const key = el.getAttribute("data-i18n");
-          if(I18N[lang] && I18N[lang][key]) el.textContent = I18N[lang][key];
+          if (!el.dataset.i18nPl) {
+            el.dataset.i18nPl = el.textContent.trim();
+          }
+          if (lang === "en") {
+            if (I18N.en && I18N.en[key]) {
+              el.textContent = I18N.en[key];
+            }
+          } else {
+            if (el.dataset.i18nPl) {
+              el.textContent = el.dataset.i18nPl;
+            }
+          }
         });
       }
-      (function init(){
-        document.getElementById("year").textContent = new Date().getFullYear();
+
+      (function init() {
+        const yearEl = document.getElementById("year");
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear();
+        }
         const saved = localStorage.getItem("lang") || "pl";
         applyI18n(saved);
         const btn = document.getElementById("lang");
-        btn.addEventListener("click", ()=>{
-          const cur = localStorage.getItem("lang") || "pl";
-          const next = cur==="pl" ? "en" : "pl";
-          localStorage.setItem("lang", next);
-          applyI18n(next);
-        });
+        if (btn) {
+          btn.addEventListener("click", () => {
+            const cur = localStorage.getItem("lang") || "pl";
+            const next = cur === "pl" ? "en" : "pl";
+            localStorage.setItem("lang", next);
+            applyI18n(next);
+          });
+        }
       })();
     </script>
   
@@ -501,9 +594,8 @@
         var btn = document.getElementById('lang');
         if(btn){
           btn.addEventListener('click', function(){ 
-            var cur = localStorage.getItem('lang') || 'pl';
-            var next = cur === 'pl' ? 'en' : 'pl';
-            setTimeout(function(){ setSEO(next); }, 0);
+            var lang = localStorage.getItem('lang') || 'pl';
+            setTimeout(function(){ setSEO(lang); }, 0);
           });
         }
         // initial
